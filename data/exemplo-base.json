@@ -205,7 +205,7 @@
         {
           "id": "n-20260204-dem-registro-chamados-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -592,7 +592,7 @@
         {
           "id": "n-20260212-dem-checklist-arquivos-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -1051,7 +1051,7 @@
         {
           "id": "n-20260227-dem-evidencias-pasta-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -1330,7 +1330,7 @@
         {
           "id": "n-20260305-dem-parametros-perfil-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -1715,7 +1715,7 @@
         {
           "id": "n-20260313-dem-validacao-mensal-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -2143,7 +2143,7 @@
         {
           "id": "n-20260327-dem-painel-pendencias-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -2372,7 +2372,7 @@
         {
           "id": "n-20260403-dem-produtos-parametros-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -2758,7 +2758,7 @@
         {
           "id": "n-20260414-dem-importacao-json-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -3122,7 +3122,7 @@
         {
           "id": "n-20260424-dem-ficha-demanda-longa-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -3135,7 +3135,7 @@
         {
           "id": "n-20260424-dem-ficha-demanda-longa-b17",
           "type": "checklist",
-          "html": "Separar alterações WDF e alterações preliminares",
+          "html": "Separar alterações WFD e alterações preliminares",
           "done": false,
           "page": 1
         },
@@ -3437,7 +3437,7 @@
         {
           "id": "n-20260506-dem-criacao-registros-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -3888,7 +3888,7 @@
         {
           "id": "n-20260515-dem-respostas-rapidas-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
@@ -4342,7 +4342,7 @@
         {
           "id": "n-20260527-dem-etiquetas-cores-b15",
           "type": "h2",
-          "html": "Alterações WDF",
+          "html": "Alterações WFD",
           "page": 1
         },
         {
