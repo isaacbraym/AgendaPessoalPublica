@@ -1,0 +1,10 @@
+Agenda Pessoal / Agenda Caderno
+Todos os direitos reservados.
+
+Este projeto, sua interface, organização, código-fonte, estrutura, temas, fluxos e recursos são protegidos por direitos autorais.
+
+É proibida a cópia, redistribuição, revenda, sublicenciamento, engenharia reversa com finalidade comercial, remoção de avisos de autoria ou criação de produto derivado sem autorização expressa do autor.
+
+A versão pública/distribuída pode conter código minificado e obfuscado apenas para execução pelo usuário final.
+
+© 2026. Todos os direitos reservados.
