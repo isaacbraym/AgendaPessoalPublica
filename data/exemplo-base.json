@@ -3,83 +3,593 @@
   "settings": {
     "scheduleSoundEnabled": true,
     "sampleDynamicDates": true,
-    "sampleBaseDate": "2026-05-11"
+    "sampleBaseDate": "2026-05-11",
+    "noteTemplates": {
+      "overrides": {},
+      "custom": [
+        {
+          "id": "tpl-guia-rapido-usuario",
+          "name": "Guia Rápido do Usuário",
+          "baseType": "Anotação",
+          "icon": "🧭",
+          "description": "Modelo fictício para criar uma anotação tutorial curta, com passos e dica final.",
+          "blocks": [
+            {
+              "id": "tpl-guia-b01",
+              "type": "h1",
+              "html": "Guia rápido",
+              "page": 1
+            },
+            {
+              "id": "tpl-guia-b02",
+              "type": "text",
+              "html": "Objetivo: ",
+              "page": 1
+            },
+            {
+              "id": "tpl-guia-b03",
+              "type": "checklist",
+              "html": "Passo 1: ",
+              "page": 1,
+              "done": false
+            },
+            {
+              "id": "tpl-guia-b04",
+              "type": "checklist",
+              "html": "Passo 2: ",
+              "page": 1,
+              "done": false
+            },
+            {
+              "id": "tpl-guia-b05",
+              "type": "callout-note",
+              "html": "Dica: ",
+              "page": 1,
+              "cv": "note"
+            }
+          ]
+        },
+        {
+          "id": "tpl-checklist-validacao",
+          "name": "Checklist de Validação",
+          "baseType": "Demanda",
+          "icon": "✅",
+          "description": "Modelo fictício para validar uma entrega antes de concluir a demanda.",
+          "blocks": [
+            {
+              "id": "tpl-check-b01",
+              "type": "h1",
+              "html": "Checklist de Validação",
+              "page": 1
+            },
+            {
+              "id": "tpl-check-b02",
+              "type": "text",
+              "html": "Movimento: ",
+              "page": 1
+            },
+            {
+              "id": "tpl-check-b03",
+              "type": "text",
+              "html": "OP: ",
+              "page": 1
+            },
+            {
+              "id": "tpl-check-b04",
+              "type": "h2",
+              "html": "Antes de concluir",
+              "page": 1
+            },
+            {
+              "id": "tpl-check-b05",
+              "type": "checklist",
+              "html": "Confirmar objetivo da demanda",
+              "page": 1,
+              "done": false
+            },
+            {
+              "id": "tpl-check-b06",
+              "type": "checklist",
+              "html": "Revisar impacto e pendências",
+              "page": 1,
+              "done": false
+            },
+            {
+              "id": "tpl-check-b07",
+              "type": "checklist",
+              "html": "Atualizar tags e projeto",
+              "page": 1,
+              "done": false
+            },
+            {
+              "id": "tpl-check-b08",
+              "type": "callout-action",
+              "html": "Próxima ação: ",
+              "page": 1,
+              "cv": "action"
+            }
+          ]
+        }
+      ],
+      "hiddenBuiltins": []
+    }
   },
   "projects": [
+    {
+      "id": "proj-organizacao-agenda",
+      "name": "Organização da Agenda",
+      "color": "#7c3aed",
+      "status": "ativo",
+      "description": "Projeto tutorial para aprender temas, templates, post-its, busca, menus, histórico, backups e uso geral da agenda.",
+      "createdAt": "2026-05-01T08:00:00+00:00"
+    },
     {
       "id": "proj-service-desk",
       "name": "Service Desk & Chamados",
       "color": "#2563eb",
       "status": "ativo",
-      "description": "Organização do atendimento diário, triagem de chamados, priorização e acompanhamento de pendências internas.",
+      "description": "Rotina fictícia de um analista de TI para demandas, incidentes, pendências, agendamentos, checklists e acompanhamento diário.",
       "createdAt": "2026-05-01T08:00:00+00:00"
     },
     {
-      "id": "proj-automacao",
-      "name": "Automação Interna",
-      "color": "#d97706",
-      "status": "ativo",
-      "description": "Melhorias simples para reduzir tarefas manuais, padronizar conferências e evitar retrabalho operacional.",
-      "createdAt": "2026-05-01T09:00:00+00:00"
-    },
-    {
-      "id": "proj-documentacao",
+      "id": "proj-documentacao-tecnica",
       "name": "Documentação Técnica",
       "color": "#16a34a",
       "status": "ativo",
-      "description": "Base de conhecimento, modelos de registro, guias rápidos e documentação de processos recorrentes.",
-      "createdAt": "2026-05-01T10:00:00+00:00"
+      "description": "Guias, registros longos, tabelas, imagens, links, blocos do editor e documentação interna genérica.",
+      "createdAt": "2026-05-01T08:00:00+00:00"
     }
   ],
   "notes": [
     {
-      "id": "sd-anot-001-triagem-rapida",
-      "date": "2026-05-11",
-      "title": "Triagem rápida de chamados do dia",
+      "id": "org-anot-001-tour",
+      "date": "2026-05-13",
+      "title": "Comece aqui: tour vivo da Agenda Caderno",
       "blocks": [
         {
-          "id": "sd-anot-001-b01",
+          "id": "org-anot-001-tour-b01",
           "type": "h1",
-          "html": "Triagem rápida",
+          "html": "Comece aqui: a agenda ensina enquanto você usa",
           "page": 1
         },
         {
-          "id": "sd-anot-001-b02",
+          "id": "org-anot-001-tour-b02",
           "type": "text",
-          "html": "Separar o que precisa de resposta imediata, o que pode aguardar e o que deve virar demanda.",
+          "html": "Esta base demo foi pensada como um manual vivo. Cada post-it abre uma parte do sistema e mostra uma situação realista de uso para um analista de TI fictício.",
           "page": 1
         },
         {
-          "id": "sd-anot-001-b03",
+          "id": "org-anot-001-tour-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-tutorial-tour",
+          "caption": "Mapa visual da interface",
+          "sideHtml": "Use os post-its como atalhos: clique para abrir, explore as demandas, veja o Kanban e depois faça um backup antes de começar sua agenda real.",
+          "width": 58
+        },
+        {
+          "id": "org-anot-001-tour-b04",
           "type": "checklist",
-          "html": "Verificar chamados novos sem categoria",
+          "html": "Abrir pelo menos uma anotação, uma demanda e um incidente",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "org-anot-001-tour-b05",
+          "type": "checklist",
+          "html": "Testar a busca por backup, kanban, DEM-SD-004 ou localStorage",
           "page": 1,
           "done": false
         },
         {
-          "id": "sd-anot-001-b04",
+          "id": "org-anot-001-tour-b06",
           "type": "checklist",
-          "html": "Marcar itens críticos antes de iniciar respostas longas",
+          "html": "Recolher os painéis laterais para liberar a área central",
           "page": 1,
           "done": false
         },
         {
-          "id": "sd-anot-001-b05",
+          "id": "org-anot-001-tour-b07",
+          "type": "callout-note",
+          "html": "Dica: esta base é fictícia e segura. Ela existe para ensinar o app, não para representar dados reais.",
+          "page": 1,
+          "cv": "note"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "tutorial",
+        "comece-aqui",
+        "visao-geral"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c1",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 2
+    },
+    {
+      "id": "org-anot-002-personalizar-tema-template",
+      "date": "2026-05-14",
+      "title": "Tutorial: personalizar temas e templates com segurança",
+      "blocks": [
+        {
+          "id": "org-anot-002-personalizar-tema-template-b01",
+          "type": "h1",
+          "html": "Personalizar sem quebrar o padrão",
+          "page": 1
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b02",
+          "type": "text",
+          "html": "Os templates padrão funcionam como modelos protegidos: eles são a referência do sistema e não devem ser alterados diretamente como se fossem rascunhos livres.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-temas-template",
+          "caption": "Fluxo seguro para criar seu próprio modelo",
+          "sideHtml": "O caminho ideal é duplicar, renomear, escolher ícone, escrever uma descrição curta e adaptar a estrutura para sua rotina.",
+          "width": 58
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b04",
+          "type": "h2",
+          "html": "Checklist de personalização",
+          "page": 1
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b05",
+          "type": "checklist",
+          "html": "Duplicar o template que mais se aproxima do uso desejado",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b06",
+          "type": "checklist",
+          "html": "Escolher um ícone fácil de reconhecer no menu de modelos",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b07",
+          "type": "checklist",
+          "html": "Escrever uma descrição curta explicando quando usar o modelo",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b08",
+          "type": "checklist",
+          "html": "Ajustar blocos como título, checklist, observação, ação e tabela",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b09",
+          "type": "checklist",
+          "html": "Salvar como cópia personalizada e manter o padrão como referência",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-002-personalizar-tema-template-b10",
           "type": "callout-priority",
-          "html": "Prioridade: começar pelos chamados com impacto em mais de um utilizador.",
+          "html": "Regra de ouro: personalize por cópia. Assim você evolui a agenda sem perder uma base confiável para voltar atrás.",
           "page": 1,
           "cv": "priority"
         }
       ],
       "priority": "Média",
+      "status": "Em andamento",
+      "tags": [
+        "tutorial",
+        "temas",
+        "templates"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c4",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 3
+    },
+    {
+      "id": "org-anot-003-lista-temas",
+      "date": "2026-05-15",
+      "title": "Guia visual: quando usar cada tema",
+      "blocks": [
+        {
+          "id": "org-anot-003-lista-temas-b01",
+          "type": "h1",
+          "html": "Temas disponíveis",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b02",
+          "type": "text",
+          "html": "Os temas mudam a sensação visual da agenda, mas a prioridade é sempre legibilidade. Escolha o tema conforme o ambiente e o tempo de leitura.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-lista-temas",
+          "caption": "Mini galeria de temas",
+          "sideHtml": "A imagem resume a ideia: mudar o clima visual sem transformar a agenda em algo difícil de ler.",
+          "width": 54
+        },
+        {
+          "id": "org-anot-003-lista-temas-b04",
+          "type": "bullet",
+          "html": "Couro Executivo: visual quente, clássico e mais elegante para uso profissional.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b05",
+          "type": "bullet",
+          "html": "SaaS Clean: claro, objetivo, com cara de ferramenta moderna.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b06",
+          "type": "bullet",
+          "html": "Dark Glass: escuro, com profundidade, bom para ambientes de pouca luz.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b07",
+          "type": "bullet",
+          "html": "Natural Desk: tons naturais, calmos e menos cansativos.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b08",
+          "type": "bullet",
+          "html": "Binder Luxo: visual sofisticado, sempre pensando em manter contraste legível.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b09",
+          "type": "bullet",
+          "html": "Corporativo Neutro: discreto, direto e bom para rotina de trabalho.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b10",
+          "type": "bullet",
+          "html": "Oldschool Ledger: estilo registro antigo, bom para sensação de caderno contábil.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b11",
+          "type": "bullet",
+          "html": "Fichário Studio: aparência de fichário organizado e criativo.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b12",
+          "type": "bullet",
+          "html": "Poppins Cream: claro, creme, limpo, com base em branco, #FCF6F1, #F4DFCD e texto preto.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-003-lista-temas-b13",
+          "type": "callout-note",
+          "html": "Teste o tema por alguns minutos antes de decidir. O melhor tema é o que deixa você escrever mais e se perder menos.",
+          "page": 1,
+          "cv": "note"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "tutorial",
+        "temas",
+        "visual"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c5",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 4
+    },
+    {
+      "id": "org-anot-004-postits",
+      "date": "2026-05-16",
+      "title": "Post-its do mês: clique, arraste e troque cores",
+      "blocks": [
+        {
+          "id": "org-anot-004-postits-b01",
+          "type": "h1",
+          "html": "Post-its são atalhos, não enfeites",
+          "page": 1
+        },
+        {
+          "id": "org-anot-004-postits-b02",
+          "type": "text",
+          "html": "A faixa de post-its do mês serve para navegar rápido pelos registros do período. Ela mostra anotações, demandas e incidentes com data, tipo, prévia e cor.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-004-postits-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-postits-cor",
+          "caption": "Interação com os post-its",
+          "sideHtml": "Clique para abrir o registro, arraste horizontalmente para percorrer a faixa e use as setas quando houver conteúdo escondido para os lados.",
+          "width": 60
+        },
+        {
+          "id": "org-anot-004-postits-b04",
+          "type": "checklist",
+          "html": "Clicar em um post-it abre o registro correspondente",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "org-anot-004-postits-b05",
+          "type": "checklist",
+          "html": "Arrastar a faixa para a esquerda ou direita percorre os post-its",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-004-postits-b06",
+          "type": "checklist",
+          "html": "As setas indicam quando há conteúdo para esquerda ou direita",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-004-postits-b07",
+          "type": "checklist",
+          "html": "Botão direito no post-it permite trocar a cor quando fizer sentido",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-004-postits-b08",
+          "type": "callout-action",
+          "html": "Use cores por intenção: amarelo para guia, azul para busca, verde para backup, rosa para atenção e laranja para rotina.",
+          "page": 1,
+          "cv": "action"
+        }
+      ],
+      "priority": "Média",
       "status": "Pendente",
       "tags": [
-        "suporte",
-        "triagem",
-        "agenda"
+        "tutorial",
+        "postits",
+        "cores"
       ],
-      "projectId": "proj-service-desk",
+      "projectId": "proj-organizacao-agenda",
       "postitColor": "c1",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 5
+    },
+    {
+      "id": "org-anot-005-agendamento-backup",
+      "date": "2026-05-11",
+      "title": "Agendamento ativo: fazer backup da agenda",
+      "blocks": [
+        {
+          "id": "org-anot-005-agendamento-backup-b01",
+          "type": "h1",
+          "html": "Este post-it também é um lembrete real",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b02",
+          "type": "text",
+          "html": "Poucos minutos depois de carregar esta base, este registro deve aparecer como lembrete. A ideia é ensinar o recurso usando uma ação realmente útil: exportar um backup JSON.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-agendamento-backup",
+          "caption": "Popup de lembrete local",
+          "sideHtml": "O lembrete funciona localmente no navegador. Ele ajuda a criar uma rotina simples sem depender de servidor externo.",
+          "width": 58
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b04",
+          "type": "h2",
+          "html": "Como funciona",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b05",
+          "type": "bullet",
+          "html": "Anotação comum não precisa ter alerta.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b06",
+          "type": "bullet",
+          "html": "Ao criar uma anotação, você pode marcar que ela é um agendamento.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b07",
+          "type": "bullet",
+          "html": "Quando é agendamento, aparecem data, hora e opção de lembrete.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b08",
+          "type": "bullet",
+          "html": "Som ativo chama atenção; adiar empurra o aviso; ocultar tira da tela por enquanto; concluir encerra aquele lembrete.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b09",
+          "type": "checklist",
+          "html": "Quando o aviso tocar, exportar o JSON de backup",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-005-agendamento-backup-b10",
+          "type": "callout-priority",
+          "html": "Backup é a primeira rotina que vale criar. O app é offline e guarda dados no navegador, então o JSON é sua cópia de segurança portátil.",
+          "page": 1,
+          "cv": "priority"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "agendamento",
+        "backup"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c2",
       "tipo": "Anotação",
       "baseType": "Anotação",
       "vinculoTipo": null,
@@ -94,590 +604,90 @@
       "sampleTimeOffsetMinutes": 3
     },
     {
-      "id": "sd-anot-002-mapa-atendimento",
-      "date": "2026-05-11",
-      "title": "Mapa de atendimento e atalhos úteis",
+      "id": "org-anot-006-busca-inteligente",
+      "date": "2026-05-17",
+      "title": "Busca inteligente: encontre fora do mês atual",
       "blocks": [
         {
-          "id": "sd-anot-002-b01",
+          "id": "org-anot-006-busca-inteligente-b01",
           "type": "h1",
-          "html": "Mapa de atendimento",
+          "html": "A busca não depende do período selecionado",
           "page": 1
         },
         {
-          "id": "sd-anot-002-b02",
+          "id": "org-anot-006-busca-inteligente-b02",
           "type": "text",
-          "html": "Anotação de referência para lembrar o fluxo básico de entrada, análise e registro.",
+          "html": "Você pode estar vendo maio, mas buscar um texto que está em outro mês. A busca por texto percorre a base e lista correspondências abaixo, sem ficar presa ao mês aberto.",
           "page": 1
         },
         {
-          "id": "sd-anot-002-b03",
+          "id": "org-anot-006-busca-inteligente-b03",
           "type": "image",
           "html": "",
           "page": 1,
-          "imageId": "img-demo-fluxo-atendimento",
-          "caption": "Fluxo visual genérico de atendimento",
-          "sideHtml": "Use este espaço para escrever observações ao lado da imagem. Exemplo: quando a entrada já tiver histórico semelhante, registrar a ligação antes de responder.",
-          "width": 52
+          "imageId": "img-busca-global",
+          "caption": "Resultados com cor coerente",
+          "sideHtml": "Quando possível, os cards de resultado acompanham a cor do post-it/projeto para você bater o olho e localizar o assunto rapidamente.",
+          "width": 60
         },
         {
-          "id": "sd-anot-002-b04",
-          "type": "link",
-          "html": "",
-          "page": 1,
-          "url": "https://example.com/base-conhecimento",
-          "urlTitle": "Exemplo de link para base interna"
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Em andamento",
-      "tags": [
-        "suporte",
-        "imagem",
-        "fluxo"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "double",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 0
-    },
-    {
-      "id": "sd-anot-003-decisao-fila",
-      "date": "2026-05-11",
-      "title": "Registro de decisão sobre fila de suporte",
-      "blocks": [
-        {
-          "id": "sd-anot-003-b01",
-          "type": "h1",
-          "html": "Decisão da fila",
-          "page": 1
-        },
-        {
-          "id": "sd-anot-003-b02",
-          "type": "callout-decision",
-          "html": "Decisão: itens repetidos devem virar demanda ou artigo curto para evitar respostas manuais repetidas.",
-          "page": 1,
-          "cv": "decision"
-        },
-        {
-          "id": "sd-anot-003-b03",
-          "type": "numbered",
-          "html": "Agrupar chamados parecidos por sintoma",
-          "page": 1
-        },
-        {
-          "id": "sd-anot-003-b04",
-          "type": "numbered",
-          "html": "Criar resposta-base revisável",
-          "page": 1
-        },
-        {
-          "id": "sd-anot-003-b05",
-          "type": "numbered",
-          "html": "Abrir demanda quando houver ajuste de processo",
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "suporte",
-        "decisao",
-        "fluxo"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c3",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 2
-    },
-    {
-      "id": "sd-anot-004-revisao-sla",
-      "date": "2026-05-11",
-      "title": "Revisão semanal de SLA",
-      "blocks": [
-        {
-          "id": "sd-anot-004-b01",
-          "type": "h1",
-          "html": "Revisão semanal",
-          "page": 1
-        },
-        {
-          "id": "sd-anot-004-b02",
-          "type": "table",
-          "html": "<table><tbody><tr><td contenteditable=\"true\">Indicador</td><td contenteditable=\"true\">Meta</td><td contenteditable=\"true\">Situação</td></tr><tr><td contenteditable=\"true\">Chamados sem categoria</td><td contenteditable=\"true\">0</td><td contenteditable=\"true\">Em revisão</td></tr><tr><td contenteditable=\"true\">Pendências críticas</td><td contenteditable=\"true\">até 2</td><td contenteditable=\"true\">Controlado</td></tr><tr><td contenteditable=\"true\">Respostas antigas</td><td contenteditable=\"true\">revisar semanalmente</td><td contenteditable=\"true\">Pendente</td></tr></tbody></table>",
-          "page": 1
-        },
-        {
-          "id": "sd-anot-004-b03",
-          "type": "checklist",
-          "html": "Comparar volume da semana com a semana anterior",
-          "page": 1,
-          "done": false
-        },
-        {
-          "id": "sd-anot-004-b04",
-          "type": "checklist",
-          "html": "Separar melhoria que deve virar demanda",
-          "page": 1,
-          "done": false
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "sla",
-        "tabela",
-        "suporte"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c4",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 4
-    },
-    {
-      "id": "sd-dem-001-registro-recorrente",
-      "date": "2026-05-11",
-      "title": "Padronizar abertura de chamado recorrente",
-      "blocks": [
-        {
-          "id": "sd-dem-001-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-001-b02",
-          "type": "text",
-          "html": "Observações: Criar modelo curto para registrar chamados repetidos sem depender de memória.",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-001-b03",
+          "id": "org-anot-006-busca-inteligente-b04",
           "type": "h2",
-          "html": "Desenvolvimento",
+          "html": "Ela procura por",
           "page": 1
         },
         {
-          "id": "sd-dem-001-b04",
-          "type": "text",
-          "html": "Desenvolvimento: Ficha com sintoma, origem, ação executada e decisão final.",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-001-b05",
-          "type": "text",
-          "html": "OP: DEM-SD-001",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-001-b06",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-001-b07",
+          "id": "org-anot-006-busca-inteligente-b05",
           "type": "checklist",
-          "html": "Definir campos obrigatórios",
+          "html": "Título e texto dos blocos",
           "page": 1,
           "done": true
         },
         {
-          "id": "sd-dem-001-b08",
+          "id": "org-anot-006-busca-inteligente-b06",
           "type": "checklist",
-          "html": "Testar preenchimento com três exemplos fictícios",
+          "html": "Tags",
           "page": 1,
-          "done": false
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "demanda",
-        "chamados",
-        "modelo"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c5",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-001",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": -1
-    },
-    {
-      "id": "sd-dem-002-filtro-prioridade",
-      "date": "2026-05-11",
-      "title": "Criar filtro por prioridade no painel interno",
-      "blocks": [
-        {
-          "id": "sd-dem-002-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
+          "done": true
         },
         {
-          "id": "sd-dem-002-b02",
-          "type": "text",
-          "html": "Observações: O painel deve permitir localizar itens Alta, Média e Baixa sem leitura manual de todos os cartões.",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-002-b03",
-          "type": "table",
-          "html": "<table><tbody><tr><td contenteditable=\"true\">Prioridade</td><td contenteditable=\"true\">Uso esperado</td></tr><tr><td contenteditable=\"true\">Alta</td><td contenteditable=\"true\">Impacto imediato</td></tr><tr><td contenteditable=\"true\">Média</td><td contenteditable=\"true\">Acompanhamento normal</td></tr><tr><td contenteditable=\"true\">Baixa</td><td contenteditable=\"true\">Melhoria ou organização</td></tr></tbody></table>",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-002-b04",
+          "id": "org-anot-006-busca-inteligente-b07",
           "type": "checklist",
-          "html": "Validar nomes dos filtros",
+          "html": "Projeto",
           "page": 1,
-          "done": false
-        }
-      ],
-      "priority": "Alta",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "prioridade",
-        "painel"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c1",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-002",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 3
-    },
-    {
-      "id": "sd-dem-003-respostas-frequentes",
-      "date": "2026-05-11",
-      "title": "Modelo de resposta para dúvidas frequentes",
-      "blocks": [
-        {
-          "id": "sd-dem-003-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
+          "done": true
         },
         {
-          "id": "sd-dem-003-b02",
-          "type": "text",
-          "html": "Observações: Criar respostas-base curtas para dúvidas comuns, sem parecer texto automático.",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-003-b03",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-003-b04",
+          "id": "org-anot-006-busca-inteligente-b08",
           "type": "checklist",
-          "html": "Separar abertura, orientação e encerramento",
+          "html": "Data e data em formato brasileiro",
           "page": 1,
-          "done": false
+          "done": true
         },
         {
-          "id": "sd-dem-003-b05",
+          "id": "org-anot-006-busca-inteligente-b09",
           "type": "checklist",
-          "html": "Criar campo para adaptação manual",
+          "html": "ID de demanda ou incidente, como DEM-SD-004 e INC-DOC-002",
           "page": 1,
-          "done": false
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "resposta",
-        "wfd"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c2",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-003",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 5
-    },
-    {
-      "id": "sd-dem-004-conferencia-concluidos",
-      "date": "2026-05-11",
-      "title": "Conferência de chamados concluídos",
-      "blocks": [
-        {
-          "id": "sd-dem-004-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
+          "done": true
         },
         {
-          "id": "sd-dem-004-b02",
-          "type": "text",
-          "html": "Observações: Revisão concluída dos chamados fechados na semana anterior.",
-          "page": 1
-        },
-        {
-          "id": "sd-dem-004-b03",
+          "id": "org-anot-006-busca-inteligente-b10",
           "type": "callout-action",
-          "html": "Ação final: manter conferência semanal simples e objetiva.",
+          "html": "Teste agora: busque por “localStorage”, “Kanban”, “backup” ou “DEM-DOC-004”.",
           "page": 1,
           "cv": "action"
-        },
-        {
-          "id": "sd-dem-004-b04",
-          "type": "checklist",
-          "html": "Arquivar itens sem pendência",
-          "page": 1,
-          "done": true
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Concluída",
-      "tags": [
-        "concluido",
-        "suporte"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c3",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-004",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": -3
-    },
-    {
-      "id": "sd-inc-001-relatorio-branco",
-      "date": "2026-05-11",
-      "title": "Relatório não abriu após atualização local",
-      "blocks": [
-        {
-          "id": "sd-inc-001-b01",
-          "type": "h1",
-          "html": "Causa do Incidente",
-          "page": 1
-        },
-        {
-          "id": "sd-inc-001-b02",
-          "type": "callout-problem",
-          "html": "Causa do Incidente: Relatório interno carregou em branco após atualização local em ambiente de teste.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "sd-inc-001-b03",
-          "type": "h2",
-          "html": "Solução",
-          "page": 1
-        },
-        {
-          "id": "sd-inc-001-b04",
-          "type": "callout-action",
-          "html": "Solução: Validar cache, permissões e retorno da consulta antes de liberar correção.",
-          "page": 1,
-          "cv": "action"
-        },
-        {
-          "id": "sd-inc-001-b05",
-          "type": "checklist",
-          "html": "Reproduzir em ambiente controlado",
-          "page": 1,
-          "done": true
-        },
-        {
-          "id": "sd-inc-001-b06",
-          "type": "checklist",
-          "html": "Confirmar correção com utilizador fictício",
-          "page": 1,
-          "done": false
         }
       ],
       "priority": "Alta",
       "status": "Em andamento",
       "tags": [
-        "incidente",
-        "relatorio",
-        "suporte"
+        "tutorial",
+        "busca",
+        "filtro"
       ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c4",
-      "tipo": "Incidente",
-      "baseType": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-001",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 1
-    },
-    {
-      "id": "aut-anot-001-ideias",
-      "date": "2026-05-11",
-      "title": "Ideias para automação de rotina",
-      "blocks": [
-        {
-          "id": "aut-anot-001-b01",
-          "type": "h1",
-          "html": "Ideias rápidas",
-          "page": 1
-        },
-        {
-          "id": "aut-anot-001-b02",
-          "type": "bullet",
-          "html": "Agrupar arquivos por data de recebimento",
-          "page": 1
-        },
-        {
-          "id": "aut-anot-001-b03",
-          "type": "bullet",
-          "html": "Gerar resumo de conferência antes de exportar",
-          "page": 1
-        },
-        {
-          "id": "aut-anot-001-b04",
-          "type": "bullet",
-          "html": "Avisar quando um campo obrigatório estiver vazio",
-          "page": 1
-        },
-        {
-          "id": "aut-anot-001-b05",
-          "type": "freebox",
-          "html": "Caixa livre: arraste este bloco no editor para simular um lembrete visual estilo OneNote.",
-          "page": 1,
-          "x": 6,
-          "y": 18,
-          "w": 64,
-          "h": 90
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "automacao",
-        "ideias",
-        "freebox"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c5",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 0
-    },
-    {
-      "id": "aut-anot-002-validacao-script",
-      "date": "2026-05-11",
-      "title": "Checklist de validação de script",
-      "blocks": [
-        {
-          "id": "aut-anot-002-b01",
-          "type": "h1",
-          "html": "Validação antes de executar",
-          "page": 1
-        },
-        {
-          "id": "aut-anot-002-b02",
-          "type": "checklist",
-          "html": "Conferir pasta de origem",
-          "page": 1,
-          "done": false
-        },
-        {
-          "id": "aut-anot-002-b03",
-          "type": "checklist",
-          "html": "Conferir quantidade esperada de arquivos",
-          "page": 1,
-          "done": false
-        },
-        {
-          "id": "aut-anot-002-b04",
-          "type": "checklist",
-          "html": "Gerar log resumido",
-          "page": 1,
-          "done": false
-        },
-        {
-          "id": "aut-anot-002-b05",
-          "type": "callout-note",
-          "html": "Observação: manter mensagens curtas para facilitar leitura no painel.",
-          "page": 1,
-          "cv": "note"
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "checklist",
-        "script",
-        "automacao"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c1",
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c3",
       "tipo": "Anotação",
       "baseType": "Anotação",
       "vinculoTipo": null,
@@ -691,39 +701,147 @@
       "sampleDayOffset": 6
     },
     {
-      "id": "aut-anot-003-manual-auto",
-      "date": "2026-05-11",
-      "title": "Resumo de execução manual x automática",
+      "id": "org-anot-007-menus-recolhiveis",
+      "date": "2026-05-18",
+      "title": "Mais espaço: menus recolhíveis e Big Page",
       "blocks": [
         {
-          "id": "aut-anot-003-b01",
+          "id": "org-anot-007-menus-recolhiveis-b01",
           "type": "h1",
-          "html": "Comparativo",
+          "html": "A área de escrita precisa respirar",
           "page": 1
         },
         {
-          "id": "aut-anot-003-b02",
-          "type": "table",
-          "html": "<table><tbody><tr><td contenteditable=\"true\">Etapa</td><td contenteditable=\"true\">Manual</td><td contenteditable=\"true\">Automático</td></tr><tr><td contenteditable=\"true\">Separar arquivos</td><td contenteditable=\"true\">15 min</td><td contenteditable=\"true\">2 min</td></tr><tr><td contenteditable=\"true\">Validar nomes</td><td contenteditable=\"true\">risco de erro</td><td contenteditable=\"true\">regra fixa</td></tr><tr><td contenteditable=\"true\">Gerar resumo</td><td contenteditable=\"true\">manual</td><td contenteditable=\"true\">automático</td></tr></tbody></table>",
+          "id": "org-anot-007-menus-recolhiveis-b02",
+          "type": "text",
+          "html": "A agenda foi pensada para escrita e leitura. Por isso, o menu lateral esquerdo e o painel direito de pendências podem ser recolhidos quando você quiser foco.",
           "page": 1
         },
         {
-          "id": "aut-anot-003-b03",
+          "id": "org-anot-007-menus-recolhiveis-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-menus-bigpage",
+          "caption": "Painéis recolhidos liberam o centro",
+          "sideHtml": "Quando for escrever bastante, recolha os painéis e use o modo Big Page no editor para ocupar melhor a tela.",
+          "width": 58
+        },
+        {
+          "id": "org-anot-007-menus-recolhiveis-b04",
+          "type": "bullet",
+          "html": "Menu esquerdo: bom para navegar, trocar temas e acessar áreas do sistema.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-007-menus-recolhiveis-b05",
+          "type": "bullet",
+          "html": "Painel direito: útil para pendências e agendamentos, mas pode sair do caminho.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-007-menus-recolhiveis-b06",
+          "type": "bullet",
+          "html": "Big Page: ao editar, abre a escrita em destaque sobre a interface.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-007-menus-recolhiveis-b07",
+          "type": "callout-note",
+          "html": "Se sair do Big Page com alterações, o sistema pergunta se deseja salvar, descartar ou continuar editando. Sem alteração, fecha direto.",
+          "page": 1,
+          "cv": "note"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "tutorial",
+        "layout",
+        "big-page"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c5",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 7
+    },
+    {
+      "id": "org-anot-008-historico",
+      "date": "2026-05-19",
+      "title": "Histórico: concluído não é perdido",
+      "blocks": [
+        {
+          "id": "org-anot-008-historico-b01",
+          "type": "h1",
+          "html": "Histórico é memória, não lixeira",
+          "page": 1
+        },
+        {
+          "id": "org-anot-008-historico-b02",
+          "type": "text",
+          "html": "Quando um registro é concluído, ele deixa de disputar atenção nas pendências, mas continua fazendo parte da agenda. O histórico ajuda a consultar o que já foi feito.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-008-historico-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-historico",
+          "caption": "Ciclo entre pendência e histórico",
+          "sideHtml": "Concluir reduz ruído visual, mas a busca e a navegação por mês continuam encontrando o registro quando você precisar revisar.",
+          "width": 56
+        },
+        {
+          "id": "org-anot-008-historico-b04",
+          "type": "h2",
+          "html": "Diferença entre as formas de encontrar",
+          "page": 1
+        },
+        {
+          "id": "org-anot-008-historico-b05",
+          "type": "bullet",
+          "html": "Mês: bom para relembrar o que aconteceu em uma data.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-008-historico-b06",
+          "type": "bullet",
+          "html": "Post-its: bom para abrir rapidamente registros do mês visível.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-008-historico-b07",
+          "type": "bullet",
+          "html": "Busca: melhor caminho quando você lembra uma palavra, tag, projeto ou ID.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-008-historico-b08",
           "type": "callout-decision",
-          "html": "Decisão: automatizar apenas o que já tem regra clara.",
+          "html": "Use Concluída sem medo: o registro sai do fluxo ativo, mas continua documentado.",
           "page": 1,
           "cv": "decision"
         }
       ],
-      "priority": "Baixa",
-      "status": "Em andamento",
+      "priority": "Média",
+      "status": "Pendente",
       "tags": [
-        "tabela",
-        "comparativo",
-        "automacao"
+        "tutorial",
+        "historico",
+        "consulta"
       ],
-      "projectId": "proj-automacao",
-      "postitColor": "c2",
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c4",
       "tipo": "Anotação",
       "baseType": "Anotação",
       "vinculoTipo": null,
@@ -737,495 +855,78 @@
       "sampleDayOffset": 8
     },
     {
-      "id": "aut-anot-004-agendamento",
-      "date": "2026-05-11",
-      "title": "Revisão de automação amanhã",
+      "id": "org-anot-009-armazenamento-backup",
+      "date": "2026-05-20",
+      "title": "Armazenamento local, exportação e importação",
       "blocks": [
         {
-          "id": "aut-anot-004-b01",
+          "id": "org-anot-009-armazenamento-backup-b01",
           "type": "h1",
-          "html": "Revisão agendada",
+          "html": "Onde seus dados ficam",
           "page": 1
         },
         {
-          "id": "aut-anot-004-b02",
+          "id": "org-anot-009-armazenamento-backup-b02",
           "type": "text",
-          "html": "Conferir se o fluxo continua simples para uso diário e se o log ficou objetivo.",
+          "html": "A Agenda Caderno é offline. Ela salva os registros no armazenamento do navegador deste computador e usa recursos locais para manter a experiência simples: abrir o index.html e usar.",
           "page": 1
         },
         {
-          "id": "aut-anot-004-b03",
+          "id": "org-anot-009-armazenamento-backup-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-backup-storage",
+          "caption": "Fluxo local + JSON",
+          "sideHtml": "O backup exportado leva os registros e as imagens leves anexadas. Importar JSON restaura a base em outro momento.",
+          "width": 62
+        },
+        {
+          "id": "org-anot-009-armazenamento-backup-b04",
           "type": "checklist",
-          "html": "Revisar mensagens de erro",
+          "html": "Exportar JSON antes de grandes alterações",
           "page": 1,
           "done": false
         },
         {
-          "id": "aut-anot-004-b04",
+          "id": "org-anot-009-armazenamento-backup-b05",
           "type": "checklist",
-          "html": "Confirmar se o backup JSON continua importável",
+          "html": "Guardar uma cópia fora da pasta temporária do navegador",
           "page": 1,
           "done": false
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "agendamento",
-        "automacao"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c3",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": true,
-      "scheduledTime": "09:00",
-      "reminderEnabled": true,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 1
-    },
-    {
-      "id": "aut-dem-001-pacote-diario",
-      "date": "2026-05-11",
-      "title": "Gerar pacote diário de arquivos processados",
-      "blocks": [
-        {
-          "id": "aut-dem-001-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
         },
         {
-          "id": "aut-dem-001-b02",
-          "type": "text",
-          "html": "Observações: Ao final do processamento, gerar uma pasta única com resumo, arquivos aprovados e rejeitados.",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-001-b03",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-001-b04",
+          "id": "org-anot-009-armazenamento-backup-b06",
           "type": "checklist",
-          "html": "Definir nome padrão do pacote",
-          "page": 1,
-          "done": true
-        },
-        {
-          "id": "aut-dem-001-b05",
-          "type": "checklist",
-          "html": "Salvar resumo em TXT simples",
+          "html": "Importar JSON para restaurar ou testar uma base demo",
           "page": 1,
           "done": false
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "demanda",
-        "pacote",
-        "automacao"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c4",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-005",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 2
-    },
-    {
-      "id": "aut-dem-002-validar-nomes",
-      "date": "2026-05-11",
-      "title": "Validar nomes de arquivos antes de exportar",
-      "blocks": [
-        {
-          "id": "aut-dem-002-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
         },
         {
-          "id": "aut-dem-002-b02",
-          "type": "text",
-          "html": "Observações: Evitar exportação quando o nome do arquivo não seguir o padrão mínimo.",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-002-b03",
-          "type": "table",
-          "html": "<table><tbody><tr><td contenteditable=\"true\">Regra</td><td contenteditable=\"true\">Exemplo</td></tr><tr><td contenteditable=\"true\">Ano e mês</td><td contenteditable=\"true\">2026-05</td></tr><tr><td contenteditable=\"true\">Tipo</td><td contenteditable=\"true\">DEMANDA</td></tr><tr><td contenteditable=\"true\">Sequência</td><td contenteditable=\"true\">0001</td></tr></tbody></table>",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-002-b04",
+          "id": "org-anot-009-armazenamento-backup-b07",
           "type": "checklist",
-          "html": "Criar mensagem objetiva quando falhar",
+          "html": "Evitar limpar dados do navegador sem backup recente",
           "page": 1,
           "done": false
-        }
-      ],
-      "priority": "Alta",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "validacao",
-        "arquivo"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c5",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-006",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 10
-    },
-    {
-      "id": "aut-dem-003-log-resumido",
-      "date": "2026-05-11",
-      "title": "Criar log resumido para processamento",
-      "blocks": [
-        {
-          "id": "aut-dem-003-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
         },
         {
-          "id": "aut-dem-003-b02",
-          "type": "text",
-          "html": "Observações: O log deve mostrar quantidade processada, rejeitada e motivo principal.",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-003-b03",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-003-b04",
-          "type": "bullet",
-          "html": "Resumo em TXT",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-003-b05",
-          "type": "bullet",
-          "html": "Mensagem curta para tela",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-003-b06",
-          "type": "bullet",
-          "html": "Base para histórico futuro",
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "log",
-        "processamento"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c1",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-007",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 12
-    },
-    {
-      "id": "aut-dem-004-checklist-entrega",
-      "date": "2026-05-11",
-      "title": "Automatizar checklist de entrega",
-      "blocks": [
-        {
-          "id": "aut-dem-004-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-004-b02",
-          "type": "text",
-          "html": "Observações: Checklist automatizado para lembrar conferências antes de enviar pacote.",
-          "page": 1
-        },
-        {
-          "id": "aut-dem-004-b03",
-          "type": "checklist",
-          "html": "Validar campos obrigatórios",
-          "page": 1,
-          "done": true
-        },
-        {
-          "id": "aut-dem-004-b04",
-          "type": "checklist",
-          "html": "Gerar resumo final",
-          "page": 1,
-          "done": true
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Concluída",
-      "tags": [
-        "concluido",
-        "automacao"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c2",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-008",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": -5
-    },
-    {
-      "id": "aut-inc-001-exportacao-travada",
-      "date": "2026-05-11",
-      "title": "Exportação ficou travada em lote pequeno",
-      "blocks": [
-        {
-          "id": "aut-inc-001-b01",
-          "type": "h1",
-          "html": "Causa do Incidente",
-          "page": 1
-        },
-        {
-          "id": "aut-inc-001-b02",
+          "id": "org-anot-009-armazenamento-backup-b08",
           "type": "callout-problem",
-          "html": "Causa do Incidente: Exportação parou quando o lote tinha poucos registros e um item sem categoria.",
+          "html": "Atenção: limpar dados do navegador, trocar de perfil ou usar outro computador pode fazer a agenda parecer vazia se você não tiver exportado um JSON.",
           "page": 1,
           "cv": "problem"
-        },
-        {
-          "id": "aut-inc-001-b03",
-          "type": "h2",
-          "html": "Ajustes Realizados",
-          "page": 1
-        },
-        {
-          "id": "aut-inc-001-b04",
-          "type": "callout-decision",
-          "html": "Ajustes Realizados: Adicionada validação antes de montar o pacote final.",
-          "page": 1,
-          "cv": "decision"
-        },
-        {
-          "id": "aut-inc-001-b05",
-          "type": "checklist",
-          "html": "Testar lote pequeno",
-          "page": 1,
-          "done": true
-        },
-        {
-          "id": "aut-inc-001-b06",
-          "type": "checklist",
-          "html": "Validar mensagem para usuário",
-          "page": 1,
-          "done": false
         }
       ],
       "priority": "Alta",
-      "status": "Em andamento",
-      "tags": [
-        "incidente",
-        "exportacao",
-        "automacao"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c3",
-      "tipo": "Incidente",
-      "baseType": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-002",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": -1
-    },
-    {
-      "id": "doc-anot-001-indice",
-      "date": "2026-05-11",
-      "title": "Índice da base de conhecimento",
-      "blocks": [
-        {
-          "id": "doc-anot-001-b01",
-          "type": "h1",
-          "html": "Índice rápido",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-001-b02",
-          "type": "numbered",
-          "html": "Como abrir uma anotação",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-001-b03",
-          "type": "numbered",
-          "html": "Como transformar registro em demanda",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-001-b04",
-          "type": "numbered",
-          "html": "Como usar checklist e tabela",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-001-b05",
-          "type": "numbered",
-          "html": "Como exportar backup JSON",
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "documentacao",
-        "indice"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c4",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 0
-    },
-    {
-      "id": "doc-anot-002-editor",
-      "date": "2026-05-11",
-      "title": "Guia de uso do editor avançado",
-      "blocks": [
-        {
-          "id": "doc-anot-002-b01",
-          "type": "h1",
-          "html": "Editor avançado",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-002-b02",
-          "type": "text",
-          "html": "O editor aceita títulos, listas, checklist, tabela, imagens, links, observações e caixas livres.",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-002-b03",
-          "type": "callout-note",
-          "html": "Observação: use blocos curtos para facilitar leitura no modo Big Page.",
-          "page": 1,
-          "cv": "note"
-        },
-        {
-          "id": "doc-anot-002-b04",
-          "type": "freebox",
-          "html": "Dica visual: esta caixa livre pode ser arrastada e redimensionada dentro do editor.",
-          "page": 1,
-          "x": 8,
-          "y": 22,
-          "w": 58,
-          "h": 110
-        }
-      ],
-      "priority": "Média",
       "status": "Pendente",
       "tags": [
-        "editor",
-        "guia",
-        "one-note"
+        "tutorial",
+        "backup",
+        "localstorage",
+        "importacao"
       ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c5",
-      "tipo": "Anotação",
-      "baseType": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "double",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 3
-    },
-    {
-      "id": "doc-anot-003-revisao-conteudo",
-      "date": "2026-05-11",
-      "title": "Tabela de revisão de conteúdos publicados",
-      "blocks": [
-        {
-          "id": "doc-anot-003-b01",
-          "type": "h1",
-          "html": "Revisão de conteúdo",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-003-b02",
-          "type": "table",
-          "html": "<table><tbody><tr><td contenteditable=\"true\">Conteúdo</td><td contenteditable=\"true\">Responsável fictício</td><td contenteditable=\"true\">Status</td></tr><tr><td contenteditable=\"true\">Guia de chamados</td><td contenteditable=\"true\">Equipe TI</td><td contenteditable=\"true\">Revisar</td></tr><tr><td contenteditable=\"true\">Modelo de demanda</td><td contenteditable=\"true\">Equipe TI</td><td contenteditable=\"true\">Ok</td></tr><tr><td contenteditable=\"true\">Backup JSON</td><td contenteditable=\"true\">Equipe TI</td><td contenteditable=\"true\">Pendente</td></tr></tbody></table>",
-          "page": 1
-        },
-        {
-          "id": "doc-anot-003-b03",
-          "type": "checklist",
-          "html": "Atualizar exemplos sem dados reais",
-          "page": 1,
-          "done": false
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Pendente",
-      "tags": [
-        "tabela",
-        "documentacao"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c1",
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c2",
       "tipo": "Anotação",
       "baseType": "Anotação",
       "vinculoTipo": null,
@@ -1239,48 +940,72 @@
       "sampleDayOffset": 9
     },
     {
-      "id": "doc-anot-004-backup-json",
-      "date": "2026-05-11",
-      "title": "Notas sobre backup JSON com imagem",
+      "id": "org-anot-010-projetos-percentuais",
+      "date": "2026-05-21",
+      "title": "Projetos: cores, filtros e percentuais",
       "blocks": [
         {
-          "id": "doc-anot-004-b01",
+          "id": "org-anot-010-projetos-percentuais-b01",
           "type": "h1",
-          "html": "Backup JSON",
+          "html": "Projetos agrupam o que pertence ao mesmo contexto",
           "page": 1
         },
         {
-          "id": "doc-anot-004-b02",
+          "id": "org-anot-010-projetos-percentuais-b02",
           "type": "text",
-          "html": "Este exemplo mostra que uma imagem anexada pode viajar junto no backup como texto compactado em base64.",
+          "html": "Um projeto reúne anotações, demandas e incidentes. Isso ajuda a filtrar, entender progresso e manter assuntos parecidos próximos.",
           "page": 1
         },
         {
-          "id": "doc-anot-004-b03",
+          "id": "org-anot-010-projetos-percentuais-b03",
           "type": "image",
           "html": "",
           "page": 1,
-          "imageId": "img-demo-json-backup",
-          "caption": "Imagem genérica sobre backup em JSON",
-          "sideHtml": "Ao exportar a agenda, os anexos usados nas anotações entram no campo resources do JSON. Assim o backup continua offline e portátil.",
-          "width": 48
+          "imageId": "img-projetos-percentual",
+          "caption": "Projetos com barra de progresso",
+          "sideHtml": "O percentual é uma leitura simples do conjunto: quanto do que está vinculado ao projeto já está concluído.",
+          "width": 58
         },
         {
-          "id": "doc-anot-004-b04",
-          "type": "checklist",
-          "html": "Exportar backup de teste",
+          "id": "org-anot-010-projetos-percentuais-b04",
+          "type": "bullet",
+          "html": "Cor do projeto: ajuda a reconhecer o contexto nos cards e filtros.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-010-projetos-percentuais-b05",
+          "type": "bullet",
+          "html": "Filtro por projeto: reduz ruído quando você quer focar em uma frente.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-010-projetos-percentuais-b06",
+          "type": "bullet",
+          "html": "Percentual: cresce conforme registros do projeto passam para Concluída.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-010-projetos-percentuais-b07",
+          "type": "bullet",
+          "html": "Kanban por projeto: mostra gargalos sem misturar assuntos.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-010-projetos-percentuais-b08",
+          "type": "callout-action",
+          "html": "Use poucos projetos e bons nomes. Projeto demais vira gaveta; projeto de menos vira bagunça.",
           "page": 1,
-          "done": false
+          "cv": "action"
         }
       ],
       "priority": "Média",
-      "status": "Pendente",
+      "status": "Em andamento",
       "tags": [
-        "backup",
-        "json",
-        "imagem"
+        "tutorial",
+        "projetos",
+        "percentual"
       ],
-      "projectId": "proj-documentacao",
+      "projectId": "proj-organizacao-agenda",
       "postitColor": "c2",
       "tipo": "Anotação",
       "baseType": "Anotação",
@@ -1289,121 +1014,109 @@
       "isScheduled": false,
       "scheduledTime": "",
       "reminderEnabled": false,
-      "sheetLayout": "double",
+      "sheetLayout": "single",
       "createdAt": "2026-05-01T08:00:00+00:00",
       "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 14
+      "sampleDayOffset": 10
     },
     {
-      "id": "doc-dem-001-procedimento-demanda",
-      "date": "2026-05-11",
-      "title": "Atualizar procedimento de abertura de demanda",
+      "id": "doc-anot-011-editor-avancado",
+      "date": "2026-05-22",
+      "title": "Editor avançado: blocos para escrever melhor",
       "blocks": [
         {
-          "id": "doc-dem-001-b01",
+          "id": "doc-anot-011-editor-avancado-b01",
           "type": "h1",
-          "html": "Observações",
+          "html": "Um editor por blocos",
           "page": 1
         },
         {
-          "id": "doc-dem-001-b02",
+          "id": "doc-anot-011-editor-avancado-b02",
           "type": "text",
-          "html": "Observações: Explicar quando uma anotação simples deve virar demanda acompanhável no Kanban.",
+          "html": "O editor permite misturar formatos em um mesmo registro. A graça é usar o bloco certo para cada ideia, sem transformar tudo em texto corrido.",
           "page": 1
         },
         {
-          "id": "doc-dem-001-b03",
+          "id": "doc-anot-011-editor-avancado-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-editor-blocos",
+          "caption": "Blocos disponíveis no editor",
+          "sideHtml": "A imagem resume possibilidades: títulos, listas, checklist, chamadas, tabela, link, caixa livre e imagem.",
+          "width": 58
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b04",
           "type": "h2",
-          "html": "Desenvolvimento",
+          "html": "Exemplo prático",
           "page": 1
         },
         {
-          "id": "doc-dem-001-b04",
+          "id": "doc-anot-011-editor-avancado-b05",
           "type": "checklist",
-          "html": "Criar critérios objetivos",
+          "html": "Usar H1 para o assunto principal",
           "page": 1,
           "done": true
         },
         {
-          "id": "doc-dem-001-b05",
+          "id": "doc-anot-011-editor-avancado-b06",
           "type": "checklist",
-          "html": "Inserir exemplo fictício",
+          "html": "Usar H2 para separar etapas",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b07",
+          "type": "checklist",
+          "html": "Usar checklist para tarefas conferíveis",
           "page": 1,
           "done": false
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b08",
+          "type": "separator",
+          "html": "",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b09",
+          "type": "table",
+          "html": "<table><thead><tr><th>Bloco</th><th>Quando usar</th><th>Exemplo</th></tr></thead><tbody><tr><td>Callout</td><td>Destaques rápidos</td><td>Atenção, decisão, ação</td></tr><tr><td>Tabela</td><td>Comparar itens</td><td>Status de validação</td></tr><tr><td>Imagem</td><td>Evidência visual</td><td>Print ou diagrama leve</td></tr></tbody></table>",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b10",
+          "type": "link",
+          "html": "",
+          "page": 1,
+          "url": "https://example.com/guia-interno",
+          "urlTitle": "Exemplo de link genérico para manual interno"
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b11",
+          "type": "freebox",
+          "html": "Caixa livre: use para um lembrete visual solto, como um aviso no canto da área de escrita.",
+          "page": 1,
+          "x": 4,
+          "y": 14,
+          "w": 74,
+          "h": 96
         }
       ],
       "priority": "Média",
-      "status": "Em andamento",
+      "status": "Concluída",
       "tags": [
-        "demanda",
-        "procedimento",
-        "kanban"
+        "tutorial",
+        "editor",
+        "blocos"
       ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c3",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-009",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": 1
-    },
-    {
-      "id": "doc-dem-002-modelo-incidente",
-      "date": "2026-05-11",
-      "title": "Montar modelo de incidente para treinamento",
-      "blocks": [
-        {
-          "id": "doc-dem-002-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "doc-dem-002-b02",
-          "type": "text",
-          "html": "Observações: Criar exemplo de incidente com causa, solução, ajustes e evidências, sem dados reais.",
-          "page": 1
-        },
-        {
-          "id": "doc-dem-002-b03",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "doc-dem-002-b04",
-          "type": "checklist",
-          "html": "Separar causa e solução",
-          "page": 1,
-          "done": false
-        },
-        {
-          "id": "doc-dem-002-b05",
-          "type": "checklist",
-          "html": "Adicionar campos com espaço após dois-pontos",
-          "page": 1,
-          "done": false
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "incidente",
-        "treinamento"
-      ],
-      "projectId": "proj-documentacao",
+      "projectId": "proj-documentacao-tecnica",
       "postitColor": "c4",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-010",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
       "isScheduled": false,
       "scheduledTime": "",
       "reminderEnabled": false,
@@ -1413,42 +1126,365 @@
       "sampleDayOffset": 11
     },
     {
-      "id": "doc-dem-003-tags-busca",
-      "date": "2026-05-11",
-      "title": "Revisar tags e padrões de busca",
+      "id": "sd-anot-012-revisao-amanha",
+      "date": "2026-05-12",
+      "title": "Agendamento: revisão rápida dos chamados amanhã",
       "blocks": [
         {
-          "id": "doc-dem-003-b01",
+          "id": "sd-anot-012-revisao-amanha-b01",
           "type": "h1",
-          "html": "Observações",
+          "html": "Amanhã às 09:00: revisão de fila",
           "page": 1
         },
         {
-          "id": "doc-dem-003-b02",
+          "id": "sd-anot-012-revisao-amanha-b02",
           "type": "text",
-          "html": "Observações: Garantir que título, texto, tags, projeto, data e ID possam ser encontrados pela busca.",
+          "html": "Este é o segundo agendamento ativo da base. Ele simula uma rotina útil: começar o dia olhando chamados, pendências e demandas em andamento.",
           "page": 1
         },
         {
-          "id": "doc-dem-003-b03",
-          "type": "table",
-          "html": "<table><tbody><tr><td contenteditable=\"true\">Campo</td><td contenteditable=\"true\">Exemplo</td></tr><tr><td contenteditable=\"true\">Tag</td><td contenteditable=\"true\">backup</td></tr><tr><td contenteditable=\"true\">Projeto</td><td contenteditable=\"true\">Documentação Técnica</td></tr><tr><td contenteditable=\"true\">ID</td><td contenteditable=\"true\">DEM-2026-011</td></tr></tbody></table>",
+          "id": "sd-anot-012-revisao-amanha-b03",
+          "type": "h2",
+          "html": "Roteiro de 10 minutos",
           "page": 1
+        },
+        {
+          "id": "sd-anot-012-revisao-amanha-b04",
+          "type": "numbered",
+          "html": "Abrir Pendências e ver o que está vencendo.",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-012-revisao-amanha-b05",
+          "type": "numbered",
+          "html": "Conferir o Kanban do projeto Service Desk & Chamados.",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-012-revisao-amanha-b06",
+          "type": "numbered",
+          "html": "Buscar por IDs prioritários ou tags críticas.",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-012-revisao-amanha-b07",
+          "type": "numbered",
+          "html": "Atualizar status e deixar a próxima ação escrita.",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-012-revisao-amanha-b08",
+          "type": "callout-note",
+          "html": "A agenda não precisa apitar para tudo. Use lembretes para poucos compromissos realmente importantes.",
+          "page": 1,
+          "cv": "note"
         }
       ],
-      "priority": "Baixa",
+      "priority": "Média",
       "status": "Pendente",
       "tags": [
-        "demanda",
-        "busca",
-        "tags"
+        "tutorial",
+        "agendamento",
+        "service-desk"
       ],
-      "projectId": "proj-documentacao",
+      "projectId": "proj-service-desk",
       "postitColor": "c5",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": true,
+      "scheduledTime": "09:00",
+      "reminderEnabled": true,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 1
+    },
+    {
+      "id": "org-dem-001-pendencias",
+      "date": "2026-05-23",
+      "title": "Pendências: como decidir o que aparece no painel",
+      "blocks": [
+        {
+          "id": "org-dem-001-pendencias-b01",
+          "type": "h1",
+          "html": "Pendências sem virar poluição",
+          "page": 1
+        },
+        {
+          "id": "org-dem-001-pendencias-b02",
+          "type": "text",
+          "html": "O painel de pendências existe para mostrar o que ainda precisa de ação. Ele combina status, prioridade, prazo, projeto e checklist para orientar o foco.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-001-pendencias-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-pendencias-logica",
+          "caption": "Lógica das pendências",
+          "sideHtml": "Registros não concluídos aparecem; atrasados e alta prioridade chamam mais atenção; projeto ajuda a entender o contexto.",
+          "width": 58
+        },
+        {
+          "id": "org-dem-001-pendencias-b04",
+          "type": "checklist",
+          "html": "Manter pendência só quando existe próxima ação clara",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-001-pendencias-b05",
+          "type": "checklist",
+          "html": "Evitar criar dez itens quando uma demanda com checklist resolve",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-001-pendencias-b06",
+          "type": "checklist",
+          "html": "Concluir quando não houver mais ação pendente",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-001-pendencias-b07",
+          "type": "callout-priority",
+          "html": "Se tudo é urgente, nada é urgente. Use prioridade Alta apenas quando o atraso ou impacto realmente justificar.",
+          "page": 1,
+          "cv": "priority"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "pendencias",
+        "prioridade"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c4",
       "tipo": "Demanda",
       "baseType": "Demanda",
       "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-011",
+      "vinculoId": "DEM-AG-001",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 12
+    },
+    {
+      "id": "org-dem-002-projetos-na-pratica",
+      "date": "2026-05-24",
+      "title": "Projetos na prática: agrupar sem complicar",
+      "blocks": [
+        {
+          "id": "org-dem-002-projetos-na-pratica-b01",
+          "type": "h1",
+          "html": "Como usar projetos no dia a dia",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b02",
+          "type": "text",
+          "html": "Ao criar um registro, vincule ao projeto mais coerente. Isso permite filtrar, medir progresso e ler a história daquela frente sem misturar assuntos.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b03",
+          "type": "h2",
+          "html": "O que compõe a lógica",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b04",
+          "type": "bullet",
+          "html": "Nome claro: diz o assunto sem precisar abrir todos os registros.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b05",
+          "type": "bullet",
+          "html": "Cor: cria associação visual nos cards e nos post-its.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b06",
+          "type": "bullet",
+          "html": "Status dos registros: alimenta percentual e Kanban.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b07",
+          "type": "bullet",
+          "html": "Tipos misturados: anotação explica, demanda executa, incidente registra problema.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-002-projetos-na-pratica-b08",
+          "type": "callout-action",
+          "html": "Nesta demo há só 3 projetos para mostrar que uma agenda boa não precisa de muitas gavetas.",
+          "page": 1,
+          "cv": "action"
+        }
+      ],
+      "priority": "Média",
+      "status": "Em andamento",
+      "tags": [
+        "tutorial",
+        "projetos",
+        "filtros"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c2",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-AG-002",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 13
+    },
+    {
+      "id": "sd-dem-003-kanban",
+      "date": "2026-05-25",
+      "title": "Kanban: fluxo simples para não perder etapas",
+      "blocks": [
+        {
+          "id": "sd-dem-003-kanban-b01",
+          "type": "h1",
+          "html": "Kanban é fluxo, não depósito",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-003-kanban-b02",
+          "type": "text",
+          "html": "O Kanban usa os status da agenda: Pendente aparece como A fazer, Em andamento mostra o que está sendo tratado e Concluída fecha o ciclo.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-003-kanban-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-kanban-fluxo",
+          "caption": "Três colunas e poucos cartões em andamento",
+          "sideHtml": "Arraste cartões entre colunas para mudar status. Clicar no card abre o registro para ler ou editar detalhes.",
+          "width": 60
+        },
+        {
+          "id": "sd-dem-003-kanban-b04",
+          "type": "checklist",
+          "html": "Deixar claro o próximo passo antes de mover para Em andamento",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "sd-dem-003-kanban-b05",
+          "type": "checklist",
+          "html": "Não manter muitos cartões em andamento ao mesmo tempo",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "sd-dem-003-kanban-b06",
+          "type": "checklist",
+          "html": "Mover para Concluída quando a ação foi validada",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "sd-dem-003-kanban-b07",
+          "type": "callout-decision",
+          "html": "Bom uso: poucas tarefas em andamento e registros com contexto suficiente para retomar depois.",
+          "page": 1,
+          "cv": "decision"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Em andamento",
+      "tags": [
+        "tutorial",
+        "kanban",
+        "status"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c3",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-SD-003",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 14
+    },
+    {
+      "id": "doc-dem-004-tabela-excel",
+      "date": "2026-05-26",
+      "title": "Tabela estilo Excel: controle fictício de validação",
+      "blocks": [
+        {
+          "id": "doc-dem-004-tabela-excel-b01",
+          "type": "h1",
+          "html": "Tabela para controle rápido",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-004-tabela-excel-b02",
+          "type": "text",
+          "html": "Use tabela quando a informação precisa ser comparada em linhas e colunas. Ela é ótima para validação, conferência e pequenos controles internos.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-004-tabela-excel-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-tabela-excel",
+          "caption": "Mini tabela de validação",
+          "sideHtml": "A tabela não substitui uma planilha completa, mas resolve bem controles simples dentro da própria anotação.",
+          "width": 54
+        },
+        {
+          "id": "doc-dem-004-tabela-excel-b04",
+          "type": "table",
+          "html": "<table><thead><tr><th>Item</th><th>Status</th><th>Observação</th></tr></thead><tbody><tr><td>Backup exportado</td><td>Pendente</td><td>Gerar JSON antes do teste</td></tr><tr><td>Busca por ID</td><td>OK</td><td>Localizou DEM-SD-003</td></tr><tr><td>Imagem SVG</td><td>OK</td><td>Carregou via resources</td></tr><tr><td>Kanban</td><td>Pendente</td><td>Mover cartão após revisão</td></tr></tbody></table>",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-004-tabela-excel-b05",
+          "type": "callout-action",
+          "html": "Próxima ação: atualizar a tabela conforme cada validação for feita e concluir a demanda ao final.",
+          "page": 1,
+          "cv": "action"
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "tabela",
+        "validacao"
+      ],
+      "projectId": "proj-documentacao-tecnica",
+      "postitColor": "c2",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-DOC-004",
       "isScheduled": false,
       "scheduledTime": "",
       "reminderEnabled": false,
@@ -1458,114 +1494,78 @@
       "sampleDayOffset": 15
     },
     {
-      "id": "doc-dem-004-onboarding",
-      "date": "2026-05-11",
-      "title": "Publicar roteiro de onboarding interno",
+      "id": "sd-dem-005-checklist-chamado",
+      "date": "2026-05-27",
+      "title": "Checklist de chamado: do registro à conclusão",
       "blocks": [
         {
-          "id": "doc-dem-004-b01",
+          "id": "sd-dem-005-checklist-chamado-b01",
           "type": "h1",
-          "html": "Observações",
+          "html": "Um chamado bem escrito economiza tempo",
           "page": 1
         },
         {
-          "id": "doc-dem-004-b02",
+          "id": "sd-dem-005-checklist-chamado-b02",
           "type": "text",
-          "html": "Observações: Roteiro fictício concluído para demonstrar cartões finalizados no Kanban.",
+          "html": "Esta demanda mostra como transformar uma tarefa solta em um checklist objetivo. O ideal é que qualquer pessoa consiga entender o estado atual sem perguntar tudo de novo.",
           "page": 1
         },
         {
-          "id": "doc-dem-004-b03",
+          "id": "sd-dem-005-checklist-chamado-b03",
           "type": "checklist",
-          "html": "Criar sequência inicial",
+          "html": "Registrar o problema com uma frase direta",
           "page": 1,
           "done": true
         },
         {
-          "id": "doc-dem-004-b04",
+          "id": "sd-dem-005-checklist-chamado-b04",
           "type": "checklist",
-          "html": "Revisar texto final",
+          "html": "Informar impacto e urgência",
           "page": 1,
-          "done": true
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Concluída",
-      "tags": [
-        "concluido",
-        "onboarding"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c1",
-      "tipo": "Demanda",
-      "baseType": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-012",
-      "isScheduled": false,
-      "scheduledTime": "",
-      "reminderEnabled": false,
-      "sheetLayout": "single",
-      "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
-      "sampleDayOffset": -4
-    },
-    {
-      "id": "doc-inc-001-anexo",
-      "date": "2026-05-11",
-      "title": "Anexo não carregou em solicitação interna",
-      "blocks": [
-        {
-          "id": "doc-inc-001-b01",
-          "type": "h1",
-          "html": "Causa do Incidente",
-          "page": 1
+          "done": false
         },
         {
-          "id": "doc-inc-001-b02",
-          "type": "callout-problem",
-          "html": "Causa do Incidente: Um anexo pequeno não aparecia após salvar uma solicitação interna fictícia.",
+          "id": "sd-dem-005-checklist-chamado-b05",
+          "type": "checklist",
+          "html": "Descrever a próxima ação",
           "page": 1,
-          "cv": "problem"
+          "done": false
         },
         {
-          "id": "doc-inc-001-b03",
-          "type": "h2",
-          "html": "Solução",
-          "page": 1
-        },
-        {
-          "id": "doc-inc-001-b04",
-          "type": "callout-action",
-          "html": "Solução: Revalidar o carregamento do recurso e confirmar se o backup exportado inclui a imagem.",
+          "id": "sd-dem-005-checklist-chamado-b06",
+          "type": "checklist",
+          "html": "Mover status no Kanban quando começar o atendimento",
           "page": 1,
-          "cv": "action"
+          "done": false
         },
         {
-          "id": "doc-inc-001-b05",
-          "type": "h2",
-          "html": "Evidências",
-          "page": 1
+          "id": "sd-dem-005-checklist-chamado-b07",
+          "type": "checklist",
+          "html": "Concluir somente após validação",
+          "page": 1,
+          "done": false
         },
         {
-          "id": "doc-inc-001-b06",
-          "type": "text",
-          "html": "Evidências: registro fictício para demonstrar estrutura de incidente.",
-          "page": 1
+          "id": "sd-dem-005-checklist-chamado-b08",
+          "type": "callout-note",
+          "html": "Checklist bom não é grande: ele só deixa explícito o que precisa acontecer.",
+          "page": 1,
+          "cv": "note"
         }
       ],
       "priority": "Média",
       "status": "Pendente",
       "tags": [
-        "incidente",
-        "anexo",
-        "backup"
+        "tutorial",
+        "checklist",
+        "chamados"
       ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c2",
-      "tipo": "Incidente",
-      "baseType": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-003",
+      "projectId": "proj-service-desk",
+      "postitColor": "c5",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-SD-005",
       "isScheduled": false,
       "scheduledTime": "",
       "reminderEnabled": false,
@@ -1573,16 +1573,771 @@
       "createdAt": "2026-05-01T08:00:00+00:00",
       "updatedAt": "2026-05-01T08:00:00+00:00",
       "sampleDayOffset": 16
+    },
+    {
+      "id": "sd-dem-006-id-tags-busca",
+      "date": "2026-05-28",
+      "title": "IDs e tags: como facilitar a busca depois",
+      "blocks": [
+        {
+          "id": "sd-dem-006-id-tags-busca-b01",
+          "type": "h1",
+          "html": "Use IDs e tags como placas de localização",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-006-id-tags-busca-b02",
+          "type": "text",
+          "html": "Demandas e incidentes têm ID. Esse ID entra na busca e ajuda a recuperar um assunto mesmo quando você não lembra a data.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-006-id-tags-busca-b03",
+          "type": "bullet",
+          "html": "ID fictício desta demanda: DEM-SD-006.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-006-id-tags-busca-b04",
+          "type": "bullet",
+          "html": "Tags úteis: busca, checklist, backup, incidente, kanban, projeto.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-006-id-tags-busca-b05",
+          "type": "bullet",
+          "html": "Evite tags demais: três ou quatro boas costumam ser suficientes.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-006-id-tags-busca-b06",
+          "type": "callout-action",
+          "html": "Teste: procure por DEM-SD-006 na busca. Depois procure apenas por “tags”.",
+          "page": 1,
+          "cv": "action"
+        }
+      ],
+      "priority": "Média",
+      "status": "Em andamento",
+      "tags": [
+        "tutorial",
+        "tags",
+        "id",
+        "busca"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c3",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-SD-006",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 17
+    },
+    {
+      "id": "doc-dem-007-documentar-processo",
+      "date": "2026-05-29",
+      "title": "Documentar processo sem virar texto gigante",
+      "blocks": [
+        {
+          "id": "doc-dem-007-documentar-processo-b01",
+          "type": "h1",
+          "html": "Documentação leve",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-007-documentar-processo-b02",
+          "type": "text",
+          "html": "Documentar não é escrever tudo. É deixar o suficiente para outra pessoa entender o contexto, repetir o processo e evitar retrabalho.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-007-documentar-processo-b03",
+          "type": "numbered",
+          "html": "Comece com objetivo em uma frase.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-007-documentar-processo-b04",
+          "type": "numbered",
+          "html": "Liste passos em ordem.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-007-documentar-processo-b05",
+          "type": "numbered",
+          "html": "Use tabela quando houver comparação.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-007-documentar-processo-b06",
+          "type": "numbered",
+          "html": "Anexe imagem quando ela explicar mais rápido que texto.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-007-documentar-processo-b07",
+          "type": "callout-decision",
+          "html": "Concluída porque o modelo básico de documentação já foi demonstrado nesta base.",
+          "page": 1,
+          "cv": "decision"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "tutorial",
+        "documentacao",
+        "processo"
+      ],
+      "projectId": "proj-documentacao-tecnica",
+      "postitColor": "c2",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-DOC-007",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 18
+    },
+    {
+      "id": "org-dem-008-rotina-backup",
+      "date": "2026-05-30",
+      "title": "Rotina simples de backup semanal",
+      "blocks": [
+        {
+          "id": "org-dem-008-rotina-backup-b01",
+          "type": "h1",
+          "html": "Backup como hábito",
+          "page": 1
+        },
+        {
+          "id": "org-dem-008-rotina-backup-b02",
+          "type": "text",
+          "html": "O lembrete de backup ensina o recurso; esta demanda mostra a rotina recomendada para não depender só do armazenamento do navegador.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-008-rotina-backup-b03",
+          "type": "checklist",
+          "html": "Exportar JSON ao final de uma semana com muitas alterações",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-008-rotina-backup-b04",
+          "type": "checklist",
+          "html": "Guardar o arquivo em uma pasta própria de backups",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-008-rotina-backup-b05",
+          "type": "checklist",
+          "html": "Manter pelo menos duas versões recentes",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-008-rotina-backup-b06",
+          "type": "checklist",
+          "html": "Importar em ambiente de teste se quiser validar antes de substituir a base real",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-dem-008-rotina-backup-b07",
+          "type": "callout-priority",
+          "html": "Backup bom é aquele que você consegue encontrar quando precisa.",
+          "page": 1,
+          "cv": "priority"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "backup",
+        "rotina"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c2",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-AG-008",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 19
+    },
+    {
+      "id": "sd-dem-009-prioridade-prazo",
+      "date": "2026-05-09",
+      "title": "Prioridade e prazo: o que realmente muda",
+      "blocks": [
+        {
+          "id": "sd-dem-009-prioridade-prazo-b01",
+          "type": "h1",
+          "html": "Exemplo de registro atrasado",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-009-prioridade-prazo-b02",
+          "type": "text",
+          "html": "Esta é uma das duas pendências atrasadas da demo. Ela existe para mostrar como o painel destaca o que passou do prazo sem transformar toda a base em alerta vermelho.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-009-prioridade-prazo-b03",
+          "type": "bullet",
+          "html": "Status Pendente + data anterior a hoje = atraso.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-009-prioridade-prazo-b04",
+          "type": "bullet",
+          "html": "Prioridade Alta reforça que deve ser olhada primeiro.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-009-prioridade-prazo-b05",
+          "type": "bullet",
+          "html": "Ao concluir, sai das pendências ativas e passa a servir como histórico.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-009-prioridade-prazo-b06",
+          "type": "callout-action",
+          "html": "Ação fictícia: revisar a fila de chamados críticos e fechar o que já foi resolvido.",
+          "page": 1,
+          "cv": "action"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "prazo",
+        "prioridade"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c4",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-SD-009",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": -2
+    },
+    {
+      "id": "doc-dem-010-evidencia-imagem",
+      "date": "2026-05-31",
+      "title": "Quando usar imagem como evidência",
+      "blocks": [
+        {
+          "id": "doc-dem-010-evidencia-imagem-b01",
+          "type": "h1",
+          "html": "Imagem deve explicar algo",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-010-evidencia-imagem-b02",
+          "type": "text",
+          "html": "Na agenda, imagens são úteis para diagrama, print de evidência, fluxo ou comparação visual. Elas devem complementar o texto, não substituir uma descrição mínima.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-010-evidencia-imagem-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-editor-blocos",
+          "caption": "Imagem com legenda e texto lateral",
+          "sideHtml": "A legenda diz o que a imagem representa. O texto lateral explica a conclusão ou próxima ação.",
+          "width": 56
+        },
+        {
+          "id": "doc-dem-010-evidencia-imagem-b04",
+          "type": "checklist",
+          "html": "Inserir imagem apenas quando ela reduzir dúvida",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "doc-dem-010-evidencia-imagem-b05",
+          "type": "checklist",
+          "html": "Escrever legenda objetiva",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "doc-dem-010-evidencia-imagem-b06",
+          "type": "checklist",
+          "html": "Evitar imagens pesadas na base demo",
+          "page": 1,
+          "done": true
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "imagem",
+        "evidencia"
+      ],
+      "projectId": "proj-documentacao-tecnica",
+      "postitColor": "c3",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-DOC-010",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 20
+    },
+    {
+      "id": "org-dem-011-limpeza-visual",
+      "date": "2026-06-01",
+      "title": "Limpeza visual: menos registros, mais intenção",
+      "blocks": [
+        {
+          "id": "org-dem-011-limpeza-visual-b01",
+          "type": "h1",
+          "html": "A agenda não deve virar depósito",
+          "page": 1
+        },
+        {
+          "id": "org-dem-011-limpeza-visual-b02",
+          "type": "text",
+          "html": "Esta base tem poucos projetos e registros suficientes para ensinar. A mesma lógica vale para uso real: criar só o que ajuda a decidir, lembrar ou documentar.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-011-limpeza-visual-b03",
+          "type": "bullet",
+          "html": "Anotação: contexto, estudo, explicação ou memória.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-011-limpeza-visual-b04",
+          "type": "bullet",
+          "html": "Demanda: algo que precisa de ação, prazo ou acompanhamento.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-011-limpeza-visual-b05",
+          "type": "bullet",
+          "html": "Incidente: problema com causa, impacto e solução.",
+          "page": 1
+        },
+        {
+          "id": "org-dem-011-limpeza-visual-b06",
+          "type": "callout-decision",
+          "html": "Concluída porque a própria base demo já segue este princípio: rica, mas sem excesso.",
+          "page": 1,
+          "cv": "decision"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "tutorial",
+        "ux",
+        "organizacao"
+      ],
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c1",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-AG-011",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 21
+    },
+    {
+      "id": "sd-dem-012-fluxo-atendimento",
+      "date": "2026-06-02",
+      "title": "Fluxo fictício de atendimento no Service Desk",
+      "blocks": [
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b01",
+          "type": "h1",
+          "html": "Da entrada à conclusão",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b02",
+          "type": "text",
+          "html": "Esta demanda mostra uma sequência simples para registrar atendimento sem depender de sistemas externos dentro da demo.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b03",
+          "type": "numbered",
+          "html": "Registrar solicitação recebida.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b04",
+          "type": "numbered",
+          "html": "Classificar prioridade e projeto.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b05",
+          "type": "numbered",
+          "html": "Escrever próxima ação.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b06",
+          "type": "numbered",
+          "html": "Mover no Kanban conforme o andamento.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b07",
+          "type": "numbered",
+          "html": "Concluir e deixar histórico consultável.",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-012-fluxo-atendimento-b08",
+          "type": "callout-note",
+          "html": "Fluxo fictício, sem clientes reais e sem dados sensíveis.",
+          "page": 1,
+          "cv": "note"
+        }
+      ],
+      "priority": "Média",
+      "status": "Concluída",
+      "tags": [
+        "tutorial",
+        "service-desk",
+        "fluxo"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c5",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-SD-012",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 22
+    },
+    {
+      "id": "sd-inc-001-como-registrar",
+      "date": "2026-06-03",
+      "title": "Incidente modelo: como registrar causa, impacto e prevenção",
+      "blocks": [
+        {
+          "id": "sd-inc-001-como-registrar-b01",
+          "type": "h1",
+          "html": "Registro de incidente bem estruturado",
+          "page": 1
+        },
+        {
+          "id": "sd-inc-001-como-registrar-b02",
+          "type": "text",
+          "html": "Incidente não é só “deu erro”. Ele deve explicar o que aconteceu, qual foi o impacto, como foi resolvido e o que evita repetição.",
+          "page": 1
+        },
+        {
+          "id": "sd-inc-001-como-registrar-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-incidente-estrutura",
+          "caption": "Estrutura mínima de incidente",
+          "sideHtml": "Use esta sequência sempre que documentar um problema técnico ou falha de processo.",
+          "width": 58
+        },
+        {
+          "id": "sd-inc-001-como-registrar-b04",
+          "type": "callout-problem",
+          "html": "Causa do Incidente: configuração fictícia aplicada fora do horário planejado gerou comportamento inesperado em um painel interno.",
+          "page": 1,
+          "cv": "problem"
+        },
+        {
+          "id": "sd-inc-001-como-registrar-b05",
+          "type": "callout-priority",
+          "html": "Impacto: equipe precisou conferir manualmente alguns registros até a normalização.",
+          "page": 1,
+          "cv": "priority"
+        },
+        {
+          "id": "sd-inc-001-como-registrar-b06",
+          "type": "callout-action",
+          "html": "Solução: revisar configuração, validar com checklist e registrar evidência da correção.",
+          "page": 1,
+          "cv": "action"
+        },
+        {
+          "id": "sd-inc-001-como-registrar-b07",
+          "type": "callout-decision",
+          "html": "Prevenção: toda mudança semelhante deve virar demanda com checklist antes de ser aplicada.",
+          "page": 1,
+          "cv": "decision"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Em andamento",
+      "tags": [
+        "tutorial",
+        "incidente",
+        "modelo"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c4",
+      "tipo": "Incidente",
+      "baseType": "Incidente",
+      "vinculoTipo": "Incidente",
+      "vinculoId": "INC-SD-001",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 23
+    },
+    {
+      "id": "doc-inc-002-imagem-nao-carregou",
+      "date": "2026-06-04",
+      "title": "Incidente visual: imagem não carregou no registro",
+      "blocks": [
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b01",
+          "type": "h1",
+          "html": "Imagem ausente depois de importar",
+          "page": 1
+        },
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b02",
+          "type": "text",
+          "html": "Incidente fictício para ensinar como documentar um problema visual leve sem exagerar na complexidade.",
+          "page": 1
+        },
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b03",
+          "type": "callout-problem",
+          "html": "Causa do Incidente: o JSON foi importado sem o recurso da imagem em resources/images, então o bloco ficou sem anexo para carregar.",
+          "page": 1,
+          "cv": "problem"
+        },
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b04",
+          "type": "callout-priority",
+          "html": "Impacto: a anotação continuou legível, mas perdeu a evidência visual que ajudava a explicar o processo.",
+          "page": 1,
+          "cv": "priority"
+        },
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b05",
+          "type": "callout-action",
+          "html": "Solução: exportar novamente a base completa e confirmar que o backup informou imagens anexadas.",
+          "page": 1,
+          "cv": "action"
+        },
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b06",
+          "type": "checklist",
+          "html": "Conferir se a imagem aparece após importar",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "doc-inc-002-imagem-nao-carregou-b07",
+          "type": "checklist",
+          "html": "Evitar editar manualmente o JSON removendo resources",
+          "page": 1,
+          "done": true
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "incidente",
+        "imagem",
+        "backup"
+      ],
+      "projectId": "proj-documentacao-tecnica",
+      "postitColor": "c3",
+      "tipo": "Incidente",
+      "baseType": "Incidente",
+      "vinculoTipo": "Incidente",
+      "vinculoId": "INC-DOC-002",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 24
+    },
+    {
+      "id": "sd-inc-003-registro-duplicado",
+      "date": "2026-05-10",
+      "title": "Incidente de processo: registro duplicado no fluxo",
+      "blocks": [
+        {
+          "id": "sd-inc-003-registro-duplicado-b01",
+          "type": "h1",
+          "html": "Duplicidade no acompanhamento",
+          "page": 1
+        },
+        {
+          "id": "sd-inc-003-registro-duplicado-b02",
+          "type": "text",
+          "html": "Esta é a segunda e última ocorrência atrasada da demo. Ela mostra como registrar uma falha de processo simples, investigar e encerrar corretamente.",
+          "page": 1
+        },
+        {
+          "id": "sd-inc-003-registro-duplicado-b03",
+          "type": "callout-problem",
+          "html": "Causa do Incidente: a mesma solicitação fictícia foi registrada como anotação livre e depois como demanda, sem vincular o contexto.",
+          "page": 1,
+          "cv": "problem"
+        },
+        {
+          "id": "sd-inc-003-registro-duplicado-b04",
+          "type": "callout-priority",
+          "html": "Impacto: o Kanban indicou mais trabalho do que realmente existia e as pendências ficaram confusas.",
+          "page": 1,
+          "cv": "priority"
+        },
+        {
+          "id": "sd-inc-003-registro-duplicado-b05",
+          "type": "callout-action",
+          "html": "Ação corretiva: manter a demanda como item ativo, concluir a anotação duplicada e registrar a decisão no histórico.",
+          "page": 1,
+          "cv": "action"
+        },
+        {
+          "id": "sd-inc-003-registro-duplicado-b06",
+          "type": "callout-decision",
+          "html": "Prevenção: antes de criar novo registro, buscar por título, ID ou tag relacionada.",
+          "page": 1,
+          "cv": "decision"
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "tutorial",
+        "incidente",
+        "processo",
+        "duplicidade"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c5",
+      "tipo": "Incidente",
+      "baseType": "Incidente",
+      "vinculoTipo": "Incidente",
+      "vinculoId": "INC-SD-003",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": -1
     }
   ],
   "resources": {
-    "resources/images/img-demo-fluxo-atendimento": {
+    "resources/images/img-tutorial-tour": {
       "type": "image/svg+xml",
-      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+PHJlY3Qgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIzNjAiIHJ4PSIyOCIgZmlsbD0iI0ZDRjZGMSIvPjxyZWN0IHg9IjUyIiB5PSI2NCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI5NiIgcng9IjE4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjMwMCIgeT0iNjQiIHdpZHRoPSIxNjAiIGhlaWdodD0iOTYiIHJ4PSIxOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjZDk3NzA2IiBzdHJva2Utd2lkdGg9IjUiLz48cmVjdCB4PSI1NDgiIHk9IjY0IiB3aWR0aD0iMTYwIiBoZWlnaHQ9Ijk2IiByeD0iMTgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzE2YTM0YSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTIyMiAxMTIgSDI4NiIgc3Ryb2tlPSIjMTExMTExIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNzcgOTggbDE4IDE0IC0xOCAxNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTExMTExIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik00NzAgMTEyIEg1MzQiIHN0cm9rZT0iIzExMTExMSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNTI1IDk4IGwxOCAxNCAtMTggMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMTExMSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48dGV4dCB4PSIxMzIiIHk9IjEwMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExMTExIj5FbnRyYWRhPC90ZXh0Pjx0ZXh0IHg9IjEzMiIgeT0iMTMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiM1MjYwNmQiPnRyaWFnZW08L3RleHQ+PHRleHQgeD0iMzgwIiB5PSIxMDMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTExMSI+QW7DoWxpc2U8L3RleHQ+PHRleHQgeD0iMzgwIiB5PSIxMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzUyNjA2ZCI+cHJpb3JpZGFkZTwvdGV4dD48dGV4dCB4PSI2MjgiIHk9IjEwMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExMTExIj5SZWdpc3RybzwvdGV4dD48dGV4dCB4PSI2MjgiIHk9IjEzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNTI2MDZkIj5hw6fDo28gdG9tYWRhPC90ZXh0PjxyZWN0IHg9Ijg0IiB5PSIyMjIiIHdpZHRoPSI1OTIiIGhlaWdodD0iNjgiIHJ4PSIyMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjZDhjN2I1IiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIzODAiIHk9IjI1MSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExMTExIj5GbHV4byBzaW1wbGVzIGRlIGF0ZW5kaW1lbnRvPC90ZXh0Pjx0ZXh0IHg9IjM4MCIgeT0iMjc3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2YjViNGEiPmV4ZW1wbG8gZ2Vuw6lyaWNvIHBhcmEgZGVtb25zdHJhciBpbWFnZW0gYW5leGEgbm8gSlNPTjwvdGV4dD48L3N2Zz4="
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzdjM2FlZCIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPk1hcGEgZG8gc2lzdGVtYTwvdGV4dD4KPHRleHQgeD0iMTI4IiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzUyNjA2ZCI+bWVudSwgcG9zdC1pdHMsIHDDoWdpbmEgZSBwZW5kw6puY2lhcyBubyBtZXNtbyBmbHV4bzwvdGV4dD4KPHJlY3QgeD0iODgiIHk9IjE0MiIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNjIiIHI9IjgiIGZpbGw9IiM3YzNhZWQiLz48dGV4dCB4PSIxMzgiIHk9IjE2OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5NZW51IGVzcXVlcmRvPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIxODkiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjA5IiByPSI4IiBmaWxsPSIjMjU2M2ViIi8+PHRleHQgeD0iMTM4IiB5PSIyMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+w4FyZWEgZGUgZXNjcml0YTwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMjM2IiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjI1NiIgcj0iOCIgZmlsbD0iIzE2YTM0YSIvPjx0ZXh0IHg9IjEzOCIgeT0iMjYyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPlBhaW5lbCBkaXJlaXRvPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyODMiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMzAzIiByPSI4IiBmaWxsPSIjZDk3NzA2Ii8+PHRleHQgeD0iMTM4IiB5PSIzMDkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+UG9zdC1pdHM8L3RleHQ+Cjwvc3ZnPg=="
     },
-    "resources/images/img-demo-json-backup": {
+    "resources/images/img-temas-template": {
       "type": "image/svg+xml",
-      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+PHJlY3Qgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIzNjAiIHJ4PSIyOCIgZmlsbD0iIzExMTgyNyIvPjxyZWN0IHg9IjU4IiB5PSI0OCIgd2lkdGg9IjY0NCIgaGVpZ2h0PSIyNjQiIHJ4PSIyMiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45NiIvPjxyZWN0IHg9Ijg4IiB5PSI4NCIgd2lkdGg9IjIzOCIgaGVpZ2h0PSIxODgiIHJ4PSIxNiIgZmlsbD0iI0ZDRjZGMSIgc3Ryb2tlPSIjRjRERkNEIiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSIzNjYiIHk9Ijg0IiB3aWR0aD0iMzA2IiBoZWlnaHQ9IjE4OCIgcng9IjE2IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyNiIgcj0iMjIiIGZpbGw9IiMyNTYzZWIiLz48cmVjdCB4PSIxNjYiIHk9IjExMSIgd2lkdGg9IjEyNCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiM5NEEzQjgiLz48cmVjdCB4PSIxNjYiIHk9IjEzNSIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0iI0NCRDVFMSIvPjxyZWN0IHg9IjExMiIgeT0iMTgwIiB3aWR0aD0iMTc4IiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iI2Q5NzcwNiIvPjxyZWN0IHg9IjExMiIgeT0iMjEyIiB3aWR0aD0iMTI2IiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iIzE2YTM0YSIvPjx0ZXh0IHg9IjUxOSIgeT0iMTIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkltYWdlbSBubyBiYWNrdXA8L3RleHQ+PHRleHQgeD0iNTE5IiB5PSIxNTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzQ3NTU2OSI+byBhcnF1aXZvIEpTT04gZ3VhcmRhIG8gYW5leG88L3RleHQ+PHRleHQgeD0iNTE5IiB5PSIxODEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzQ3NTU2OSI+Y29tbyB0ZXh0byBiYXNlNjQ8L3RleHQ+PHBhdGggZD0iTTM4NSAyMjAgSDY1MyIgc3Ryb2tlPSIjQ0JENUUxIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzg1IDI0OCBINTkwIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjM4MCIgeT0iMzMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiNDQkQ1RTEiPkRlbW9uc3RyYcOnw6NvIGZpY3TDrWNpYSDCtyBzZW0gZGFkb3MgcmVhaXM8L3RleHQ+PC9zdmc+"
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzdjM2FlZCIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlRlbWFzIGUgdGVtcGxhdGVzPC90ZXh0Pgo8dGV4dCB4PSIxMjgiIHk9IjExMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNTI2MDZkIj5vIHBhZHLDo28gw6kgcHJvdGVnaWRvOyBwZXJzb25hbGl6ZSBwb3IgY8OzcGlhPC90ZXh0Pgo8cmVjdCB4PSI5MiIgeT0iMTQ2IiB3aWR0aD0iODIiIGhlaWdodD0iMTEwIiByeD0iMTYiIGZpbGw9IiM4YjVhMmIiIHN0cm9rZT0iIzk0YTNiOCIvPjxyZWN0IHg9IjEwNyIgeT0iMTY0IiB3aWR0aD0iNTIiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNzUiLz48cmVjdCB4PSIxMDciIHk9IjE4OCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjM2IiByeD0iOCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjM1Ii8+PHRleHQgeD0iMTMzIiB5PSIyNDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+Q291cm88L3RleHQ+PHJlY3QgeD0iMjIyIiB5PSIxNDYiIHdpZHRoPSI4MiIgaGVpZ2h0PSIxMTAiIHJ4PSIxNiIgZmlsbD0iIzI1NjNlYiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHJlY3QgeD0iMjM3IiB5PSIxNjQiIHdpZHRoPSI1MiIgaGVpZ2h0PSIxMCIgcng9IjUiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii43NSIvPjxyZWN0IHg9IjIzNyIgeT0iMTg4IiB3aWR0aD0iNTIiIGhlaWdodD0iMzYiIHJ4PSI4IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuMzUiLz48dGV4dCB4PSIyNjMiIHk9IjI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5TYWFTPC90ZXh0PjxyZWN0IHg9IjM1MiIgeT0iMTQ2IiB3aWR0aD0iODIiIGhlaWdodD0iMTEwIiByeD0iMTYiIGZpbGw9IiMxMTE4MjciIHN0cm9rZT0iIzk0YTNiOCIvPjxyZWN0IHg9IjM2NyIgeT0iMTY0IiB3aWR0aD0iNTIiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNzUiLz48cmVjdCB4PSIzNjciIHk9IjE4OCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjM2IiByeD0iOCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjM1Ii8+PHRleHQgeD0iMzkzIiB5PSIyNDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+R2xhc3M8L3RleHQ+PHJlY3QgeD0iNDgyIiB5PSIxNDYiIHdpZHRoPSI4MiIgaGVpZ2h0PSIxMTAiIHJ4PSIxNiIgZmlsbD0iI2Y0ZGZjZCIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHJlY3QgeD0iNDk3IiB5PSIxNjQiIHdpZHRoPSI1MiIgaGVpZ2h0PSIxMCIgcng9IjUiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii43NSIvPjxyZWN0IHg9IjQ5NyIgeT0iMTg4IiB3aWR0aD0iNTIiIGhlaWdodD0iMzYiIHJ4PSI4IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuMzUiLz48dGV4dCB4PSI1MjMiIHk9IjI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5DcmVhbTwvdGV4dD48cmVjdCB4PSI2MTIiIHk9IjE0NiIgd2lkdGg9IjgyIiBoZWlnaHQ9IjExMCIgcng9IjE2IiBmaWxsPSIjN2MzYWVkIiBzdHJva2U9IiM5NGEzYjgiLz48cmVjdCB4PSI2MjciIHk9IjE2NCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjc1Ii8+PHJlY3QgeD0iNjI3IiB5PSIxODgiIHdpZHRoPSI1MiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii4zNSIvPjx0ZXh0IHg9IjY1MyIgeT0iMjQyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkx1eG88L3RleHQ+PHJlY3QgeD0iODYiIHk9IjI3NCIgd2lkdGg9IjU4OCIgaGVpZ2h0PSIzNCIgcng9IjEyIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSIzODAiIHk9IjI5NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE1IiBmaWxsPSIjNDc1NTY5Ij5EdXBsaWNhciB0ZW1wbGF0ZSDihpIgZXNjb2xoZXIgw61jb25lIOKGkiBhanVzdGFyIGRlc2NyacOnw6NvIOKGkiBzYWx2YXIgY8OzcGlhPC90ZXh0Pgo8L3N2Zz4="
+    },
+    "resources/images/img-lista-temas": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iI2Q5NzcwNiIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkdhbGVyaWEgZGUgdGVtYXM8L3RleHQ+Cjx0ZXh0IHg9IjEyOCIgeT0iMTEyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM1MjYwNmQiPmNhZGEgdGVtYSBtdWRhIG8gY2xpbWEgc2VtIHRpcmFyIGEgbGVnaWJpbGlkYWRlPC90ZXh0Pgo8cmVjdCB4PSI5MiIgeT0iMTQ2IiB3aWR0aD0iODIiIGhlaWdodD0iMTEwIiByeD0iMTYiIGZpbGw9IiM4YjVhMmIiIHN0cm9rZT0iIzk0YTNiOCIvPjxyZWN0IHg9IjEwNyIgeT0iMTY0IiB3aWR0aD0iNTIiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNzUiLz48cmVjdCB4PSIxMDciIHk9IjE4OCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjM2IiByeD0iOCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjM1Ii8+PHRleHQgeD0iMTMzIiB5PSIyNDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+Q291cm88L3RleHQ+PHJlY3QgeD0iMjIyIiB5PSIxNDYiIHdpZHRoPSI4MiIgaGVpZ2h0PSIxMTAiIHJ4PSIxNiIgZmlsbD0iIzI1NjNlYiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHJlY3QgeD0iMjM3IiB5PSIxNjQiIHdpZHRoPSI1MiIgaGVpZ2h0PSIxMCIgcng9IjUiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii43NSIvPjxyZWN0IHg9IjIzNyIgeT0iMTg4IiB3aWR0aD0iNTIiIGhlaWdodD0iMzYiIHJ4PSI4IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuMzUiLz48dGV4dCB4PSIyNjMiIHk9IjI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5TYWFTPC90ZXh0PjxyZWN0IHg9IjM1MiIgeT0iMTQ2IiB3aWR0aD0iODIiIGhlaWdodD0iMTEwIiByeD0iMTYiIGZpbGw9IiMxMTE4MjciIHN0cm9rZT0iIzk0YTNiOCIvPjxyZWN0IHg9IjM2NyIgeT0iMTY0IiB3aWR0aD0iNTIiIGhlaWdodD0iMTAiIHJ4PSI1IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNzUiLz48cmVjdCB4PSIzNjciIHk9IjE4OCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjM2IiByeD0iOCIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjM1Ii8+PHRleHQgeD0iMzkzIiB5PSIyNDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+R2xhc3M8L3RleHQ+PHJlY3QgeD0iNDgyIiB5PSIxNDYiIHdpZHRoPSI4MiIgaGVpZ2h0PSIxMTAiIHJ4PSIxNiIgZmlsbD0iI2Y0ZGZjZCIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHJlY3QgeD0iNDk3IiB5PSIxNjQiIHdpZHRoPSI1MiIgaGVpZ2h0PSIxMCIgcng9IjUiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii43NSIvPjxyZWN0IHg9IjQ5NyIgeT0iMTg4IiB3aWR0aD0iNTIiIGhlaWdodD0iMzYiIHJ4PSI4IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuMzUiLz48dGV4dCB4PSI1MjMiIHk9IjI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5DcmVhbTwvdGV4dD48cmVjdCB4PSI2MTIiIHk9IjE0NiIgd2lkdGg9IjgyIiBoZWlnaHQ9IjExMCIgcng9IjE2IiBmaWxsPSIjN2MzYWVkIiBzdHJva2U9IiM5NGEzYjgiLz48cmVjdCB4PSI2MjciIHk9IjE2NCIgd2lkdGg9IjUyIiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjc1Ii8+PHJlY3QgeD0iNjI3IiB5PSIxODgiIHdpZHRoPSI1MiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii4zNSIvPjx0ZXh0IHg9IjY1MyIgeT0iMjQyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkx1eG88L3RleHQ+PHJlY3QgeD0iODYiIHk9IjI3NCIgd2lkdGg9IjU4OCIgaGVpZ2h0PSIzNCIgcng9IjEyIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSIzODAiIHk9IjI5NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE1IiBmaWxsPSIjNDc1NTY5Ij5EdXBsaWNhciB0ZW1wbGF0ZSDihpIgZXNjb2xoZXIgw61jb25lIOKGkiBhanVzdGFyIGRlc2NyacOnw6NvIOKGkiBzYWx2YXIgY8OzcGlhPC90ZXh0Pgo8L3N2Zz4="
+    },
+    "resources/images/img-postits-cor": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iI2Q5NzcwNiIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlBvc3QtaXRzIG5hdmVnw6F2ZWlzPC90ZXh0Pgo8dGV4dCB4PSIxMjgiIHk9IjExMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNTI2MDZkIj5jbGlxdWUsIGFycmFzdGUsIHVzZSBzZXRhcyBlIHRyb3F1ZSBjb3JlczwvdGV4dD4KPHJlY3QgeD0iNzQiIHk9IjE0MiIgd2lkdGg9IjkyIiBoZWlnaHQ9IjExMiIgcng9IjgiIGZpbGw9IiNmZmY1YTgiIHN0cm9rZT0iI2E4YTI5ZSIgdHJhbnNmb3JtPSJyb3RhdGUoLTIgMTIwIDE5OCkiLz48cmVjdCB4PSI4NiIgeT0iMTUxIiB3aWR0aD0iMjgiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii41NSIvPjx0ZXh0IHg9IjEyMCIgeT0iMTkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiMxZjI5MzciPjExPC90ZXh0Pjx0ZXh0IHg9IjEyMCIgeT0iMjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM0NzU1NjkiPnBvc3QtaXQ8L3RleHQ+PHJlY3QgeD0iMTg4IiB5PSIxNDIiIHdpZHRoPSI5MiIgaGVpZ2h0PSIxMTIiIHJ4PSI4IiBmaWxsPSIjYzhmMmNmIiBzdHJva2U9IiNhOGEyOWUiIHRyYW5zZm9ybT0icm90YXRlKDAgMjM0IDE5OCkiLz48cmVjdCB4PSIyMDAiIHk9IjE1MSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjgiIHJ4PSIzIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNTUiLz48dGV4dCB4PSIyMzQiIHk9IjE5MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjMWYyOTM3Ij4xMjwvdGV4dD48dGV4dCB4PSIyMzQiIHk9IjIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNDc1NTY5Ij5wb3N0LWl0PC90ZXh0PjxyZWN0IHg9IjMwMiIgeT0iMTQyIiB3aWR0aD0iOTIiIGhlaWdodD0iMTEyIiByeD0iOCIgZmlsbD0iI2NmZTVmZiIgc3Ryb2tlPSIjYThhMjllIiB0cmFuc2Zvcm09InJvdGF0ZSgyIDM0OCAxOTgpIi8+PHJlY3QgeD0iMzE0IiB5PSIxNTEiIHdpZHRoPSIyOCIgaGVpZ2h0PSI4IiByeD0iMyIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iLjU1Ii8+PHRleHQgeD0iMzQ4IiB5PSIxOTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iIzFmMjkzNyI+MTM8L3RleHQ+PHRleHQgeD0iMzQ4IiB5PSIyMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzQ3NTU2OSI+cG9zdC1pdDwvdGV4dD48cmVjdCB4PSI0MTYiIHk9IjE0MiIgd2lkdGg9IjkyIiBoZWlnaHQ9IjExMiIgcng9IjgiIGZpbGw9IiNmZmQxZGMiIHN0cm9rZT0iI2E4YTI5ZSIgdHJhbnNmb3JtPSJyb3RhdGUoNCA0NjIgMTk4KSIvPjxyZWN0IHg9IjQyOCIgeT0iMTUxIiB3aWR0aD0iMjgiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9Ii41NSIvPjx0ZXh0IHg9IjQ2MiIgeT0iMTkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiMxZjI5MzciPjE0PC90ZXh0Pjx0ZXh0IHg9IjQ2MiIgeT0iMjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM0NzU1NjkiPnBvc3QtaXQ8L3RleHQ+PHJlY3QgeD0iNTMwIiB5PSIxNDIiIHdpZHRoPSI5MiIgaGVpZ2h0PSIxMTIiIHJ4PSI4IiBmaWxsPSIjZmZkOWE4IiBzdHJva2U9IiNhOGEyOWUiIHRyYW5zZm9ybT0icm90YXRlKDYgNTc2IDE5OCkiLz48cmVjdCB4PSI1NDIiIHk9IjE1MSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjgiIHJ4PSIzIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIuNTUiLz48dGV4dCB4PSI1NzYiIHk9IjE5MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjMWYyOTM3Ij4xNTwvdGV4dD48dGV4dCB4PSI1NzYiIHk9IjIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNDc1NTY5Ij5wb3N0LWl0PC90ZXh0PjxwYXRoIGQ9Ik04NiAyODYgSDY1MCIgc3Ryb2tlPSIjOTRhM2I4IiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xMjggMjcwIGwtMjIgMTYgMjIgMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNNjA4IDI3MCBsMjIgMTYgLTIyIDE2IiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iNjAyIiB5PSIxMjIiIHdpZHRoPSI4NCIgaGVpZ2h0PSI4MiIgcng9IjE0IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSI2NDQiIHk9IjE1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5ib3TDo288L3RleHQ+PHRleHQgeD0iNjQ0IiB5PSIxNzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzQ3NTU2OSI+ZGlyZWl0bzwvdGV4dD48Y2lyY2xlIGN4PSI2MjIiIGN5PSIxOTAiIHI9IjciIGZpbGw9IiNmZmY1YTgiLz48Y2lyY2xlIGN4PSI2NDQiIGN5PSIxOTAiIHI9IjciIGZpbGw9IiNjZmU1ZmYiLz48Y2lyY2xlIGN4PSI2NjYiIGN5PSIxOTAiIHI9IjciIGZpbGw9IiNmZmQxZGMiLz4KPC9zdmc+"
+    },
+    "resources/images/img-agendamento-backup": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzE2YTM0YSIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkxlbWJyZXRlIGxvY2FsPC90ZXh0Pgo8dGV4dCB4PSIxMjgiIHk9IjExMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNTI2MDZkIj5iYWNrdXAgdG9jYSBwb3Vjb3MgbWludXRvcyBhcMOzcyBjYXJyZWdhciBhIGRlbW88L3RleHQ+CjxyZWN0IHg9Ijg4IiB5PSIxNDIiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMTYyIiByPSI4IiBmaWxsPSIjMTZhMzRhIi8+PHRleHQgeD0iMTM4IiB5PSIxNjgiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+U29tIGF0aXZvPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIxODkiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjA5IiByPSI4IiBmaWxsPSIjMjU2M2ViIi8+PHRleHQgeD0iMTM4IiB5PSIyMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+QWRpYXI8L3RleHQ+PHJlY3QgeD0iODgiIHk9IjIzNiIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIyNTYiIHI9IjgiIGZpbGw9IiMxNmEzNGEiLz48dGV4dCB4PSIxMzgiIHk9IjI2MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5PY3VsdGFyPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyODMiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMzAzIiByPSI4IiBmaWxsPSIjZDk3NzA2Ii8+PHRleHQgeD0iMTM4IiB5PSIzMDkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+Q29uY2x1aXI8L3RleHQ+Cjwvc3ZnPg=="
+    },
+    "resources/images/img-busca-global": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzI1NjNlYiIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkJ1c2NhIGdsb2JhbDwvdGV4dD4KPHRleHQgeD0iMTI4IiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzUyNjA2ZCI+dGV4dG8gbsOjbyBkZXBlbmRlIGRvIG3DqnMgc2VsZWNpb25hZG88L3RleHQ+CjxyZWN0IHg9IjkyIiB5PSIxMzIiIHdpZHRoPSI1NzYiIGhlaWdodD0iNTIiIHJ4PSIxOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjQiLz48Y2lyY2xlIGN4PSIxMjQiIGN5PSIxNTgiIHI9IjEyIiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iNCIvPjxwYXRoIGQ9Ik0xMzQgMTY4IGwxNCAxNCIgc3Ryb2tlPSIjMjU2M2ViIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjE2NCIgeT0iMTY0IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMxMTE4MjciPmJhY2t1cCAgREVNLVNELTAwNCAgdGFncyAgZGF0YTwvdGV4dD48cmVjdCB4PSIxMTYiIHk9IjIxMCIgd2lkdGg9IjIzOCIgaGVpZ2h0PSIzMCIgcng9IjEwIiBmaWxsPSIjZmZmNWE4IiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMzIiIHk9IjIzMSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5CYWNrdXAgSlNPTjwvdGV4dD48cmVjdCB4PSIxMTYiIHk9IjI1MiIgd2lkdGg9IjIzOCIgaGVpZ2h0PSIzMCIgcng9IjEwIiBmaWxsPSIjY2ZlNWZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMzIiIHk9IjI3MyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5ERU0tU0QtMDA0PC90ZXh0PjxyZWN0IHg9IjM4NiIgeT0iMjEwIiB3aWR0aD0iMjM4IiBoZWlnaHQ9IjMwIiByeD0iMTAiIGZpbGw9IiNjOGYyY2YiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjQwMiIgeT0iMjMxIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPlByb2pldG8gKyB0YWc8L3RleHQ+PHJlY3QgeD0iMzg2IiB5PSIyNTIiIHdpZHRoPSIyMzgiIGhlaWdodD0iMzAiIHJ4PSIxMCIgZmlsbD0iI2ZmZDFkYyIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iNDAyIiB5PSIyNzMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+VGV4dG8gYW50aWdvPC90ZXh0Pjx0ZXh0IHg9IjM4MCIgeT0iMzA2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiM0NzU1NjkiPkEgYnVzY2EgbsOjbyBmaWNhIHByZXNhIGFvIG3DqnMgc2VsZWNpb25hZG88L3RleHQ+Cjwvc3ZnPg=="
+    },
+    "resources/images/img-menus-bigpage": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzQ3NTU2OSIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPk1haXMgZXNwYcOnbzwvdGV4dD4KPHRleHQgeD0iMTI4IiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzUyNjA2ZCI+cGFpbsOpaXMgcmVjb2xow612ZWlzIGRlaXhhbSBhIGVzY3JpdGEgcmVzcGlyYXI8L3RleHQ+CjxyZWN0IHg9Ijg4IiB5PSIxNDIiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMTYyIiByPSI4IiBmaWxsPSIjNDc1NTY5Ii8+PHRleHQgeD0iMTM4IiB5PSIxNjgiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+UmVjb2xoZXIgbWVudSBlc3F1ZXJkbzwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMTg5IiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjIwOSIgcj0iOCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjEzOCIgeT0iMjE1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPlJlY29saGVyIHBlbmTDqm5jaWFzPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyMzYiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjU2IiByPSI4IiBmaWxsPSIjMTZhMzRhIi8+PHRleHQgeD0iMTM4IiB5PSIyNjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+QWJyaXIgQmlnIFBhZ2U8L3RleHQ+PHJlY3QgeD0iODgiIHk9IjI4MyIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIzMDMiIHI9IjgiIGZpbGw9IiNkOTc3MDYiLz48dGV4dCB4PSIxMzgiIHk9IjMwOSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5Wb2x0YXIgY29tIEVTQzwvdGV4dD4KPC9zdmc+"
+    },
+    "resources/images/img-historico": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzY0NzQ4YiIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkhpc3TDs3JpY288L3RleHQ+Cjx0ZXh0IHg9IjEyOCIgeT0iMTEyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM1MjYwNmQiPm8gcXVlIGZvaSBjb25jbHXDrWRvIGNvbnRpbnVhIGNvbnN1bHTDoXZlbDwvdGV4dD4KPHJlY3QgeD0iODgiIHk9IjE0MiIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNjIiIHI9IjgiIGZpbGw9IiM2NDc0OGIiLz48dGV4dCB4PSIxMzgiIHk9IjE2OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5Db25jbHVpdT8gc2FpIGRhcyBwZW5kw6puY2lhczwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMTg5IiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjIwOSIgcj0iOCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjEzOCIgeT0iMjE1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPkhpc3TDs3JpY28gZ3VhcmRhIG8gcmVnaXN0cm88L3RleHQ+PHJlY3QgeD0iODgiIHk9IjIzNiIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIyNTYiIHI9IjgiIGZpbGw9IiMxNmEzNGEiLz48dGV4dCB4PSIxMzgiIHk9IjI2MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5CdXNjYSBlbmNvbnRyYSBkZXBvaXM8L3RleHQ+PHJlY3QgeD0iODgiIHk9IjI4MyIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIzMDMiIHI9IjgiIGZpbGw9IiNkOTc3MDYiLz48dGV4dCB4PSIxMzgiIHk9IjMwOSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5Nw6pzIGNvbnRpbnVhIG5hdmVnw6F2ZWw8L3RleHQ+Cjwvc3ZnPg=="
+    },
+    "resources/images/img-backup-storage": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzE2YTM0YSIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkJhY2t1cCBlIGltcG9ydGHDp8OjbzwvdGV4dD4KPHRleHQgeD0iMTI4IiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzUyNjA2ZCI+ZGFkb3MgbG9jYWlzICsgSlNPTiBwYXJhIHNlZ3VyYW7Dp2E8L3RleHQ+CjxyZWN0IHg9Ijc4IiB5PSIxNTAiIHdpZHRoPSIxNjAiIGhlaWdodD0iOTIiIHJ4PSIxOCIgZmlsbD0iI2VkZTlmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTU4IiB5PSIxODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+TmF2ZWdhZG9yPC90ZXh0Pjx0ZXh0IHg9IjE1OCIgeT0iMjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM0NzU1NjkiPmxvY2FsU3RvcmFnZTwvdGV4dD48cmVjdCB4PSIzMDAiIHk9IjE1MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI5MiIgcng9IjE4IiBmaWxsPSIjZGNmY2U3IiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIzODAiIHk9IjE4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5CYWNrdXA8L3RleHQ+PHRleHQgeD0iMzgwIiB5PSIyMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzQ3NTU2OSI+YXJxdWl2byAuanNvbjwvdGV4dD48cmVjdCB4PSI1MjIiIHk9IjE1MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI5MiIgcng9IjE4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2MDIiIHk9IjE4OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5JbXBvcnRhcjwvdGV4dD48dGV4dCB4PSI2MDIiIHk9IjIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjNDc1NTY5Ij5yZXN0YXVyYSBiYXNlPC90ZXh0PjxwYXRoIGQ9Ik0yNDYgMTk2IEgyOTIiIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMjgyIDE4NCBsMTYgMTIgLTE2IDEyIiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTQ2OCAxOTYgSDUxNCIgc3Ryb2tlPSIjMTExODI3IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01MDQgMTg0IGwxNiAxMiAtMTYgMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48dGV4dCB4PSIzODAiIHk9IjI5MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE1IiBmaWxsPSIjNDc1NTY5Ij5PZmZsaW5lIG7Do28gw6kgc2luw7RuaW1vIGRlIGRpc3BlbnNhciBiYWNrdXA8L3RleHQ+Cjwvc3ZnPg=="
+    },
+    "resources/images/img-projetos-percentual": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzE2YTM0YSIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlByb2pldG9zPC90ZXh0Pgo8dGV4dCB4PSIxMjgiIHk9IjExMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNTI2MDZkIj5jb3JlcywgZmlsdHJvcyBlIHBlcmNlbnR1YWwgZGUgY29uY2x1c8OjbzwvdGV4dD4KPGNpcmNsZSBjeD0iMTIyIiBjeT0iMTUwIiByPSIxOCIgZmlsbD0iIzdjM2FlZCIvPjx0ZXh0IHg9IjE2MCIgeT0iMTQ2IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPk9yZ2FuaXphw6fDo288L3RleHQ+PHJlY3QgeD0iMTYwIiB5PSIxNTgiIHdpZHRoPSIzOTAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjZTVlN2ViIi8+PHJlY3QgeD0iMTYwIiB5PSIxNTgiIHdpZHRoPSIyODAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjN2MzYWVkIi8+PHRleHQgeD0iNTc0IiB5PSIxNzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+NzIlPC90ZXh0PjxjaXJjbGUgY3g9IjEyMiIgY3k9IjIwOCIgcj0iMTgiIGZpbGw9IiMyNTYzZWIiLz48dGV4dCB4PSIxNjAiIHk9IjIwNCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5TZXJ2aWNlIERlc2s8L3RleHQ+PHJlY3QgeD0iMTYwIiB5PSIyMTYiIHdpZHRoPSIzOTAiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjZTVlN2ViIi8+PHJlY3QgeD0iMTYwIiB5PSIyMTYiIHdpZHRoPSIxNzEiIGhlaWdodD0iMTIiIHJ4PSI2IiBmaWxsPSIjMjU2M2ViIi8+PHRleHQgeD0iNTc0IiB5PSIyMjgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+NDQlPC90ZXh0PjxjaXJjbGUgY3g9IjEyMiIgY3k9IjI2NiIgcj0iMTgiIGZpbGw9IiMxNmEzNGEiLz48dGV4dCB4PSIxNjAiIHk9IjI2MiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5Eb2N1bWVudGHDp8OjbzwvdGV4dD48cmVjdCB4PSIxNjAiIHk9IjI3NCIgd2lkdGg9IjM5MCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiNlNWU3ZWIiLz48cmVjdCB4PSIxNjAiIHk9IjI3NCIgd2lkdGg9IjIyNiIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiMxNmEzNGEiLz48dGV4dCB4PSI1NzQiIHk9IjI4NiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij41OCU8L3RleHQ+PHRleHQgeD0iMzgwIiB5PSIzMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNSIgZmlsbD0iIzQ3NTU2OSI+UGVyY2VudHVhbCA9IHJlZ2lzdHJvcyBjb25jbHXDrWRvcyBkZW50cm8gZG8gcHJvamV0bzwvdGV4dD4KPC9zdmc+"
+    },
+    "resources/images/img-editor-blocos": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iI2RiMjc3NyIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkVkaXRvciBhdmFuw6dhZG88L3RleHQ+Cjx0ZXh0IHg9IjEyOCIgeT0iMTEyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM1MjYwNmQiPmJsb2NvcyBkaWZlcmVudGVzIHBhcmEgYW5vdGFyIG1lbGhvcjwvdGV4dD4KPHJlY3QgeD0iODgiIHk9IjEzMiIgd2lkdGg9IjI4NiIgaGVpZ2h0PSIzNCIgcng9IjEyIiBmaWxsPSIjZWRlOWZlIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSIxMDgiIHk9IjE1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE3IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5IMTwvdGV4dD48dGV4dCB4PSIxNDYiIHk9IjE1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjMTExODI3Ij5Uw610dWxvIGdyYW5kZTwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMTc4IiB3aWR0aD0iMjg2IiBoZWlnaHQ9IjM0IiByeD0iMTIiIGZpbGw9IiNkY2ZjZTciIHN0cm9rZT0iI2NiZDVlMSIvPjx0ZXh0IHg9IjEwOCIgeT0iMjAxIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPuKYkTwvdGV4dD48dGV4dCB4PSIxNDYiIHk9IjIwMSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjMTExODI3Ij5DaGVja2xpc3Q8L3RleHQ+PHJlY3QgeD0iODgiIHk9IjIyNCIgd2lkdGg9IjI4NiIgaGVpZ2h0PSIzNCIgcng9IjEyIiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSIxMDgiIHk9IjI0NyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE3IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij7ilqY8L3RleHQ+PHRleHQgeD0iMTQ2IiB5PSIyNDciIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzExMTgyNyI+VGFiZWxhPC90ZXh0PjxyZWN0IHg9IjM4NiIgeT0iMTMyIiB3aWR0aD0iMjg2IiBoZWlnaHQ9IjM0IiByeD0iMTIiIGZpbGw9IiNmZWYzYzciIHN0cm9rZT0iI2NiZDVlMSIvPjx0ZXh0IHg9IjQwNiIgeT0iMTU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPvCfkqw8L3RleHQ+PHRleHQgeD0iNDQ0IiB5PSIxNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzExMTgyNyI+T2JzZXJ2YcOnw6NvPC90ZXh0PjxyZWN0IHg9IjM4NiIgeT0iMTc4IiB3aWR0aD0iMjg2IiBoZWlnaHQ9IjM0IiByeD0iMTIiIGZpbGw9IiNmZWUyZTIiIHN0cm9rZT0iI2NiZDVlMSIvPjx0ZXh0IHg9IjQwNiIgeT0iMjAxIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPvCflJc8L3RleHQ+PHRleHQgeD0iNDQ0IiB5PSIyMDEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzExMTgyNyI+TGluazwvdGV4dD48cmVjdCB4PSIzODYiIHk9IjIyNCIgd2lkdGg9IjI4NiIgaGVpZ2h0PSIzNCIgcng9IjEyIiBmaWxsPSIjZmNlN2YzIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSI0MDYiIHk9IjI0NyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE3IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij7wn5a8PC90ZXh0Pjx0ZXh0IHg9IjQ0NCIgeT0iMjQ3IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxMTE4MjciPkltYWdlbSArIGxlZ2VuZGE8L3RleHQ+PHJlY3QgeD0iMTA4IiB5PSIyODIiIHdpZHRoPSI1NDQiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0iIzExMTgyNyIgb3BhY2l0eT0iLjA4Ii8+PHRleHQgeD0iMzgwIiB5PSIzMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNSIgZmlsbD0iIzQ3NTU2OSI+VXNlIEJpZyBQYWdlIHF1YW5kbyBxdWlzZXIgZXNjcmV2ZXIgc2VtIGRpc3RyYcOnw6NvPC90ZXh0Pgo8L3N2Zz4="
+    },
+    "resources/images/img-kanban-fluxo": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzI1NjNlYiIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPkthbmJhbiBkaWTDoXRpY288L3RleHQ+Cjx0ZXh0IHg9IjEyOCIgeT0iMTEyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM1MjYwNmQiPmFycmFzdGUgY2FydMO1ZXMgZW50cmUgZXRhcGFzPC90ZXh0Pgo8cmVjdCB4PSI3MCIgeT0iMTMyIiB3aWR0aD0iMTg4IiBoZWlnaHQ9IjE3NiIgcng9IjE4IiBmaWxsPSIjZmZmN2VkIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSI4OCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkEgZmF6ZXI8L3RleHQ+PHJlY3QgeD0iMjc4IiB5PSIxMzIiIHdpZHRoPSIxODgiIGhlaWdodD0iMTc2IiByeD0iMTgiIGZpbGw9IiNlZmY2ZmYiIHN0cm9rZT0iI2NiZDVlMSIvPjx0ZXh0IHg9IjI5NiIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkVtIGFuZGFtZW50bzwvdGV4dD48cmVjdCB4PSI0ODYiIHk9IjEzMiIgd2lkdGg9IjE4OCIgaGVpZ2h0PSIxNzYiIHJ4PSIxOCIgZmlsbD0iI2YwZmRmNCIgc3Ryb2tlPSIjY2JkNWUxIi8+PHRleHQgeD0iNTA0IiB5PSIxNjMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+Q29uY2x1w61kYTwvdGV4dD48cmVjdCB4PSI5MCIgeT0iMTgyIiB3aWR0aD0iMTQ4IiBoZWlnaHQ9IjMyIiByeD0iMTAiIGZpbGw9IiNmZmY1YTgiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjEwNCIgeT0iMjAzIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkRFTS0wMDE8L3RleHQ+PHJlY3QgeD0iOTAiIHk9IjIyOSIgd2lkdGg9IjE0OCIgaGVpZ2h0PSIzMiIgcng9IjEwIiBmaWxsPSIjZmZkOWE4IiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMDQiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5ERU0tMDA0PC90ZXh0PjxyZWN0IHg9IjI5OCIgeT0iMTgyIiB3aWR0aD0iMTQ4IiBoZWlnaHQ9IjMyIiByeD0iMTAiIGZpbGw9IiNjZmU1ZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjMxMiIgeT0iMjAzIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPklOQy0wMDI8L3RleHQ+PHJlY3QgeD0iMjk4IiB5PSIyMjkiIHdpZHRoPSIxNDgiIGhlaWdodD0iMzIiIHJ4PSIxMCIgZmlsbD0iI2ZmZDFkYyIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMzEyIiB5PSIyNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTgyNyI+REVNLTAwNjwvdGV4dD48cmVjdCB4PSI1MDYiIHk9IjE4MiIgd2lkdGg9IjE0OCIgaGVpZ2h0PSIzMiIgcng9IjEwIiBmaWxsPSIjYzhmMmNmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI1MjAiIHk9IjIwMyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExODI3Ij5BTk9ULTAwMzwvdGV4dD48cGF0aCBkPSJNMjM4IDIyMCBDMjU4IDIyMCAyNjYgMjIwIDI4NiAyMjAiIHN0cm9rZT0iIzExMTgyNyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMjc4IDIxMCBsMTQgMTAgLTE0IDEwIiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTQ0NiAyMjAgQzQ2NiAyMjAgNDc0IDIyMCA0OTQgMjIwIiBzdHJva2U9IiMxMTE4MjciIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTQ4NiAyMTAgbDE0IDEwIC0xNCAxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTExODI3IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4="
+    },
+    "resources/images/img-pendencias-logica": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iI2RiMjc3NyIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlBlbmTDqm5jaWFzPC90ZXh0Pgo8dGV4dCB4PSIxMjgiIHk9IjExMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjNTI2MDZkIj5wcmlvcmlkYWRlICsgcHJhem8gKyBzdGF0dXMgKyBwcm9qZXRvPC90ZXh0Pgo8cmVjdCB4PSI4OCIgeT0iMTQyIiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjE2MiIgcj0iOCIgZmlsbD0iI2RiMjc3NyIvPjx0ZXh0IHg9IjEzOCIgeT0iMTY4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPk7Do28gY29uY2x1w61kbyBhcGFyZWNlPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIxODkiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjA5IiByPSI4IiBmaWxsPSIjMjU2M2ViIi8+PHRleHQgeD0iMTM4IiB5PSIyMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+QXRyYXNhZG8gZmljYSBlbSBkZXN0YXF1ZTwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMjM2IiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjI1NiIgcj0iOCIgZmlsbD0iIzE2YTM0YSIvPjx0ZXh0IHg9IjEzOCIgeT0iMjYyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPkFsdGEgcHJpb3JpZGFkZSBjaGFtYSBhdGVuw6fDo288L3RleHQ+PHJlY3QgeD0iODgiIHk9IjI4MyIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIzMDMiIHI9IjgiIGZpbGw9IiNkOTc3MDYiLz48dGV4dCB4PSIxMzgiIHk9IjMwOSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5Qcm9qZXRvIG9yZ2FuaXphIG8gY29udGV4dG88L3RleHQ+Cjwvc3ZnPg=="
+    },
+    "resources/images/img-incidente-estrutura": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iI2RjMjYyNiIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlJlZ2lzdHJvIGRlIGluY2lkZW50ZTwvdGV4dD4KPHRleHQgeD0iMTI4IiB5PSIxMTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzUyNjA2ZCI+Y2F1c2EsIGltcGFjdG8sIHNvbHXDp8OjbyBlIHByZXZlbsOnw6NvPC90ZXh0Pgo8cmVjdCB4PSI4OCIgeT0iMTQyIiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjE2MiIgcj0iOCIgZmlsbD0iI2RjMjYyNiIvPjx0ZXh0IHg9IjEzOCIgeT0iMTY4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPkNhdXNhIGRvIEluY2lkZW50ZTwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMTg5IiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjIwOSIgcj0iOCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjEzOCIgeT0iMjE1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPkltcGFjdG8gcGVyY2ViaWRvPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyMzYiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjU2IiByPSI4IiBmaWxsPSIjMTZhMzRhIi8+PHRleHQgeD0iMTM4IiB5PSIyNjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+U29sdcOnw6NvIGFwbGljYWRhPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyODMiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMzAzIiByPSI4IiBmaWxsPSIjZDk3NzA2Ii8+PHRleHQgeD0iMTM4IiB5PSIzMDkiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+UHJldmVuw6fDo288L3RleHQ+Cjwvc3ZnPg=="
+    },
+    "resources/images/img-tabela-excel": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzBmNzY2ZSIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlRhYmVsYSBlc3RpbG8gcGxhbmlsaGE8L3RleHQ+Cjx0ZXh0IHg9IjEyOCIgeT0iMTEyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM1MjYwNmQiPmJvbSBwYXJhIGNoZWNrbGlzdCBkZSB2YWxpZGHDp8OjbzwvdGV4dD4KPHJlY3QgeD0iODgiIHk9IjE0MiIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNjIiIHI9IjgiIGZpbGw9IiMwZjc2NmUiLz48dGV4dCB4PSIxMzgiIHk9IjE2OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5JdGVtPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIxODkiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjA5IiByPSI4IiBmaWxsPSIjMjU2M2ViIi8+PHRleHQgeD0iMTM4IiB5PSIyMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+U3RhdHVzPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyMzYiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjU2IiByPSI4IiBmaWxsPSIjMTZhMzRhIi8+PHRleHQgeD0iMTM4IiB5PSIyNjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+UmVzcG9uc8OhdmVsIGdlbsOpcmljbzwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMjgzIiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjMwMyIgcj0iOCIgZmlsbD0iI2Q5NzcwNiIvPjx0ZXh0IHg9IjEzOCIgeT0iMzA5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPk9ic2VydmHDp8OjbzwvdGV4dD4KPC9zdmc+"
     }
   },
   "updatedAt": "2026-05-11T12:00:00+00:00"
