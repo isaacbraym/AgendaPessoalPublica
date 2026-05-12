@@ -1,7 +1,6 @@
 {
   "schema": 2,
   "settings": {
-    "theme": "corporate",
     "scheduleSoundEnabled": true,
     "sampleDynamicDates": true,
     "sampleBaseDate": "2026-05-11"
@@ -11,3938 +10,934 @@
       "id": "proj-service-desk",
       "name": "Service Desk & Chamados",
       "color": "#2563eb",
-      "status": "Em andamento",
-      "description": "Rotina de atendimento, triagem, acompanhamento de SLAs e resolução de chamados internos.",
-      "createdAt": "2026-02-01T08:00:00+00:00"
+      "status": "ativo",
+      "description": "Organização do atendimento diário, triagem de chamados, priorização e acompanhamento de pendências internas.",
+      "createdAt": "2026-05-01T08:00:00+00:00"
     },
     {
       "id": "proj-automacao",
       "name": "Automação Interna",
       "color": "#d97706",
-      "status": "Em andamento",
-      "description": "Pequenas automações para reduzir tarefas manuais, organizar arquivos e melhorar fluxos operacionais.",
-      "createdAt": "2026-02-01T09:00:00+00:00"
+      "status": "ativo",
+      "description": "Melhorias simples para reduzir tarefas manuais, padronizar conferências e evitar retrabalho operacional.",
+      "createdAt": "2026-05-01T09:00:00+00:00"
     },
     {
       "id": "proj-documentacao",
       "name": "Documentação Técnica",
       "color": "#16a34a",
-      "status": "Em andamento",
-      "description": "Base de conhecimento, procedimentos, guias rápidos e documentação de processos recorrentes.",
-      "createdAt": "2026-02-01T10:00:00+00:00"
-    },
-    {
-      "id": "proj-estudos",
-      "name": "Estudos & Certificações",
-      "color": "#7c3aed",
-      "status": "Em andamento",
-      "description": "Plano de estudo contínuo para redes, SQL, automação, segurança e boas práticas de desenvolvimento.",
-      "createdAt": "2026-02-01T18:00:00+00:00"
-    },
-    {
-      "id": "proj-pessoal",
-      "name": "Organização Pessoal",
-      "color": "#64748b",
-      "status": "Em andamento",
-      "description": "Tarefas simples do dia a dia, lembretes pessoais, compras, agenda doméstica e organização da semana.",
-      "createdAt": "2026-02-01T19:00:00+00:00"
+      "status": "ativo",
+      "description": "Base de conhecimento, modelos de registro, guias rápidos e documentação de processos recorrentes.",
+      "createdAt": "2026-05-01T10:00:00+00:00"
     }
   ],
   "notes": [
     {
-      "id": "n-20260202-planejamento-semana",
-      "date": "2026-05-04",
-      "title": "Planejamento da semana de atendimento",
+      "id": "sd-anot-001-triagem-rapida",
+      "date": "2026-05-11",
+      "title": "Triagem rápida de chamados do dia",
       "blocks": [
         {
-          "id": "n-20260202-planejamento-semana-b01",
+          "id": "sd-anot-001-b01",
           "type": "h1",
-          "html": "Semana de atendimento",
+          "html": "Triagem rápida",
           "page": 1
         },
         {
-          "id": "n-20260202-planejamento-semana-b02",
+          "id": "sd-anot-001-b02",
           "type": "text",
-          "html": "Objetivo da semana: reduzir pendências antigas sem perder qualidade nas respostas novas.",
+          "html": "Separar o que precisa de resposta imediata, o que pode aguardar e o que deve virar demanda.",
           "page": 1
         },
         {
-          "id": "n-20260202-planejamento-semana-b03",
+          "id": "sd-anot-001-b03",
           "type": "checklist",
-          "html": "Abrir a manhã com triagem rápida dos chamados críticos",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260202-planejamento-semana-b04",
-          "type": "checklist",
-          "html": "Separar dúvidas simples para resposta em bloco",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260202-planejamento-semana-b05",
-          "type": "checklist",
-          "html": "Revisar pendências com mais de dois dias sem atualização",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260202-planejamento-semana-b06",
-          "type": "callout-note",
-          "html": "Ideia: usar tags curtas para diferenciar suporte, melhoria, documentação e estudo.",
+          "html": "Verificar chamados novos sem categoria",
           "page": 1,
-          "cv": "note"
+          "done": false
+        },
+        {
+          "id": "sd-anot-001-b04",
+          "type": "checklist",
+          "html": "Marcar itens críticos antes de iniciar respostas longas",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "sd-anot-001-b05",
+          "type": "callout-priority",
+          "html": "Prioridade: começar pelos chamados com impacto em mais de um utilizador.",
+          "page": 1,
+          "cv": "priority"
         }
       ],
       "priority": "Média",
-      "status": "Em andamento",
+      "status": "Pendente",
       "tags": [
-        "planejamento",
         "suporte",
-        "semana"
+        "triagem",
+        "agenda"
       ],
       "projectId": "proj-service-desk",
       "postitColor": "c1",
       "tipo": "Anotação",
+      "baseType": "Anotação",
       "vinculoTipo": null,
       "vinculoId": "",
-      "createdAt": "2026-02-02T08:20:00+00:00",
-      "updatedAt": "2026-02-02T10:05:00+00:00",
-      "sampleDayOffset": -7,
-      "scheduledTime": "16:30",
-      "reminderEnabled": true
+      "isScheduled": true,
+      "scheduledTime": "",
+      "reminderEnabled": true,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 0,
+      "sampleTimeOffsetMinutes": 3
     },
     {
-      "id": "n-20260204-dem-registro-chamados",
+      "id": "sd-anot-002-mapa-atendimento",
       "date": "2026-05-11",
-      "title": "Padronizar registro de chamados recorrentes",
+      "title": "Mapa de atendimento e atalhos úteis",
       "blocks": [
         {
-          "id": "n-20260204-dem-registro-chamados-b01",
+          "id": "sd-anot-002-b01",
+          "type": "h1",
+          "html": "Mapa de atendimento",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-002-b02",
+          "type": "text",
+          "html": "Anotação de referência para lembrar o fluxo básico de entrada, análise e registro.",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-002-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-demo-fluxo-atendimento",
+          "caption": "Fluxo visual genérico de atendimento",
+          "sideHtml": "Use este espaço para escrever observações ao lado da imagem. Exemplo: quando a entrada já tiver histórico semelhante, registrar a ligação antes de responder.",
+          "width": 52
+        },
+        {
+          "id": "sd-anot-002-b04",
+          "type": "link",
+          "html": "",
+          "page": 1,
+          "url": "https://example.com/base-conhecimento",
+          "urlTitle": "Exemplo de link para base interna"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Em andamento",
+      "tags": [
+        "suporte",
+        "imagem",
+        "fluxo"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c2",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "double",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 0
+    },
+    {
+      "id": "sd-anot-003-decisao-fila",
+      "date": "2026-05-11",
+      "title": "Registro de decisão sobre fila de suporte",
+      "blocks": [
+        {
+          "id": "sd-anot-003-b01",
+          "type": "h1",
+          "html": "Decisão da fila",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-003-b02",
+          "type": "callout-decision",
+          "html": "Decisão: itens repetidos devem virar demanda ou artigo curto para evitar respostas manuais repetidas.",
+          "page": 1,
+          "cv": "decision"
+        },
+        {
+          "id": "sd-anot-003-b03",
+          "type": "numbered",
+          "html": "Agrupar chamados parecidos por sintoma",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-003-b04",
+          "type": "numbered",
+          "html": "Criar resposta-base revisável",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-003-b05",
+          "type": "numbered",
+          "html": "Abrir demanda quando houver ajuste de processo",
+          "page": 1
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "suporte",
+        "decisao",
+        "fluxo"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c3",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 2
+    },
+    {
+      "id": "sd-anot-004-revisao-sla",
+      "date": "2026-05-11",
+      "title": "Revisão semanal de SLA",
+      "blocks": [
+        {
+          "id": "sd-anot-004-b01",
+          "type": "h1",
+          "html": "Revisão semanal",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-004-b02",
+          "type": "table",
+          "html": "<table><tbody><tr><td contenteditable=\"true\">Indicador</td><td contenteditable=\"true\">Meta</td><td contenteditable=\"true\">Situação</td></tr><tr><td contenteditable=\"true\">Chamados sem categoria</td><td contenteditable=\"true\">0</td><td contenteditable=\"true\">Em revisão</td></tr><tr><td contenteditable=\"true\">Pendências críticas</td><td contenteditable=\"true\">até 2</td><td contenteditable=\"true\">Controlado</td></tr><tr><td contenteditable=\"true\">Respostas antigas</td><td contenteditable=\"true\">revisar semanalmente</td><td contenteditable=\"true\">Pendente</td></tr></tbody></table>",
+          "page": 1
+        },
+        {
+          "id": "sd-anot-004-b03",
+          "type": "checklist",
+          "html": "Comparar volume da semana com a semana anterior",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "sd-anot-004-b04",
+          "type": "checklist",
+          "html": "Separar melhoria que deve virar demanda",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "sla",
+        "tabela",
+        "suporte"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c4",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 4
+    },
+    {
+      "id": "sd-dem-001-registro-recorrente",
+      "date": "2026-05-11",
+      "title": "Padronizar abertura de chamado recorrente",
+      "blocks": [
+        {
+          "id": "sd-dem-001-b01",
           "type": "h1",
           "html": "Observações",
           "page": 1
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b02",
+          "id": "sd-dem-001-b02",
           "type": "text",
-          "html": "Criar um modelo simples para registrar chamados repetidos e facilitar consulta futura.",
+          "html": "Observações: Criar modelo curto para registrar chamados repetidos sem depender de memória.",
           "page": 1
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b03",
+          "id": "sd-dem-001-b03",
           "type": "h2",
           "html": "Desenvolvimento",
           "page": 1
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b04",
+          "id": "sd-dem-001-b04",
           "type": "text",
-          "html": "Título Desenvolvimento: Ficha de recorrência por sintoma, origem e ação tomada",
+          "html": "Desenvolvimento: Ficha com sintoma, origem, ação executada e decisão final.",
           "page": 1
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b05",
+          "id": "sd-dem-001-b05",
           "type": "text",
-          "html": "Movimento: MOV-0204-A",
+          "html": "OP: DEM-SD-001",
           "page": 1
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b06",
-          "type": "text",
-          "html": "OP: OP-REG-001",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b08",
-          "type": "bullet",
-          "html": "Campo obrigatório para sintoma resumido",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b09",
-          "type": "bullet",
-          "html": "Campo opcional para evidência",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b10",
-          "type": "bullet",
-          "html": "Prioridade calculada por impacto e urgência",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b12",
-          "type": "bullet",
-          "html": "Formulário interno",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b13",
-          "type": "bullet",
-          "html": "Lista de tags",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b14",
-          "type": "bullet",
-          "html": "Resumo para base de conhecimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b16",
-          "type": "checklist",
-          "html": "Adicionar rótulo visual quando o chamado já tiver histórico semelhante",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b17",
-          "type": "checklist",
-          "html": "Criar campo de conferência final antes de concluir",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b19",
-          "type": "checklist",
-          "html": "Validar se o texto fica claro para usuários não técnicos",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b20",
+          "id": "sd-dem-001-b06",
           "type": "h2",
           "html": "Pendências",
           "page": 1
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b21",
+          "id": "sd-dem-001-b07",
           "type": "checklist",
-          "html": "Montar exemplo preenchido",
-          "done": false,
-          "page": 1
+          "html": "Definir campos obrigatórios",
+          "page": 1,
+          "done": true
         },
         {
-          "id": "n-20260204-dem-registro-chamados-b22",
+          "id": "sd-dem-001-b08",
           "type": "checklist",
-          "html": "Definir lista inicial de sintomas",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260204-dem-registro-chamados-b23",
-          "type": "checklist",
-          "html": "Revisar com a equipe de atendimento",
-          "done": false,
-          "page": 1
+          "html": "Testar preenchimento com três exemplos fictícios",
+          "page": 1,
+          "done": false
         }
       ],
-      "priority": "Alta",
+      "priority": "Média",
       "status": "Em andamento",
       "tags": [
         "demanda",
         "chamados",
-        "padronização"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c3",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0204",
-      "createdAt": "2026-02-04T09:15:00+00:00",
-      "updatedAt": "2026-02-04T15:40:00+00:00",
-      "sampleDayOffset": 0
-    },
-    {
-      "id": "n-20260206-inc-painel-interno",
-      "date": "2026-04-29",
-      "title": "Oscilação no acesso ao painel interno",
-      "blocks": [
-        {
-          "id": "n-20260206-inc-painel-interno-b01",
-          "type": "h1",
-          "html": "Resumo do incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b02",
-          "type": "callout-problem",
-          "html": "Durante o início da tarde, parte da equipe relatou lentidão e falhas intermitentes ao abrir o painel interno.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b03",
-          "type": "h2",
-          "html": "Impacto",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b04",
-          "type": "bullet",
-          "html": "Acompanhamento de chamados ficou mais lento por cerca de quarenta minutos",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b05",
-          "type": "bullet",
-          "html": "Nenhum dado foi perdido",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b06",
-          "type": "bullet",
-          "html": "Atendimento manual foi usado como contingência",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b08",
-          "type": "numbered",
-          "html": "Registrar horário aproximado dos relatos",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b09",
-          "type": "numbered",
-          "html": "Testar acesso em outro navegador",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b10",
-          "type": "numbered",
-          "html": "Limpar sessão local e repetir o acesso",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b11",
-          "type": "numbered",
-          "html": "Comunicar normalização no canal interno",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b13",
-          "type": "text",
-          "html": "Cache de sessão antigo combinado com instabilidade momentânea no serviço interno.",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b15",
-          "type": "checklist",
-          "html": "Documentar procedimento rápido para limpar sessão",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260206-inc-painel-interno-b16",
-          "type": "checklist",
-          "html": "Criar mensagem padrão para avisos de instabilidade",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "acesso",
-        "painel"
+        "modelo"
       ],
       "projectId": "proj-service-desk",
       "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0206",
-      "createdAt": "2026-02-06T13:10:00+00:00",
-      "updatedAt": "2026-02-06T16:25:00+00:00",
-      "sampleDayOffset": -12
-    },
-    {
-      "id": "n-20260210-atalhos-suporte",
-      "date": "2026-05-08",
-      "title": "Mapa de atalhos para rotina de suporte",
-      "blocks": [
-        {
-          "id": "n-20260210-atalhos-suporte-b01",
-          "type": "h1",
-          "html": "Atalhos úteis",
-          "page": 1
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b02",
-          "type": "text",
-          "html": "Anotação para reunir comandos, caminhos e lembretes usados na rotina. A ideia é não depender da memória em dias corridos.",
-          "page": 1
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b03",
-          "type": "h2",
-          "html": "Consulta rápida",
-          "page": 1
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b04",
-          "type": "bullet",
-          "html": "Abrir painel de chamados e filtrar por pendente",
-          "page": 1
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b05",
-          "type": "bullet",
-          "html": "Verificar chamados com prazo próximo",
-          "page": 1
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b06",
-          "type": "bullet",
-          "html": "Copiar modelo de resposta conforme categoria",
-          "page": 1
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b07",
-          "type": "callout-action",
-          "html": "Transformar os atalhos mais usados em cards de referência rápida.",
-          "page": 1,
-          "cv": "action"
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b08",
-          "type": "separator",
-          "html": "",
-          "page": 2
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b09",
-          "type": "h2",
-          "html": "Boas práticas",
-          "page": 2
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b10",
-          "type": "checklist",
-          "html": "Confirmar se o problema ainda ocorre antes de escalar",
-          "done": true,
-          "page": 2
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b11",
-          "type": "checklist",
-          "html": "Registrar evidência curta, sem excesso de texto",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260210-atalhos-suporte-b12",
-          "type": "checklist",
-          "html": "Fechar chamado somente com retorno claro ao solicitante",
-          "done": false,
-          "page": 2
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Pendente",
-      "tags": [
-        "atalhos",
-        "suporte",
-        "rotina"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-02-10T17:45:00+00:00",
-      "updatedAt": "2026-02-10T18:20:00+00:00",
-      "sampleDayOffset": -3,
-      "scheduledTime": "09:30",
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260212-dem-checklist-arquivos",
-      "date": "2026-05-12",
-      "title": "Criar checklist de conferência de arquivos recebidos",
-      "blocks": [
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b02",
-          "type": "text",
-          "html": "Montar checklist para validar arquivos recebidos antes de processar ou encaminhar.",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Validação visual e técnica de arquivos por lote",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0212-B",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b06",
-          "type": "text",
-          "html": "OP: OP-CHK-002",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b08",
-          "type": "bullet",
-          "html": "Nome do arquivo deve conter data e tipo",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b09",
-          "type": "bullet",
-          "html": "Tamanho mínimo esperado precisa ser conferido",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b10",
-          "type": "bullet",
-          "html": "Arquivo vazio deve bloquear avanço",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b12",
-          "type": "bullet",
-          "html": "Checklist de recebimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b13",
-          "type": "bullet",
-          "html": "Histórico de conferência",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b14",
-          "type": "bullet",
-          "html": "Mensagem curta de falha",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b16",
-          "type": "checklist",
-          "html": "Incluir aviso quando o arquivo estiver incompleto",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b17",
-          "type": "checklist",
-          "html": "Registrar último motivo de bloqueio",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b19",
-          "type": "checklist",
-          "html": "Criar regra para campos opcionais sem quebrar importação",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b21",
-          "type": "checklist",
-          "html": "Testar com arquivo válido",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b22",
-          "type": "checklist",
-          "html": "Testar com arquivo vazio",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260212-dem-checklist-arquivos-b23",
-          "type": "checklist",
-          "html": "Escrever orientação para correção",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "arquivos",
-        "checklist"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c4",
       "tipo": "Demanda",
+      "baseType": "Demanda",
       "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0212",
-      "createdAt": "2026-02-12T11:30:00+00:00",
-      "updatedAt": "2026-02-12T11:55:00+00:00",
-      "sampleDayOffset": 1
-    },
-    {
-      "id": "n-20260218-base-conhecimento",
-      "date": "2026-05-10",
-      "title": "Revisão da base de conhecimento",
-      "blocks": [
-        {
-          "id": "n-20260218-base-conhecimento-b01",
-          "type": "h1",
-          "html": "Revisão da base",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b02",
-          "type": "text",
-          "html": "Objetivo: deixar os artigos mais práticos, com linguagem simples e passos curtos.",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b03",
-          "type": "h2",
-          "html": "Página 1 — Diagnóstico",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b04",
-          "type": "bullet",
-          "html": "Artigos longos demais dificultam consulta durante atendimento.",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b05",
-          "type": "bullet",
-          "html": "Alguns títulos não deixam claro quando usar o procedimento.",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b06",
-          "type": "bullet",
-          "html": "Faltam exemplos de erro comum em certos processos.",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b07",
-          "type": "callout-priority",
-          "html": "Prioridade da revisão: artigos usados diariamente pela equipe de suporte.",
-          "page": 1,
-          "cv": "priority"
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b08",
-          "type": "separator",
-          "html": "",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b09",
-          "type": "h2",
-          "html": "Página 2 — Nova estrutura",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b10",
-          "type": "numbered",
-          "html": "Quando usar",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b11",
-          "type": "numbered",
-          "html": "Pré-requisitos",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b12",
-          "type": "numbered",
-          "html": "Passo a passo",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b13",
-          "type": "numbered",
-          "html": "Erros comuns",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b14",
-          "type": "numbered",
-          "html": "Como validar se resolveu",
-          "page": 1
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b15",
-          "type": "separator",
-          "html": "",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b16",
-          "type": "h2",
-          "html": "Página 3 — Exemplo de artigo",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b17",
-          "type": "text",
-          "html": "Título sugerido: Como registrar evidência mínima em um chamado técnico.",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b18",
-          "type": "bullet",
-          "html": "Print ou descrição do comportamento",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b19",
-          "type": "bullet",
-          "html": "Horário aproximado do teste",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b20",
-          "type": "bullet",
-          "html": "Resultado esperado e resultado encontrado",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b21",
-          "type": "h2",
-          "html": "Página 4 — Pendências",
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b22",
-          "type": "checklist",
-          "html": "Reescrever três artigos mais acessados",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b23",
-          "type": "checklist",
-          "html": "Criar padrão de títulos",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260218-base-conhecimento-b24",
-          "type": "checklist",
-          "html": "Adicionar exemplos visuais genéricos",
-          "done": false,
-          "page": 2
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "documentação",
-        "base",
-        "conhecimento"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-02-18T14:00:00+00:00",
-      "updatedAt": "2026-02-18T18:10:00+00:00",
-      "sampleDayOffset": -1,
+      "vinculoId": "DEM-2026-001",
+      "isScheduled": false,
       "scheduledTime": "",
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260224-inc-relatorio-atualizacao",
-      "date": "2026-05-02",
-      "title": "Relatório não abriu após atualização local",
-      "blocks": [
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b01",
-          "type": "h1",
-          "html": "Resumo do incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b02",
-          "type": "callout-problem",
-          "html": "Após atualização local, um relatório interno passou a abrir em branco para alguns usuários.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b03",
-          "type": "h2",
-          "html": "Impacto",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b04",
-          "type": "bullet",
-          "html": "Consulta de indicadores do dia ficou indisponível para uma equipe",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b05",
-          "type": "bullet",
-          "html": "Usuários conseguiram seguir com consulta alternativa",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b06",
-          "type": "bullet",
-          "html": "Sem perda de informações registradas",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b08",
-          "type": "numbered",
-          "html": "Confirmar se o problema ocorria em mais de uma máquina",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b09",
-          "type": "numbered",
-          "html": "Testar abertura em perfil limpo",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b10",
-          "type": "numbered",
-          "html": "Reverter configuração local temporária",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b11",
-          "type": "numbered",
-          "html": "Registrar evidência do antes e depois",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b13",
-          "type": "text",
-          "html": "Preferência antiga salva no navegador conflitou com a nova tela do relatório.",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b15",
-          "type": "checklist",
-          "html": "Adicionar instrução de limpeza de preferência local",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260224-inc-relatorio-atualizacao-b16",
-          "type": "checklist",
-          "html": "Criar validação automática de tela em branco",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "relatório",
-        "atualização"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0224",
-      "createdAt": "2026-02-24T10:05:00+00:00",
-      "updatedAt": "2026-02-24T12:35:00+00:00",
-      "sampleDayOffset": -9
-    },
-    {
-      "id": "n-20260227-dem-evidencias-pasta",
-      "date": "2026-05-15",
-      "title": "Automatizar organização de evidências por pasta",
-      "blocks": [
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b02",
-          "type": "text",
-          "html": "Criar rotina simples para separar evidências por mês, tipo de solicitação e status.",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Organizador offline de evidências técnicas",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0227-C",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b06",
-          "type": "text",
-          "html": "OP: OP-EVD-003",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b08",
-          "type": "bullet",
-          "html": "Manter funcionamento offline",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b09",
-          "type": "bullet",
-          "html": "Não alterar arquivos originais",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b10",
-          "type": "bullet",
-          "html": "Criar pasta de saída com data",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b12",
-          "type": "bullet",
-          "html": "Pasta por mês",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b13",
-          "type": "bullet",
-          "html": "Relatório simples em texto",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b14",
-          "type": "bullet",
-          "html": "Registro de arquivos ignorados",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b16",
-          "type": "checklist",
-          "html": "Adicionar resumo final com quantidade processada",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b17",
-          "type": "checklist",
-          "html": "Destacar arquivos com nome fora do padrão",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b19",
-          "type": "checklist",
-          "html": "Validar nomes com acentos e espaços",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b21",
-          "type": "checklist",
-          "html": "Desenhar fluxo antes de implementar",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b22",
-          "type": "checklist",
-          "html": "Criar massa fictícia de teste",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260227-dem-evidencias-pasta-b23",
-          "type": "checklist",
-          "html": "Definir mensagem curta de erro",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "automação",
-        "evidências"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c1",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0227",
-      "createdAt": "2026-02-27T16:40:00+00:00",
-      "updatedAt": "2026-02-27T17:05:00+00:00",
-      "sampleDayOffset": 4
-    },
-    {
-      "id": "n-20260303-reuniao-tecnica",
-      "date": "2026-05-11",
-      "title": "Roteiro de reunião técnica",
-      "blocks": [
-        {
-          "id": "n-20260303-reuniao-tecnica-b01",
-          "type": "h1",
-          "html": "Reunião técnica",
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b02",
-          "type": "text",
-          "html": "Usar esta anotação como roteiro para não esquecer decisões e pendências.",
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b03",
-          "type": "h2",
-          "html": "Antes da reunião",
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b04",
-          "type": "checklist",
-          "html": "Separar dúvidas que dependem de decisão",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b05",
-          "type": "checklist",
-          "html": "Abrir últimos registros relacionados",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b06",
-          "type": "checklist",
-          "html": "Levar proposta simples, não apenas o problema",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b07",
-          "type": "h2",
-          "html": "Durante",
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b08",
-          "type": "bullet",
-          "html": "Anotar decisão em frase curta",
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b09",
-          "type": "bullet",
-          "html": "Registrar responsável e próximo passo",
-          "page": 1
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b10",
-          "type": "callout-decision",
-          "html": "Toda decisão precisa virar tarefa ou ajuste documentado.",
-          "page": 1,
-          "cv": "decision"
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b11",
-          "type": "separator",
-          "html": "",
-          "page": 2
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b12",
-          "type": "h2",
-          "html": "Depois",
-          "page": 2
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b13",
-          "type": "checklist",
-          "html": "Atualizar a demanda relacionada",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260303-reuniao-tecnica-b14",
-          "type": "checklist",
-          "html": "Enviar resumo objetivo para a equipe",
-          "done": false,
-          "page": 2
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "reunião",
-        "decisão",
-        "roteiro"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c3",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-03-03T08:55:00+00:00",
-      "updatedAt": "2026-03-03T09:30:00+00:00",
-      "sampleDayOffset": 0,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260305-dem-parametros-perfil",
-      "date": "2026-05-16",
-      "title": "Melhorar consulta de parâmetros por perfil",
-      "blocks": [
-        {
-          "id": "n-20260305-dem-parametros-perfil-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b02",
-          "type": "text",
-          "html": "A consulta atual exige muitos cliques. A ideia é concentrar parâmetros relevantes por perfil de uso.",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Consulta enxuta de parâmetros operacionais",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0305-A",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b06",
-          "type": "text",
-          "html": "OP: OP-PAR-004",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b08",
-          "type": "bullet",
-          "html": "Filtro por perfil",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b09",
-          "type": "bullet",
-          "html": "Busca por palavra-chave",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b10",
-          "type": "bullet",
-          "html": "Destaque para parâmetro obrigatório",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b12",
-          "type": "bullet",
-          "html": "Tela de consulta",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b13",
-          "type": "bullet",
-          "html": "Resumo exportável",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b14",
-          "type": "bullet",
-          "html": "Histórico de alteração",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b16",
-          "type": "checklist",
-          "html": "Adicionar agrupamento por categoria",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b17",
-          "type": "checklist",
-          "html": "Sinalizar parâmetro sem descrição",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b19",
-          "type": "checklist",
-          "html": "Validar nomes exibidos com linguagem simples",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b21",
-          "type": "checklist",
-          "html": "Mapear cinco perfis iniciais",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b22",
-          "type": "checklist",
-          "html": "Definir campos mínimos",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260305-dem-parametros-perfil-b23",
-          "type": "checklist",
-          "html": "Criar exemplo preenchido",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Em andamento",
-      "tags": [
-        "demanda",
-        "parâmetros",
-        "perfil"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c4",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0305",
-      "createdAt": "2026-03-05T09:10:00+00:00",
-      "updatedAt": "2026-03-05T16:00:00+00:00",
-      "sampleDayOffset": 5
-    },
-    {
-      "id": "n-20260306-inc-fila-exportacao",
-      "date": "2026-05-05",
-      "title": "Fila de exportação ficou travada",
-      "blocks": [
-        {
-          "id": "n-20260306-inc-fila-exportacao-b01",
-          "type": "h1",
-          "html": "Resumo do incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b02",
-          "type": "callout-problem",
-          "html": "A fila de exportação ficou parada com itens pendentes e sem avanço visual.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b03",
-          "type": "h2",
-          "html": "Impacto",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b04",
-          "type": "bullet",
-          "html": "Usuários aguardaram retorno para baixar arquivos",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b05",
-          "type": "bullet",
-          "html": "Não houve duplicidade confirmada",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b06",
-          "type": "bullet",
-          "html": "Foi necessário pausar novas tentativas por alguns minutos",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b08",
-          "type": "numbered",
-          "html": "Registrar quantidade de itens na fila",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b09",
-          "type": "numbered",
-          "html": "Interromper tentativa duplicada",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b10",
-          "type": "numbered",
-          "html": "Reprocessar um item controlado",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b11",
-          "type": "numbered",
-          "html": "Acompanhar normalização",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b13",
-          "type": "text",
-          "html": "Uma validação de status não retornou mensagem clara quando o item estava incompleto.",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b15",
-          "type": "checklist",
-          "html": "Criar mensagem objetiva para item incompleto",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260306-inc-fila-exportacao-b16",
-          "type": "checklist",
-          "html": "Adicionar checklist antes de enviar para exportação",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "exportação",
-        "fila"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0306",
-      "createdAt": "2026-03-06T15:10:00+00:00",
-      "updatedAt": "2026-03-06T17:20:00+00:00",
-      "sampleDayOffset": -6
-    },
-    {
-      "id": "n-20260311-estudo-sql-auditoria",
-      "date": "2026-05-13",
-      "title": "Estudo de SQL: filtros úteis para auditoria",
-      "blocks": [
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b01",
-          "type": "h1",
-          "html": "SQL para auditoria",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b02",
-          "type": "text",
-          "html": "Estudo rápido para montar consultas mais claras em conferências internas.",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b03",
-          "type": "h2",
-          "html": "Ideias de filtros",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b04",
-          "type": "bullet",
-          "html": "Período por data de criação",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b05",
-          "type": "bullet",
-          "html": "Status diferente de concluído",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b06",
-          "type": "bullet",
-          "html": "Registros alterados no mesmo dia",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b07",
-          "type": "bullet",
-          "html": "Campos obrigatórios vazios",
-          "page": 1
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b08",
-          "type": "h2",
-          "html": "Modelo mental",
-          "page": 2
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b09",
-          "type": "text",
-          "html": "Começar sempre pelo recorte menor possível e só depois adicionar novas tabelas ou condições.",
-          "page": 2
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b10",
-          "type": "callout-note",
-          "html": "Evitar consulta grande demais antes de entender o resultado esperado.",
-          "page": 2,
-          "cv": "note"
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b11",
-          "type": "checklist",
-          "html": "Criar caderno de consultas úteis",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260311-estudo-sql-auditoria-b12",
-          "type": "checklist",
-          "html": "Salvar exemplos com dados fictícios",
-          "done": false,
-          "page": 2
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Pendente",
-      "tags": [
-        "estudo",
-        "sql",
-        "auditoria"
-      ],
-      "projectId": "proj-estudos",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-03-11T20:15:00+00:00",
-      "updatedAt": "2026-03-11T21:00:00+00:00",
-      "sampleDayOffset": 2,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260313-dem-validacao-mensal",
-      "date": "2026-05-18",
-      "title": "Modelo de validação antes do fechamento mensal",
-      "blocks": [
-        {
-          "id": "n-20260313-dem-validacao-mensal-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b02",
-          "type": "text",
-          "html": "Criar uma ficha de conferência antes de encerrar o ciclo mensal de registros internos.",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Validação mensal com checklist e observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0313-B",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b06",
-          "type": "text",
-          "html": "OP: OP-VAL-005",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b08",
-          "type": "bullet",
-          "html": "Conferir pendências abertas",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b09",
-          "type": "bullet",
-          "html": "Confirmar itens concluídos",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b10",
-          "type": "bullet",
-          "html": "Gerar resumo de inconsistências",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b12",
-          "type": "bullet",
-          "html": "Checklist mensal",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b13",
-          "type": "bullet",
-          "html": "Resumo de pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b14",
-          "type": "bullet",
-          "html": "Indicador simples de conclusão",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b16",
-          "type": "checklist",
-          "html": "Incluir contador de itens sem responsável",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b17",
-          "type": "checklist",
-          "html": "Adicionar aviso de registro incompleto",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b19",
-          "type": "checklist",
-          "html": "Rever textos das mensagens para não assustar usuário comum",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b21",
-          "type": "checklist",
-          "html": "Testar com mês vazio",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b22",
-          "type": "checklist",
-          "html": "Testar com mês cheio",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260313-dem-validacao-mensal-b23",
-          "type": "checklist",
-          "html": "Validar exportação JSON após ajuste",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "validação",
-        "mensal"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c3",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0313",
-      "createdAt": "2026-03-13T10:25:00+00:00",
-      "updatedAt": "2026-03-13T10:50:00+00:00",
-      "sampleDayOffset": 7
-    },
-    {
-      "id": "n-20260318-diario-editor",
-      "date": "2026-05-19",
-      "title": "Diário de melhoria do editor",
-      "blocks": [
-        {
-          "id": "n-20260318-diario-editor-b01",
-          "type": "h1",
-          "html": "Editor como coração da agenda",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b02",
-          "type": "text",
-          "html": "A escrita precisa ser rápida, clara e sem medo de perder estrutura. O usuário deve conseguir pensar no conteúdo, não na ferramenta.",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b03",
-          "type": "h2",
-          "html": "Página 1 — Fricções percebidas",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b04",
-          "type": "bullet",
-          "html": "Inserir muitos checklists seguidos ainda exige atenção.",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b05",
-          "type": "bullet",
-          "html": "Blocos vazios precisam ser fáceis de remover.",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b06",
-          "type": "bullet",
-          "html": "O título deve ajudar a identificar rapidamente o registro.",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b07",
-          "type": "callout-priority",
-          "html": "Prioridade: reduzir cliques repetitivos no momento da escrita.",
-          "page": 1,
-          "cv": "priority"
-        },
-        {
-          "id": "n-20260318-diario-editor-b08",
-          "type": "separator",
-          "html": "",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b09",
-          "type": "h2",
-          "html": "Página 2 — Ideias de solução",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b10",
-          "type": "numbered",
-          "html": "Atalho para repetir o tipo de linha",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b11",
-          "type": "numbered",
-          "html": "Botão discreto para remover bloco",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b12",
-          "type": "numbered",
-          "html": "Modelo inicial diferente por tipo de registro",
-          "page": 1
-        },
-        {
-          "id": "n-20260318-diario-editor-b13",
-          "type": "separator",
-          "html": "",
-          "page": 2
-        },
-        {
-          "id": "n-20260318-diario-editor-b14",
-          "type": "h2",
-          "html": "Página 3 — Critérios de qualidade",
-          "page": 2
-        },
-        {
-          "id": "n-20260318-diario-editor-b15",
-          "type": "checklist",
-          "html": "Funcionar offline",
-          "done": true,
-          "page": 2
-        },
-        {
-          "id": "n-20260318-diario-editor-b16",
-          "type": "checklist",
-          "html": "Não quebrar importação/exportação JSON",
-          "done": true,
-          "page": 2
-        },
-        {
-          "id": "n-20260318-diario-editor-b17",
-          "type": "checklist",
-          "html": "Manter visual limpo",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260318-diario-editor-b18",
-          "type": "h2",
-          "html": "Página 4 — Observação final",
-          "page": 2
-        },
-        {
-          "id": "n-20260318-diario-editor-b19",
-          "type": "text",
-          "html": "A melhor funcionalidade é aquela que aparece no momento certo e não disputa atenção com o conteúdo.",
-          "page": 2
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "editor",
-        "ux",
-        "anotação"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c1",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-03-18T18:35:00+00:00",
-      "updatedAt": "2026-03-18T19:15:00+00:00",
-      "sampleDayOffset": 8,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260323-inc-anexo-solicitacao",
-      "date": "2026-05-07",
-      "title": "Anexo não carregou em solicitação interna",
-      "blocks": [
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b01",
-          "type": "h1",
-          "html": "Resumo do incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b02",
-          "type": "callout-problem",
-          "html": "Um anexo pequeno não aparecia após salvar a solicitação, apesar de o restante do registro ter sido gravado.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b03",
-          "type": "h2",
-          "html": "Impacto",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b04",
-          "type": "bullet",
-          "html": "Solicitante precisou reenviar evidência",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b05",
-          "type": "bullet",
-          "html": "Atendimento demorou mais para confirmar o problema",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b06",
-          "type": "bullet",
-          "html": "Registro principal permaneceu preservado",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b08",
-          "type": "numbered",
-          "html": "Reproduzir com arquivo de teste",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b09",
-          "type": "numbered",
-          "html": "Verificar tamanho e extensão",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b10",
-          "type": "numbered",
-          "html": "Salvar solicitação sem anexo",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b11",
-          "type": "numbered",
-          "html": "Orientar reenvio com nome simples",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b13",
-          "type": "text",
-          "html": "Nome do arquivo continha caracteres incomuns e a validação não exibiu mensagem compreensível.",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b15",
-          "type": "checklist",
-          "html": "Criar mensagem de erro mais clara",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260323-inc-anexo-solicitacao-b16",
-          "type": "checklist",
-          "html": "Adicionar dica de nome de arquivo aceito",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "anexo",
-        "upload"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0323",
-      "createdAt": "2026-03-23T11:45:00+00:00",
-      "updatedAt": "2026-03-23T13:10:00+00:00",
-      "sampleDayOffset": -4
-    },
-    {
-      "id": "n-20260327-dem-painel-pendencias",
-      "date": "2026-05-21",
-      "title": "Criar painel simples de pendências da equipe",
-      "blocks": [
-        {
-          "id": "n-20260327-dem-painel-pendencias-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b02",
-          "type": "text",
-          "html": "Criar visão rápida com pendências por status, responsável genérico e previsão de conclusão.",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Painel offline de pendências por prioridade",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0327-C",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b06",
-          "type": "text",
-          "html": "OP: OP-PEN-006",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b08",
-          "type": "bullet",
-          "html": "Filtro por prioridade",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b09",
-          "type": "bullet",
-          "html": "Filtro por projeto",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b10",
-          "type": "bullet",
-          "html": "Cards com leitura rápida",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b12",
-          "type": "bullet",
-          "html": "Painel lateral",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b13",
-          "type": "bullet",
-          "html": "Resumo por status",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b14",
-          "type": "bullet",
-          "html": "Exportação simples",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b16",
-          "type": "checklist",
-          "html": "Adicionar destaque para item atrasado",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b17",
-          "type": "checklist",
-          "html": "Permitir ocultar concluídos",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b19",
-          "type": "checklist",
-          "html": "Validar se painel não ocupa espaço demais",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b21",
-          "type": "checklist",
-          "html": "Criar protótipo visual",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b22",
-          "type": "checklist",
-          "html": "Testar com muitas pendências",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260327-dem-painel-pendencias-b23",
-          "type": "checklist",
-          "html": "Ajustar textos curtos",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Em andamento",
-      "tags": [
-        "demanda",
-        "pendências",
-        "painel"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c2",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0327",
-      "createdAt": "2026-03-27T14:30:00+00:00",
-      "updatedAt": "2026-03-27T15:00:00+00:00",
-      "sampleDayOffset": 10
-    },
-    {
-      "id": "n-20260401-organizacao-visual",
-      "date": "2026-05-23",
-      "title": "Abril: organização visual da agenda",
-      "blocks": [
-        {
-          "id": "n-20260401-organizacao-visual-b01",
-          "type": "h1",
-          "html": "Organização visual",
-          "page": 1
-        },
-        {
-          "id": "n-20260401-organizacao-visual-b02",
-          "type": "text",
-          "html": "Objetivo do mês: deixar a agenda mais confortável para leitura diária.",
-          "page": 1
-        },
-        {
-          "id": "n-20260401-organizacao-visual-b03",
-          "type": "checklist",
-          "html": "Separar registros por tipo",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260401-organizacao-visual-b04",
-          "type": "checklist",
-          "html": "Usar cores sem perder contraste",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260401-organizacao-visual-b05",
-          "type": "checklist",
-          "html": "Melhorar identificação dos post-its",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260401-organizacao-visual-b06",
-          "type": "callout-note",
-          "html": "Quando o visual ajuda, o usuário encontra o que precisa sem pensar muito.",
-          "page": 1,
-          "cv": "note"
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Em andamento",
-      "tags": [
-        "visual",
-        "agenda",
-        "abril"
-      ],
-      "projectId": "proj-pessoal",
-      "postitColor": "c1",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-04-01T08:10:00+00:00",
-      "updatedAt": "2026-04-01T08:40:00+00:00",
-      "sampleDayOffset": 12,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260403-dem-produtos-parametros",
-      "date": "2026-05-24",
-      "title": "Cadastro de produtos com parâmetros revisáveis",
-      "blocks": [
-        {
-          "id": "n-20260403-dem-produtos-parametros-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b02",
-          "type": "text",
-          "html": "Organizar cadastro de produtos fictícios com parâmetros revisáveis e histórico de alteração.",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Ficha técnica simples por produto interno",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0403-A",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b06",
-          "type": "text",
-          "html": "OP: OP-PRO-007",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b08",
-          "type": "bullet",
-          "html": "Produto deve ter código genérico",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b09",
-          "type": "bullet",
-          "html": "Parâmetros devem ter descrição",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b10",
-          "type": "bullet",
-          "html": "Alteração precisa registrar motivo",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b12",
-          "type": "bullet",
-          "html": "Produto Modelo A",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b13",
-          "type": "bullet",
-          "html": "Produto Modelo B",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b14",
-          "type": "bullet",
-          "html": "Produto Modelo C",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b16",
-          "type": "checklist",
-          "html": "Adicionar campo de revisão",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b17",
-          "type": "checklist",
-          "html": "Criar aviso quando parâmetro estiver sem descrição",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b19",
-          "type": "checklist",
-          "html": "Definir texto padrão para alteração preliminar",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b21",
-          "type": "checklist",
-          "html": "Montar três exemplos fictícios",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b22",
-          "type": "checklist",
-          "html": "Validar busca por produto",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260403-dem-produtos-parametros-b23",
-          "type": "checklist",
-          "html": "Revisar layout da ficha",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "demanda",
-        "produtos",
-        "parâmetros"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c4",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0403",
-      "createdAt": "2026-04-03T10:15:00+00:00",
-      "updatedAt": "2026-04-03T10:35:00+00:00",
-      "sampleDayOffset": 13
-    },
-    {
-      "id": "n-20260407-inc-status-reaberto",
-      "date": "2026-05-09",
-      "title": "Divergência de status em chamado reaberto",
-      "blocks": [
-        {
-          "id": "n-20260407-inc-status-reaberto-b01",
-          "type": "h1",
-          "html": "Resumo do incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b02",
-          "type": "callout-problem",
-          "html": "Um chamado reaberto aparecia como concluído na lista principal e como pendente ao abrir o detalhe.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b03",
-          "type": "h2",
-          "html": "Impacto",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b04",
-          "type": "bullet",
-          "html": "A equipe ficou em dúvida sobre qual status considerar",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b05",
-          "type": "bullet",
-          "html": "Houve risco de esquecer retorno ao solicitante",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b06",
-          "type": "bullet",
-          "html": "Correção manual resolveu o caso pontual",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b08",
-          "type": "numbered",
-          "html": "Comparar status na lista e no detalhe",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b09",
-          "type": "numbered",
-          "html": "Atualizar registro manualmente",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b10",
-          "type": "numbered",
-          "html": "Conferir histórico de alteração",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b11",
-          "type": "numbered",
-          "html": "Registrar regra esperada",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b13",
-          "type": "text",
-          "html": "A reabertura atualizou o detalhe, mas a lista ainda exibia estado anterior salvo em cache local.",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b15",
-          "type": "checklist",
-          "html": "Forçar atualização da lista após reabrir",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260407-inc-status-reaberto-b16",
-          "type": "checklist",
-          "html": "Adicionar teste de reabertura",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "status",
-        "chamado"
-      ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0407",
-      "createdAt": "2026-04-07T09:50:00+00:00",
-      "updatedAt": "2026-04-07T11:00:00+00:00",
-      "sampleDayOffset": -2
-    },
-    {
-      "id": "n-20260409-estudo-automacao-offline",
-      "date": "2026-05-25",
-      "title": "Plano de estudos: automação offline",
-      "blocks": [
-        {
-          "id": "n-20260409-estudo-automacao-offline-b01",
-          "type": "h1",
-          "html": "Automação offline",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b02",
-          "type": "text",
-          "html": "Estudar pequenas automações que funcionem sem servidor e sem depender de login.",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b03",
-          "type": "h2",
-          "html": "Tópicos",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b04",
-          "type": "bullet",
-          "html": "Manipulação de JSON",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b05",
-          "type": "bullet",
-          "html": "Leitura e escrita local pelo navegador",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b06",
-          "type": "bullet",
-          "html": "Organização de módulos JS",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b07",
-          "type": "bullet",
-          "html": "Boas práticas para não perder dados",
-          "page": 1
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b08",
-          "type": "h2",
-          "html": "Roteiro",
-          "page": 2
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b09",
-          "type": "checklist",
-          "html": "Revisar estrutura atual do app",
-          "done": true,
-          "page": 2
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b10",
-          "type": "checklist",
-          "html": "Criar exemplos pequenos e seguros",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b11",
-          "type": "checklist",
-          "html": "Documentar o que pode evoluir no futuro",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260409-estudo-automacao-offline-b12",
-          "type": "callout-action",
-          "html": "Separar estudo de implementação para evitar mexer demais no projeto de uma vez.",
-          "page": 2,
-          "cv": "action"
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Pendente",
-      "tags": [
-        "estudo",
-        "offline",
-        "automação"
-      ],
-      "projectId": "proj-estudos",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-04-09T20:05:00+00:00",
-      "updatedAt": "2026-04-09T20:40:00+00:00",
-      "sampleDayOffset": 14,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260414-dem-importacao-json",
-      "date": "2026-05-26",
-      "title": "Criar rotina de conferência de importação JSON",
-      "blocks": [
-        {
-          "id": "n-20260414-dem-importacao-json-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b02",
-          "type": "text",
-          "html": "Antes de substituir a base atual, conferir se o JSON importado tem estrutura mínima válida.",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Validação preventiva de importação",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0414-B",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b06",
-          "type": "text",
-          "html": "OP: OP-JSON-008",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b08",
-          "type": "bullet",
-          "html": "Verificar schema",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b09",
-          "type": "bullet",
-          "html": "Verificar lista de notas",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b10",
-          "type": "bullet",
-          "html": "Verificar projetos opcionais",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b12",
-          "type": "bullet",
-          "html": "Importador JSON",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b13",
-          "type": "bullet",
-          "html": "Mensagem de validação",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b14",
-          "type": "bullet",
-          "html": "Backup antes de substituir",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b16",
-          "type": "checklist",
-          "html": "Exibir resumo antes de importar",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b17",
-          "type": "checklist",
-          "html": "Bloquear arquivo sem notes[]",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b19",
-          "type": "checklist",
-          "html": "Garantir mensagem curta e compreensível",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b21",
-          "type": "checklist",
-          "html": "Criar base com erro proposital",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b22",
-          "type": "checklist",
-          "html": "Testar importação válida",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260414-dem-importacao-json-b23",
-          "type": "checklist",
-          "html": "Documentar recuperação por backup",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Em andamento",
-      "tags": [
-        "demanda",
-        "json",
-        "importação"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c3",
-      "tipo": "Demanda",
-      "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0414",
-      "createdAt": "2026-04-14T16:20:00+00:00",
-      "updatedAt": "2026-04-14T17:15:00+00:00",
-      "sampleDayOffset": 15
-    },
-    {
-      "id": "n-20260415-checklist-deploy",
-      "date": "2026-05-27",
-      "title": "Checklist de deploy interno",
-      "blocks": [
-        {
-          "id": "n-20260415-checklist-deploy-b01",
-          "type": "h1",
-          "html": "Deploy controlado",
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b02",
-          "type": "text",
-          "html": "Checklist para pequenas publicações internas. A ideia é ter passos repetíveis e fáceis de marcar.",
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b03",
-          "type": "checklist",
-          "html": "Confirmar backup do estado atual",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b04",
-          "type": "checklist",
-          "html": "Validar arquivos alterados",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b05",
-          "type": "checklist",
-          "html": "Testar abertura do index.html localmente",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b06",
-          "type": "checklist",
-          "html": "Conferir console do navegador",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b07",
-          "type": "checklist",
-          "html": "Exportar JSON antes da troca",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260415-checklist-deploy-b08",
-          "type": "callout-decision",
-          "html": "Só publicar quando o teste local abrir sem erro aparente.",
-          "page": 1,
-          "cv": "decision"
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "deploy",
-        "checklist",
-        "validação"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c1",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-04-15T18:00:00+00:00",
-      "updatedAt": "2026-04-15T18:30:00+00:00",
-      "sampleDayOffset": 16,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260420-inc-busca-duplicada",
-      "date": "2026-05-10",
-      "title": "Busca retornou resultados duplicados",
-      "blocks": [
-        {
-          "id": "n-20260420-inc-busca-duplicada-b01",
-          "type": "h1",
-          "html": "Resumo do incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b02",
-          "type": "callout-problem",
-          "html": "Ao pesquisar uma palavra comum, alguns cards apareceram duplicados na lista de resultados.",
-          "page": 1,
-          "cv": "problem"
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b03",
-          "type": "h2",
-          "html": "Impacto",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b04",
-          "type": "bullet",
-          "html": "Usuário ficou em dúvida se eram registros diferentes",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b05",
-          "type": "bullet",
-          "html": "Busca ficou visualmente poluída",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b06",
-          "type": "bullet",
-          "html": "Nenhum conteúdo foi perdido",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b08",
-          "type": "numbered",
-          "html": "Repetir busca com palavra curta",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b09",
-          "type": "numbered",
-          "html": "Comparar IDs dos cards",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b10",
-          "type": "numbered",
-          "html": "Limpar filtro de projeto",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b11",
-          "type": "numbered",
-          "html": "Atualizar renderização da busca",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b13",
-          "type": "text",
-          "html": "O mesmo registro era somado por título e por corpo sem eliminar duplicidade visual.",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b15",
-          "type": "checklist",
-          "html": "Garantir uma ocorrência por nota",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260420-inc-busca-duplicada-b16",
-          "type": "checklist",
-          "html": "Manter destaque do termo encontrado",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "busca",
-        "duplicidade"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0420",
-      "createdAt": "2026-04-20T12:20:00+00:00",
-      "updatedAt": "2026-04-20T14:05:00+00:00",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
       "sampleDayOffset": -1
     },
     {
-      "id": "n-20260424-dem-ficha-demanda-longa",
-      "date": "2026-05-29",
-      "title": "Criar modelo de ficha para demanda longa",
+      "id": "sd-dem-002-filtro-prioridade",
+      "date": "2026-05-11",
+      "title": "Criar filtro por prioridade no painel interno",
       "blocks": [
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b01",
+          "id": "sd-dem-002-b01",
           "type": "h1",
           "html": "Observações",
           "page": 1
         },
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b02",
+          "id": "sd-dem-002-b02",
           "type": "text",
-          "html": "Demanda para organizar registros extensos em uma folha única com separações claras.",
+          "html": "Observações: O painel deve permitir localizar itens Alta, Média e Baixa sem leitura manual de todos os cartões.",
           "page": 1
         },
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
+          "id": "sd-dem-002-b03",
+          "type": "table",
+          "html": "<table><tbody><tr><td contenteditable=\"true\">Prioridade</td><td contenteditable=\"true\">Uso esperado</td></tr><tr><td contenteditable=\"true\">Alta</td><td contenteditable=\"true\">Impacto imediato</td></tr><tr><td contenteditable=\"true\">Média</td><td contenteditable=\"true\">Acompanhamento normal</td></tr><tr><td contenteditable=\"true\">Baixa</td><td contenteditable=\"true\">Melhoria ou organização</td></tr></tbody></table>",
           "page": 1
         },
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b04",
+          "id": "sd-dem-002-b04",
+          "type": "checklist",
+          "html": "Validar nomes dos filtros",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "demanda",
+        "prioridade",
+        "painel"
+      ],
+      "projectId": "proj-service-desk",
+      "postitColor": "c1",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-002",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 3
+    },
+    {
+      "id": "sd-dem-003-respostas-frequentes",
+      "date": "2026-05-11",
+      "title": "Modelo de resposta para dúvidas frequentes",
+      "blocks": [
+        {
+          "id": "sd-dem-003-b01",
+          "type": "h1",
+          "html": "Observações",
+          "page": 1
+        },
+        {
+          "id": "sd-dem-003-b02",
           "type": "text",
-          "html": "Título Desenvolvimento: Ficha longa para análise e acompanhamento",
+          "html": "Observações: Criar respostas-base curtas para dúvidas comuns, sem parecer texto automático.",
           "page": 1
         },
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0424-C",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b06",
-          "type": "text",
-          "html": "OP: OP-FIC-009",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b08",
-          "type": "bullet",
-          "html": "Folha única com scroll",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b09",
-          "type": "bullet",
-          "html": "Índices internos por tema",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b10",
-          "type": "bullet",
-          "html": "Campos de pendência no final",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b12",
-          "type": "bullet",
-          "html": "Modelo de demanda",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b13",
-          "type": "bullet",
-          "html": "Checklist de validação",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b14",
-          "type": "bullet",
-          "html": "Resumo executivo",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b15",
+          "id": "sd-dem-003-b03",
           "type": "h2",
           "html": "Alterações WFD",
           "page": 1
         },
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b16",
+          "id": "sd-dem-003-b04",
           "type": "checklist",
-          "html": "Incluir bloco Observações no topo",
-          "done": true,
-          "page": 1
+          "html": "Separar abertura, orientação e encerramento",
+          "page": 1,
+          "done": false
         },
         {
-          "id": "n-20260424-dem-ficha-demanda-longa-b17",
+          "id": "sd-dem-003-b05",
           "type": "checklist",
-          "html": "Separar alterações WFD e alterações preliminares",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b19",
-          "type": "checklist",
-          "html": "Testar nomes dos títulos para o usuário entender",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b21",
-          "type": "checklist",
-          "html": "Validar estrutura com exemplo realista fictício",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b22",
-          "type": "checklist",
-          "html": "Ajustar espaçamento",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260424-dem-ficha-demanda-longa-b23",
-          "type": "checklist",
-          "html": "Confirmar busca por ID",
-          "done": false,
-          "page": 1
+          "html": "Criar campo para adaptação manual",
+          "page": 1,
+          "done": false
         }
       ],
-      "priority": "Alta",
-      "status": "Em andamento",
+      "priority": "Baixa",
+      "status": "Pendente",
       "tags": [
         "demanda",
-        "ficha",
-        "modelo"
+        "resposta",
+        "wfd"
       ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c4",
+      "projectId": "proj-service-desk",
+      "postitColor": "c2",
       "tipo": "Demanda",
+      "baseType": "Demanda",
       "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0424",
-      "createdAt": "2026-04-24T09:25:00+00:00",
-      "updatedAt": "2026-04-24T10:45:00+00:00",
-      "sampleDayOffset": 18
+      "vinculoId": "DEM-2026-003",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 5
     },
     {
-      "id": "n-20260429-retrospectiva",
-      "date": "2026-05-10",
-      "title": "Retrospectiva do mês",
+      "id": "sd-dem-004-conferencia-concluidos",
+      "date": "2026-05-11",
+      "title": "Conferência de chamados concluídos",
       "blocks": [
         {
-          "id": "n-20260429-retrospectiva-b01",
+          "id": "sd-dem-004-b01",
           "type": "h1",
-          "html": "Retrospectiva de abril",
+          "html": "Observações",
           "page": 1
         },
         {
-          "id": "n-20260429-retrospectiva-b02",
+          "id": "sd-dem-004-b02",
           "type": "text",
-          "html": "Abril foi focado em organização visual, clareza de registros e base para demandas mais longas.",
+          "html": "Observações: Revisão concluída dos chamados fechados na semana anterior.",
           "page": 1
         },
         {
-          "id": "n-20260429-retrospectiva-b03",
-          "type": "h2",
-          "html": "O que funcionou",
-          "page": 1
-        },
-        {
-          "id": "n-20260429-retrospectiva-b04",
-          "type": "bullet",
-          "html": "Post-its com tipo facilitam identificar o conteúdo",
-          "page": 1
-        },
-        {
-          "id": "n-20260429-retrospectiva-b05",
-          "type": "bullet",
-          "html": "Cores ajudam a separar prioridade visual",
-          "page": 1
-        },
-        {
-          "id": "n-20260429-retrospectiva-b06",
-          "type": "bullet",
-          "html": "Demanda em folha única parece mais natural para acompanhamento",
-          "page": 1
-        },
-        {
-          "id": "n-20260429-retrospectiva-b07",
-          "type": "h2",
-          "html": "O que ainda incomoda",
-          "page": 2
-        },
-        {
-          "id": "n-20260429-retrospectiva-b08",
-          "type": "bullet",
-          "html": "Algumas ações repetitivas no editor ainda podem melhorar",
-          "page": 2
-        },
-        {
-          "id": "n-20260429-retrospectiva-b09",
-          "type": "bullet",
-          "html": "Busca precisa continuar legível com muitos resultados",
-          "page": 2
-        },
-        {
-          "id": "n-20260429-retrospectiva-b10",
+          "id": "sd-dem-004-b03",
           "type": "callout-action",
-          "html": "Para maio: focar em criação rápida, filtros e exemplos mais ricos.",
-          "page": 2,
+          "html": "Ação final: manter conferência semanal simples e objetiva.",
+          "page": 1,
           "cv": "action"
+        },
+        {
+          "id": "sd-dem-004-b04",
+          "type": "checklist",
+          "html": "Arquivar itens sem pendência",
+          "page": 1,
+          "done": true
         }
       ],
       "priority": "Baixa",
       "status": "Concluída",
       "tags": [
-        "retrospectiva",
-        "abril",
-        "melhoria"
+        "concluido",
+        "suporte"
       ],
-      "projectId": "proj-pessoal",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-04-29T18:10:00+00:00",
-      "updatedAt": "2026-04-29T18:50:00+00:00",
-      "sampleDayOffset": -1,
-      "reminderEnabled": true
-    },
-    {
-      "id": "n-20260504-planejamento-maio",
-      "date": "2026-05-11",
-      "title": "Planejamento de maio e prioridades",
-      "blocks": [
-        {
-          "id": "n-20260504-planejamento-maio-b01",
-          "type": "h1",
-          "html": "Prioridades de maio",
-          "page": 1
-        },
-        {
-          "id": "n-20260504-planejamento-maio-b02",
-          "type": "text",
-          "html": "Manter a agenda simples, mas mais demonstrativa para quem abrir a base de exemplo pela primeira vez.",
-          "page": 1
-        },
-        {
-          "id": "n-20260504-planejamento-maio-b03",
-          "type": "checklist",
-          "html": "Criar exemplos de anotação curta",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260504-planejamento-maio-b04",
-          "type": "checklist",
-          "html": "Criar exemplos de demanda com ficha completa",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260504-planejamento-maio-b05",
-          "type": "checklist",
-          "html": "Criar incidentes com causa, ação e pendência",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260504-planejamento-maio-b06",
-          "type": "callout-note",
-          "html": "A base de exemplo precisa ensinar pelo uso, não por manual.",
-          "page": 1,
-          "cv": "note"
-        }
-      ],
-      "priority": "Média",
-      "status": "Em andamento",
-      "tags": [
-        "maio",
-        "prioridades",
-        "exemplo"
-      ],
-      "projectId": "proj-pessoal",
-      "postitColor": "c1",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-05-04T08:35:00+00:00",
-      "updatedAt": "2026-05-04T09:00:00+00:00",
-      "scheduledTime": "15:30",
-      "reminderEnabled": true,
-      "sampleDayOffset": 0,
-      "sampleTimeOffsetMinutes": 60
-    },
-    {
-      "id": "n-20260506-dem-criacao-registros",
-      "date": "2026-05-31",
-      "title": "Refinar tela de criação de registros",
-      "blocks": [
-        {
-          "id": "n-20260506-dem-criacao-registros-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b02",
-          "type": "text",
-          "html": "Melhorar a escolha entre Anotação, Demanda e Incidente para reduzir confusão no início do fluxo.",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Tela de criação com escolha de tipo",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0506-A",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b06",
-          "type": "text",
-          "html": "OP: OP-UI-010",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b08",
-          "type": "bullet",
-          "html": "Textos curtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b09",
-          "type": "bullet",
-          "html": "Cards alinhados",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b10",
-          "type": "bullet",
-          "html": "ID obrigatório só quando necessário",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b12",
-          "type": "bullet",
-          "html": "Modal de criação",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b13",
-          "type": "bullet",
-          "html": "Validação de ID",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b14",
-          "type": "bullet",
-          "html": "Resumo visual do tipo",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b16",
-          "type": "checklist",
-          "html": "Centralizar conteúdo dos cards",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b17",
-          "type": "checklist",
-          "html": "Trocar descrição de anotação para texto mais genérico",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b19",
-          "type": "checklist",
-          "html": "Verificar contraste em todos os temas",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b21",
-          "type": "checklist",
-          "html": "Testar criação de cada tipo",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b22",
-          "type": "checklist",
-          "html": "Confirmar aparição nos post-its",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260506-dem-criacao-registros-b23",
-          "type": "checklist",
-          "html": "Validar busca por ID",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Alta",
-      "status": "Em andamento",
-      "tags": [
-        "demanda",
-        "interface",
-        "criação"
-      ],
-      "projectId": "proj-automacao",
+      "projectId": "proj-service-desk",
       "postitColor": "c3",
       "tipo": "Demanda",
+      "baseType": "Demanda",
       "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0506",
-      "createdAt": "2026-05-06T10:10:00+00:00",
-      "updatedAt": "2026-05-06T11:20:00+00:00",
-      "sampleDayOffset": 20
+      "vinculoId": "DEM-2026-004",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": -3
     },
     {
-      "id": "n-20260507-inc-foco-checklist",
+      "id": "sd-inc-001-relatorio-branco",
       "date": "2026-05-11",
-      "title": "Usuário perdeu foco ao editar checklist",
+      "title": "Relatório não abriu após atualização local",
       "blocks": [
         {
-          "id": "n-20260507-inc-foco-checklist-b01",
+          "id": "sd-inc-001-b01",
           "type": "h1",
-          "html": "Resumo do incidente",
+          "html": "Causa do Incidente",
           "page": 1
         },
         {
-          "id": "n-20260507-inc-foco-checklist-b02",
+          "id": "sd-inc-001-b02",
           "type": "callout-problem",
-          "html": "Ao criar vários itens de checklist em sequência, o foco visual saiu da linha atual e confundiu a continuação da escrita.",
+          "html": "Causa do Incidente: Relatório interno carregou em branco após atualização local em ambiente de teste.",
           "page": 1,
           "cv": "problem"
         },
         {
-          "id": "n-20260507-inc-foco-checklist-b03",
+          "id": "sd-inc-001-b03",
           "type": "h2",
-          "html": "Impacto",
+          "html": "Solução",
           "page": 1
         },
         {
-          "id": "n-20260507-inc-foco-checklist-b04",
-          "type": "bullet",
-          "html": "Escrita ficou mais lenta",
-          "page": 1
+          "id": "sd-inc-001-b04",
+          "type": "callout-action",
+          "html": "Solução: Validar cache, permissões e retorno da consulta antes de liberar correção.",
+          "page": 1,
+          "cv": "action"
         },
         {
-          "id": "n-20260507-inc-foco-checklist-b05",
-          "type": "bullet",
-          "html": "Usuário precisou clicar várias vezes",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b06",
-          "type": "bullet",
-          "html": "Conteúdo digitado não foi perdido",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b08",
-          "type": "numbered",
-          "html": "Reproduzir criando nove checklists",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b09",
-          "type": "numbered",
-          "html": "Comparar comportamento com linha de texto",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b10",
-          "type": "numbered",
-          "html": "Adicionar forma de repetir linha sem copiar texto",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b11",
-          "type": "numbered",
-          "html": "Testar atalho",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b13",
-          "type": "text",
-          "html": "O fluxo exigia abrir o menu de tipos repetidas vezes, aumentando a chance de erro.",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260507-inc-foco-checklist-b15",
+          "id": "sd-inc-001-b05",
           "type": "checklist",
-          "html": "Criar botão discreto de repetir linha",
-          "done": false,
-          "page": 1
+          "html": "Reproduzir em ambiente controlado",
+          "page": 1,
+          "done": true
         },
         {
-          "id": "n-20260507-inc-foco-checklist-b16",
+          "id": "sd-inc-001-b06",
           "type": "checklist",
-          "html": "Documentar atalho no rodapé do editor",
-          "done": false,
-          "page": 1
-        }
-      ],
-      "priority": "Média",
-      "status": "Concluída",
-      "tags": [
-        "incidente",
-        "editor",
-        "checklist"
-      ],
-      "projectId": "proj-automacao",
-      "postitColor": "c5",
-      "tipo": "Incidente",
-      "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0507",
-      "createdAt": "2026-05-07T14:15:00+00:00",
-      "updatedAt": "2026-05-07T15:30:00+00:00",
-      "sampleDayOffset": 0
-    },
-    {
-      "id": "n-20260511-agenda-tarefas-dia",
-      "date": "2026-05-11",
-      "tipo": "Anotação",
-      "title": "Agenda do dia: revisar tarefas críticas",
-      "blocks": [
-        {
-          "id": "b-20260511-agenda-h1",
-          "type": "h1",
-          "html": "Agenda do dia",
-          "page": 1
-        },
-        {
-          "id": "b-20260511-agenda-txt",
-          "type": "text",
-          "html": "Anotação de teste para validar a aba Agenda e o popup de lembrete local.",
-          "page": 1
-        },
-        {
-          "id": "b-20260511-agenda-check-1",
-          "type": "checklist",
-          "html": "Conferir tarefas abertas do dia",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "b-20260511-agenda-check-2",
-          "type": "checklist",
-          "html": "Priorizar o que precisa de resposta ainda hoje",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "b-20260511-agenda-check-3",
-          "type": "checklist",
-          "html": "Registrar próximos passos antes de encerrar o expediente",
-          "done": false,
-          "page": 1
+          "html": "Confirmar correção com utilizador fictício",
+          "page": 1,
+          "done": false
         }
       ],
       "priority": "Alta",
-      "status": "Pendente",
+      "status": "Em andamento",
       "tags": [
-        "agenda",
-        "tarefas",
-        "teste"
+        "incidente",
+        "relatorio",
+        "suporte"
       ],
       "projectId": "proj-service-desk",
-      "postitColor": "c2",
-      "scheduledTime": "10:30",
-      "reminderEnabled": true,
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-05-11T08:15:00+00:00",
-      "updatedAt": "2026-05-11T08:15:00+00:00",
-      "sampleDayOffset": 0,
-      "sampleTimeOffsetMinutes": 5
-    },
-    {
-      "id": "n-20260512-reuniao-com-decisao",
-      "date": "2026-05-12",
-      "title": "Modelo de anotação de reunião com decisão",
-      "blocks": [
-        {
-          "id": "n-20260512-reuniao-com-decisao-b01",
-          "type": "h1",
-          "html": "Reunião com decisão",
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b02",
-          "type": "text",
-          "html": "Modelo para registrar reunião curta sem transformar a anotação em ata pesada.",
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b03",
-          "type": "h2",
-          "html": "Contexto",
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b04",
-          "type": "text",
-          "html": "Tema discutido: priorização de melhorias pequenas que desbloqueiam uso diário.",
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b05",
-          "type": "h2",
-          "html": "Decisões",
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b06",
-          "type": "callout-decision",
-          "html": "Decidido manter a agenda offline e evoluir por módulos pequenos.",
-          "page": 1,
-          "cv": "decision"
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b07",
-          "type": "callout-decision",
-          "html": "Demanda longa deve usar folha única; anotação comum continua livre.",
-          "page": 1,
-          "cv": "decision"
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b08",
-          "type": "h2",
-          "html": "Ações",
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b09",
-          "type": "checklist",
-          "html": "Atualizar exemplo-base com registros variados",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b10",
-          "type": "checklist",
-          "html": "Conferir se os post-its mostram tipo e cor",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b11",
-          "type": "separator",
-          "html": "",
-          "page": 2
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b12",
-          "type": "h2",
-          "html": "Resumo para enviar",
-          "page": 2
-        },
-        {
-          "id": "n-20260512-reuniao-com-decisao-b13",
-          "type": "text",
-          "html": "Foram definidas melhorias de clareza no fluxo de criação, exemplos mais imersivos e preservação da simplicidade offline.",
-          "page": 2
-        }
-      ],
-      "priority": "Média",
-      "status": "Pendente",
-      "tags": [
-        "reunião",
-        "decisão",
-        "modelo"
-      ],
-      "projectId": "proj-documentacao",
-      "postitColor": "c2",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-05-12T16:50:00+00:00",
-      "updatedAt": "2026-05-12T17:25:00+00:00",
-      "scheduledTime": "14:30",
-      "reminderEnabled": true,
+      "postitColor": "c4",
+      "tipo": "Incidente",
+      "baseType": "Incidente",
+      "vinculoTipo": "Incidente",
+      "vinculoId": "INC-2026-001",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
       "sampleDayOffset": 1
     },
     {
-      "id": "n-20260515-dem-respostas-rapidas",
-      "date": "2026-06-03",
-      "title": "Criar biblioteca de respostas rápidas",
+      "id": "aut-anot-001-ideias",
+      "date": "2026-05-11",
+      "title": "Ideias para automação de rotina",
       "blocks": [
         {
-          "id": "n-20260515-dem-respostas-rapidas-b01",
+          "id": "aut-anot-001-b01",
+          "type": "h1",
+          "html": "Ideias rápidas",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-001-b02",
+          "type": "bullet",
+          "html": "Agrupar arquivos por data de recebimento",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-001-b03",
+          "type": "bullet",
+          "html": "Gerar resumo de conferência antes de exportar",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-001-b04",
+          "type": "bullet",
+          "html": "Avisar quando um campo obrigatório estiver vazio",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-001-b05",
+          "type": "freebox",
+          "html": "Caixa livre: arraste este bloco no editor para simular um lembrete visual estilo OneNote.",
+          "page": 1,
+          "x": 6,
+          "y": 18,
+          "w": 64,
+          "h": 90
+        }
+      ],
+      "priority": "Média",
+      "status": "Em andamento",
+      "tags": [
+        "automacao",
+        "ideias",
+        "freebox"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c5",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 0
+    },
+    {
+      "id": "aut-anot-002-validacao-script",
+      "date": "2026-05-11",
+      "title": "Checklist de validação de script",
+      "blocks": [
+        {
+          "id": "aut-anot-002-b01",
+          "type": "h1",
+          "html": "Validação antes de executar",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-002-b02",
+          "type": "checklist",
+          "html": "Conferir pasta de origem",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "aut-anot-002-b03",
+          "type": "checklist",
+          "html": "Conferir quantidade esperada de arquivos",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "aut-anot-002-b04",
+          "type": "checklist",
+          "html": "Gerar log resumido",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "aut-anot-002-b05",
+          "type": "callout-note",
+          "html": "Observação: manter mensagens curtas para facilitar leitura no painel.",
+          "page": 1,
+          "cv": "note"
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "checklist",
+        "script",
+        "automacao"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c1",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 6
+    },
+    {
+      "id": "aut-anot-003-manual-auto",
+      "date": "2026-05-11",
+      "title": "Resumo de execução manual x automática",
+      "blocks": [
+        {
+          "id": "aut-anot-003-b01",
+          "type": "h1",
+          "html": "Comparativo",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-003-b02",
+          "type": "table",
+          "html": "<table><tbody><tr><td contenteditable=\"true\">Etapa</td><td contenteditable=\"true\">Manual</td><td contenteditable=\"true\">Automático</td></tr><tr><td contenteditable=\"true\">Separar arquivos</td><td contenteditable=\"true\">15 min</td><td contenteditable=\"true\">2 min</td></tr><tr><td contenteditable=\"true\">Validar nomes</td><td contenteditable=\"true\">risco de erro</td><td contenteditable=\"true\">regra fixa</td></tr><tr><td contenteditable=\"true\">Gerar resumo</td><td contenteditable=\"true\">manual</td><td contenteditable=\"true\">automático</td></tr></tbody></table>",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-003-b03",
+          "type": "callout-decision",
+          "html": "Decisão: automatizar apenas o que já tem regra clara.",
+          "page": 1,
+          "cv": "decision"
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Em andamento",
+      "tags": [
+        "tabela",
+        "comparativo",
+        "automacao"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c2",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 8
+    },
+    {
+      "id": "aut-anot-004-agendamento",
+      "date": "2026-05-11",
+      "title": "Revisão de automação amanhã",
+      "blocks": [
+        {
+          "id": "aut-anot-004-b01",
+          "type": "h1",
+          "html": "Revisão agendada",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-004-b02",
+          "type": "text",
+          "html": "Conferir se o fluxo continua simples para uso diário e se o log ficou objetivo.",
+          "page": 1
+        },
+        {
+          "id": "aut-anot-004-b03",
+          "type": "checklist",
+          "html": "Revisar mensagens de erro",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "aut-anot-004-b04",
+          "type": "checklist",
+          "html": "Confirmar se o backup JSON continua importável",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "agendamento",
+        "automacao"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c3",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": true,
+      "scheduledTime": "09:00",
+      "reminderEnabled": true,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 1
+    },
+    {
+      "id": "aut-dem-001-pacote-diario",
+      "date": "2026-05-11",
+      "title": "Gerar pacote diário de arquivos processados",
+      "blocks": [
+        {
+          "id": "aut-dem-001-b01",
           "type": "h1",
           "html": "Observações",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b02",
+          "id": "aut-dem-001-b02",
           "type": "text",
-          "html": "Criar biblioteca de textos curtos para respostas recorrentes, sem parecer automática demais.",
+          "html": "Observações: Ao final do processamento, gerar uma pasta única com resumo, arquivos aprovados e rejeitados.",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Respostas rápidas por categoria de atendimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0515-B",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b06",
-          "type": "text",
-          "html": "OP: OP-RES-011",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b07",
+          "id": "aut-dem-001-b03",
           "type": "h2",
           "html": "Parâmetros",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b08",
-          "type": "bullet",
-          "html": "Texto deve ser editável antes de usar",
+          "id": "aut-dem-001-b04",
+          "type": "checklist",
+          "html": "Definir nome padrão do pacote",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "aut-dem-001-b05",
+          "type": "checklist",
+          "html": "Salvar resumo em TXT simples",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Média",
+      "status": "Em andamento",
+      "tags": [
+        "demanda",
+        "pacote",
+        "automacao"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c4",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-005",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 2
+    },
+    {
+      "id": "aut-dem-002-validar-nomes",
+      "date": "2026-05-11",
+      "title": "Validar nomes de arquivos antes de exportar",
+      "blocks": [
+        {
+          "id": "aut-dem-002-b01",
+          "type": "h1",
+          "html": "Observações",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b09",
-          "type": "bullet",
-          "html": "Categoria visível",
+          "id": "aut-dem-002-b02",
+          "type": "text",
+          "html": "Observações: Evitar exportação quando o nome do arquivo não seguir o padrão mínimo.",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b10",
-          "type": "bullet",
-          "html": "Busca por palavra-chave",
+          "id": "aut-dem-002-b03",
+          "type": "table",
+          "html": "<table><tbody><tr><td contenteditable=\"true\">Regra</td><td contenteditable=\"true\">Exemplo</td></tr><tr><td contenteditable=\"true\">Ano e mês</td><td contenteditable=\"true\">2026-05</td></tr><tr><td contenteditable=\"true\">Tipo</td><td contenteditable=\"true\">DEMANDA</td></tr><tr><td contenteditable=\"true\">Sequência</td><td contenteditable=\"true\">0001</td></tr></tbody></table>",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b11",
+          "id": "aut-dem-002-b04",
+          "type": "checklist",
+          "html": "Criar mensagem objetiva quando falhar",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Alta",
+      "status": "Pendente",
+      "tags": [
+        "demanda",
+        "validacao",
+        "arquivo"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c5",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-006",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 10
+    },
+    {
+      "id": "aut-dem-003-log-resumido",
+      "date": "2026-05-11",
+      "title": "Criar log resumido para processamento",
+      "blocks": [
+        {
+          "id": "aut-dem-003-b01",
+          "type": "h1",
+          "html": "Observações",
+          "page": 1
+        },
+        {
+          "id": "aut-dem-003-b02",
+          "type": "text",
+          "html": "Observações: O log deve mostrar quantidade processada, rejeitada e motivo principal.",
+          "page": 1
+        },
+        {
+          "id": "aut-dem-003-b03",
           "type": "h2",
           "html": "Produtos",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b12",
+          "id": "aut-dem-003-b04",
           "type": "bullet",
-          "html": "Resposta de abertura",
+          "html": "Resumo em TXT",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b13",
+          "id": "aut-dem-003-b05",
           "type": "bullet",
-          "html": "Resposta de solicitação de evidência",
+          "html": "Mensagem curta para tela",
           "page": 1
         },
         {
-          "id": "n-20260515-dem-respostas-rapidas-b14",
+          "id": "aut-dem-003-b06",
           "type": "bullet",
-          "html": "Resposta de conclusão",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b16",
-          "type": "checklist",
-          "html": "Adicionar campo de tom da mensagem",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b17",
-          "type": "checklist",
-          "html": "Separar respostas por contexto",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b19",
-          "type": "checklist",
-          "html": "Revisar linguagem para ficar natural",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b21",
-          "type": "checklist",
-          "html": "Criar dez respostas iniciais",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b22",
-          "type": "checklist",
-          "html": "Testar busca",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260515-dem-respostas-rapidas-b23",
-          "type": "checklist",
-          "html": "Marcar respostas que precisam de revisão",
-          "done": false,
+          "html": "Base para histórico futuro",
           "page": 1
         }
       ],
@@ -3950,472 +945,645 @@
       "status": "Pendente",
       "tags": [
         "demanda",
-        "respostas",
-        "atendimento"
+        "log",
+        "processamento"
       ],
-      "projectId": "proj-service-desk",
-      "postitColor": "c4",
+      "projectId": "proj-automacao",
+      "postitColor": "c1",
       "tipo": "Demanda",
+      "baseType": "Demanda",
       "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0515",
-      "createdAt": "2026-05-15T09:05:00+00:00",
-      "updatedAt": "2026-05-15T09:45:00+00:00",
-      "sampleDayOffset": 23
+      "vinculoId": "DEM-2026-007",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 12
     },
     {
-      "id": "n-20260518-inc-json-campo-vazio",
-      "date": "2026-06-04",
-      "title": "Importação recusou JSON com campo vazio",
+      "id": "aut-dem-004-checklist-entrega",
+      "date": "2026-05-11",
+      "title": "Automatizar checklist de entrega",
       "blocks": [
         {
-          "id": "n-20260518-inc-json-campo-vazio-b01",
+          "id": "aut-dem-004-b01",
           "type": "h1",
-          "html": "Resumo do incidente",
+          "html": "Observações",
           "page": 1
         },
         {
-          "id": "n-20260518-inc-json-campo-vazio-b02",
+          "id": "aut-dem-004-b02",
+          "type": "text",
+          "html": "Observações: Checklist automatizado para lembrar conferências antes de enviar pacote.",
+          "page": 1
+        },
+        {
+          "id": "aut-dem-004-b03",
+          "type": "checklist",
+          "html": "Validar campos obrigatórios",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "aut-dem-004-b04",
+          "type": "checklist",
+          "html": "Gerar resumo final",
+          "page": 1,
+          "done": true
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "concluido",
+        "automacao"
+      ],
+      "projectId": "proj-automacao",
+      "postitColor": "c2",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-008",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": -5
+    },
+    {
+      "id": "aut-inc-001-exportacao-travada",
+      "date": "2026-05-11",
+      "title": "Exportação ficou travada em lote pequeno",
+      "blocks": [
+        {
+          "id": "aut-inc-001-b01",
+          "type": "h1",
+          "html": "Causa do Incidente",
+          "page": 1
+        },
+        {
+          "id": "aut-inc-001-b02",
           "type": "callout-problem",
-          "html": "Uma base válida foi recusada porque um campo opcional veio vazio e a mensagem não explicou o motivo.",
+          "html": "Causa do Incidente: Exportação parou quando o lote tinha poucos registros e um item sem categoria.",
           "page": 1,
           "cv": "problem"
         },
         {
-          "id": "n-20260518-inc-json-campo-vazio-b03",
+          "id": "aut-inc-001-b03",
           "type": "h2",
-          "html": "Impacto",
+          "html": "Ajustes Realizados",
           "page": 1
         },
         {
-          "id": "n-20260518-inc-json-campo-vazio-b04",
-          "type": "bullet",
-          "html": "Usuário achou que perdeu a base",
-          "page": 1
+          "id": "aut-inc-001-b04",
+          "type": "callout-decision",
+          "html": "Ajustes Realizados: Adicionada validação antes de montar o pacote final.",
+          "page": 1,
+          "cv": "decision"
         },
         {
-          "id": "n-20260518-inc-json-campo-vazio-b05",
-          "type": "bullet",
-          "html": "Foi necessário revisar o arquivo manualmente",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b06",
-          "type": "bullet",
-          "html": "A importação antiga permaneceu intacta",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b07",
-          "type": "h2",
-          "html": "Ações realizadas",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b08",
-          "type": "numbered",
-          "html": "Testar JSON com campo opcional vazio",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b09",
-          "type": "numbered",
-          "html": "Comparar com base exportada",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b10",
-          "type": "numbered",
-          "html": "Ajustar normalização",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b11",
-          "type": "numbered",
-          "html": "Reimportar arquivo de teste",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b12",
-          "type": "h2",
-          "html": "Causa provável",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b13",
-          "type": "text",
-          "html": "Validação tratava campo opcional como obrigatório em uma etapa intermediária.",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b14",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260518-inc-json-campo-vazio-b15",
+          "id": "aut-inc-001-b05",
           "type": "checklist",
-          "html": "Diferenciar campo obrigatório e opcional",
-          "done": false,
-          "page": 1
+          "html": "Testar lote pequeno",
+          "page": 1,
+          "done": true
         },
         {
-          "id": "n-20260518-inc-json-campo-vazio-b16",
+          "id": "aut-inc-001-b06",
           "type": "checklist",
-          "html": "Exibir mensagem curta com nome do campo",
-          "done": false,
-          "page": 1
+          "html": "Validar mensagem para usuário",
+          "page": 1,
+          "done": false
         }
       ],
       "priority": "Alta",
       "status": "Em andamento",
       "tags": [
         "incidente",
-        "json",
-        "importação"
+        "exportacao",
+        "automacao"
       ],
       "projectId": "proj-automacao",
-      "postitColor": "c5",
+      "postitColor": "c3",
       "tipo": "Incidente",
+      "baseType": "Incidente",
       "vinculoTipo": "Incidente",
-      "vinculoId": "INC-2026-0518",
-      "createdAt": "2026-05-18T11:00:00+00:00",
-      "updatedAt": "2026-05-18T12:10:00+00:00",
-      "sampleDayOffset": 24
+      "vinculoId": "INC-2026-002",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": -1
     },
     {
-      "id": "n-20260522-caderno-ideias",
-      "date": "2026-06-05",
-      "title": "Caderno de ideias para o próximo ciclo",
+      "id": "doc-anot-001-indice",
+      "date": "2026-05-11",
+      "title": "Índice da base de conhecimento",
       "blocks": [
         {
-          "id": "n-20260522-caderno-ideias-b01",
+          "id": "doc-anot-001-b01",
           "type": "h1",
-          "html": "Ideias para evoluir",
+          "html": "Índice rápido",
           "page": 1
         },
         {
-          "id": "n-20260522-caderno-ideias-b02",
-          "type": "text",
-          "html": "Anotação livre para reunir possibilidades sem transformar tudo em tarefa agora.",
+          "id": "doc-anot-001-b02",
+          "type": "numbered",
+          "html": "Como abrir uma anotação",
           "page": 1
         },
         {
-          "id": "n-20260522-caderno-ideias-b03",
-          "type": "h2",
-          "html": "Página 1 — Escrita",
+          "id": "doc-anot-001-b03",
+          "type": "numbered",
+          "html": "Como transformar registro em demanda",
           "page": 1
         },
         {
-          "id": "n-20260522-caderno-ideias-b04",
-          "type": "bullet",
-          "html": "Criar blocos mais rápidos para rotina de suporte.",
+          "id": "doc-anot-001-b04",
+          "type": "numbered",
+          "html": "Como usar checklist e tabela",
           "page": 1
         },
         {
-          "id": "n-20260522-caderno-ideias-b05",
-          "type": "bullet",
-          "html": "Permitir modelos salvos no futuro.",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b06",
-          "type": "bullet",
-          "html": "Melhorar experiência de página longa.",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b07",
-          "type": "callout-note",
-          "html": "Nem toda ideia precisa virar demanda no mesmo dia.",
-          "page": 1,
-          "cv": "note"
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b08",
-          "type": "separator",
-          "html": "",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b09",
-          "type": "h2",
-          "html": "Página 2 — Organização",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b10",
-          "type": "bullet",
-          "html": "Filtros de post-it por tipo",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b11",
-          "type": "bullet",
-          "html": "Cores por registro",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b12",
-          "type": "bullet",
-          "html": "Busca por ID de demanda ou incidente",
-          "page": 1
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b13",
-          "type": "separator",
-          "html": "",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b14",
-          "type": "h2",
-          "html": "Página 3 — Leitura",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b15",
-          "type": "text",
-          "html": "O modo leitura precisa dar sensação de caderno real, mas sem prender o usuário em metáforas confusas.",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b16",
-          "type": "h2",
-          "html": "Página 4 — Demonstração",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b17",
-          "type": "text",
-          "html": "A base de exemplo deve mostrar situações concretas: planejamento, checklist, incidente, demanda longa, reunião e estudo.",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b18",
-          "type": "h2",
-          "html": "Página 5 — Cuidados",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b19",
-          "type": "checklist",
-          "html": "Não colocar dados pessoais",
-          "done": true,
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b20",
-          "type": "checklist",
-          "html": "Não depender de internet",
-          "done": true,
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b21",
-          "type": "checklist",
-          "html": "Não alterar estrutura sem necessidade",
-          "done": false,
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b22",
-          "type": "h2",
-          "html": "Página 6 — Fechamento",
-          "page": 2
-        },
-        {
-          "id": "n-20260522-caderno-ideias-b23",
-          "type": "callout-action",
-          "html": "Escolher uma melhoria pequena por vez e validar antes de avançar.",
-          "page": 2,
-          "cv": "action"
-        }
-      ],
-      "priority": "Baixa",
-      "status": "Pendente",
-      "tags": [
-        "ideias",
-        "ciclo",
-        "produto"
-      ],
-      "projectId": "proj-pessoal",
-      "postitColor": "c1",
-      "tipo": "Anotação",
-      "vinculoTipo": null,
-      "vinculoId": "",
-      "createdAt": "2026-05-22T19:20:00+00:00",
-      "updatedAt": "2026-05-22T20:10:00+00:00",
-      "scheduledTime": "10:00",
-      "reminderEnabled": true,
-      "sampleDayOffset": 25
-    },
-    {
-      "id": "n-20260527-dem-etiquetas-cores",
-      "date": "2026-06-08",
-      "title": "Organizar etiquetas e cores dos post-its",
-      "blocks": [
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b01",
-          "type": "h1",
-          "html": "Observações",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b02",
-          "type": "text",
-          "html": "Permitir que o usuário personalize a cor do post-it para facilitar organização visual.",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b03",
-          "type": "h2",
-          "html": "Desenvolvimento",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b04",
-          "type": "text",
-          "html": "Título Desenvolvimento: Cores persistentes por registro",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b05",
-          "type": "text",
-          "html": "Movimento: MOV-0527-C",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b06",
-          "type": "text",
-          "html": "OP: OP-COR-012",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b07",
-          "type": "h2",
-          "html": "Parâmetros",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b08",
-          "type": "bullet",
-          "html": "Salvar cor no JSON",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b09",
-          "type": "bullet",
-          "html": "Refletir a cor na busca",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b10",
-          "type": "bullet",
-          "html": "Manter opção automática",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b11",
-          "type": "h2",
-          "html": "Produtos",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b12",
-          "type": "bullet",
-          "html": "Menu de cor",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b13",
-          "type": "bullet",
-          "html": "Post-it colorido",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b14",
-          "type": "bullet",
-          "html": "Resultado de busca com mesma cor",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b15",
-          "type": "h2",
-          "html": "Alterações WFD",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b16",
-          "type": "checklist",
-          "html": "Adicionar clique direito no post-it",
-          "done": true,
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b17",
-          "type": "checklist",
-          "html": "Aplicar classe visual persistente",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b18",
-          "type": "h2",
-          "html": "Alterações Pré",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b19",
-          "type": "checklist",
-          "html": "Conferir comportamento com filtro por tipo",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b20",
-          "type": "h2",
-          "html": "Pendências",
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b21",
-          "type": "checklist",
-          "html": "Testar todas as cores",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b22",
-          "type": "checklist",
-          "html": "Exportar e importar base",
-          "done": false,
-          "page": 1
-        },
-        {
-          "id": "n-20260527-dem-etiquetas-cores-b23",
-          "type": "checklist",
-          "html": "Verificar contraste nos temas",
-          "done": false,
+          "id": "doc-anot-001-b05",
+          "type": "numbered",
+          "html": "Como exportar backup JSON",
           "page": 1
         }
       ],
       "priority": "Média",
       "status": "Em andamento",
       "tags": [
-        "demanda",
-        "post-it",
-        "cores"
+        "documentacao",
+        "indice"
       ],
-      "projectId": "proj-automacao",
+      "projectId": "proj-documentacao",
+      "postitColor": "c4",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 0
+    },
+    {
+      "id": "doc-anot-002-editor",
+      "date": "2026-05-11",
+      "title": "Guia de uso do editor avançado",
+      "blocks": [
+        {
+          "id": "doc-anot-002-b01",
+          "type": "h1",
+          "html": "Editor avançado",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-002-b02",
+          "type": "text",
+          "html": "O editor aceita títulos, listas, checklist, tabela, imagens, links, observações e caixas livres.",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-002-b03",
+          "type": "callout-note",
+          "html": "Observação: use blocos curtos para facilitar leitura no modo Big Page.",
+          "page": 1,
+          "cv": "note"
+        },
+        {
+          "id": "doc-anot-002-b04",
+          "type": "freebox",
+          "html": "Dica visual: esta caixa livre pode ser arrastada e redimensionada dentro do editor.",
+          "page": 1,
+          "x": 8,
+          "y": 22,
+          "w": 58,
+          "h": 110
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "editor",
+        "guia",
+        "one-note"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c5",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "double",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 3
+    },
+    {
+      "id": "doc-anot-003-revisao-conteudo",
+      "date": "2026-05-11",
+      "title": "Tabela de revisão de conteúdos publicados",
+      "blocks": [
+        {
+          "id": "doc-anot-003-b01",
+          "type": "h1",
+          "html": "Revisão de conteúdo",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-003-b02",
+          "type": "table",
+          "html": "<table><tbody><tr><td contenteditable=\"true\">Conteúdo</td><td contenteditable=\"true\">Responsável fictício</td><td contenteditable=\"true\">Status</td></tr><tr><td contenteditable=\"true\">Guia de chamados</td><td contenteditable=\"true\">Equipe TI</td><td contenteditable=\"true\">Revisar</td></tr><tr><td contenteditable=\"true\">Modelo de demanda</td><td contenteditable=\"true\">Equipe TI</td><td contenteditable=\"true\">Ok</td></tr><tr><td contenteditable=\"true\">Backup JSON</td><td contenteditable=\"true\">Equipe TI</td><td contenteditable=\"true\">Pendente</td></tr></tbody></table>",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-003-b03",
+          "type": "checklist",
+          "html": "Atualizar exemplos sem dados reais",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Pendente",
+      "tags": [
+        "tabela",
+        "documentacao"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c1",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 9
+    },
+    {
+      "id": "doc-anot-004-backup-json",
+      "date": "2026-05-11",
+      "title": "Notas sobre backup JSON com imagem",
+      "blocks": [
+        {
+          "id": "doc-anot-004-b01",
+          "type": "h1",
+          "html": "Backup JSON",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-004-b02",
+          "type": "text",
+          "html": "Este exemplo mostra que uma imagem anexada pode viajar junto no backup como texto compactado em base64.",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-004-b03",
+          "type": "image",
+          "html": "",
+          "page": 1,
+          "imageId": "img-demo-json-backup",
+          "caption": "Imagem genérica sobre backup em JSON",
+          "sideHtml": "Ao exportar a agenda, os anexos usados nas anotações entram no campo resources do JSON. Assim o backup continua offline e portátil.",
+          "width": 48
+        },
+        {
+          "id": "doc-anot-004-b04",
+          "type": "checklist",
+          "html": "Exportar backup de teste",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "backup",
+        "json",
+        "imagem"
+      ],
+      "projectId": "proj-documentacao",
       "postitColor": "c2",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "double",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 14
+    },
+    {
+      "id": "doc-dem-001-procedimento-demanda",
+      "date": "2026-05-11",
+      "title": "Atualizar procedimento de abertura de demanda",
+      "blocks": [
+        {
+          "id": "doc-dem-001-b01",
+          "type": "h1",
+          "html": "Observações",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-001-b02",
+          "type": "text",
+          "html": "Observações: Explicar quando uma anotação simples deve virar demanda acompanhável no Kanban.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-001-b03",
+          "type": "h2",
+          "html": "Desenvolvimento",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-001-b04",
+          "type": "checklist",
+          "html": "Criar critérios objetivos",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "doc-dem-001-b05",
+          "type": "checklist",
+          "html": "Inserir exemplo fictício",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Média",
+      "status": "Em andamento",
+      "tags": [
+        "demanda",
+        "procedimento",
+        "kanban"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c3",
       "tipo": "Demanda",
+      "baseType": "Demanda",
       "vinculoTipo": "Demanda",
-      "vinculoId": "DEM-2026-0527",
-      "createdAt": "2026-05-27T15:10:00+00:00",
-      "updatedAt": "2026-05-27T16:05:00+00:00",
-      "sampleDayOffset": 28
+      "vinculoId": "DEM-2026-009",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 1
+    },
+    {
+      "id": "doc-dem-002-modelo-incidente",
+      "date": "2026-05-11",
+      "title": "Montar modelo de incidente para treinamento",
+      "blocks": [
+        {
+          "id": "doc-dem-002-b01",
+          "type": "h1",
+          "html": "Observações",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-002-b02",
+          "type": "text",
+          "html": "Observações: Criar exemplo de incidente com causa, solução, ajustes e evidências, sem dados reais.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-002-b03",
+          "type": "h2",
+          "html": "Pendências",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-002-b04",
+          "type": "checklist",
+          "html": "Separar causa e solução",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "doc-dem-002-b05",
+          "type": "checklist",
+          "html": "Adicionar campos com espaço após dois-pontos",
+          "page": 1,
+          "done": false
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "demanda",
+        "incidente",
+        "treinamento"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c4",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-010",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 11
+    },
+    {
+      "id": "doc-dem-003-tags-busca",
+      "date": "2026-05-11",
+      "title": "Revisar tags e padrões de busca",
+      "blocks": [
+        {
+          "id": "doc-dem-003-b01",
+          "type": "h1",
+          "html": "Observações",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-003-b02",
+          "type": "text",
+          "html": "Observações: Garantir que título, texto, tags, projeto, data e ID possam ser encontrados pela busca.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-003-b03",
+          "type": "table",
+          "html": "<table><tbody><tr><td contenteditable=\"true\">Campo</td><td contenteditable=\"true\">Exemplo</td></tr><tr><td contenteditable=\"true\">Tag</td><td contenteditable=\"true\">backup</td></tr><tr><td contenteditable=\"true\">Projeto</td><td contenteditable=\"true\">Documentação Técnica</td></tr><tr><td contenteditable=\"true\">ID</td><td contenteditable=\"true\">DEM-2026-011</td></tr></tbody></table>",
+          "page": 1
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Pendente",
+      "tags": [
+        "demanda",
+        "busca",
+        "tags"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c5",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-011",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 15
+    },
+    {
+      "id": "doc-dem-004-onboarding",
+      "date": "2026-05-11",
+      "title": "Publicar roteiro de onboarding interno",
+      "blocks": [
+        {
+          "id": "doc-dem-004-b01",
+          "type": "h1",
+          "html": "Observações",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-004-b02",
+          "type": "text",
+          "html": "Observações: Roteiro fictício concluído para demonstrar cartões finalizados no Kanban.",
+          "page": 1
+        },
+        {
+          "id": "doc-dem-004-b03",
+          "type": "checklist",
+          "html": "Criar sequência inicial",
+          "page": 1,
+          "done": true
+        },
+        {
+          "id": "doc-dem-004-b04",
+          "type": "checklist",
+          "html": "Revisar texto final",
+          "page": 1,
+          "done": true
+        }
+      ],
+      "priority": "Baixa",
+      "status": "Concluída",
+      "tags": [
+        "concluido",
+        "onboarding"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c1",
+      "tipo": "Demanda",
+      "baseType": "Demanda",
+      "vinculoTipo": "Demanda",
+      "vinculoId": "DEM-2026-012",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": -4
+    },
+    {
+      "id": "doc-inc-001-anexo",
+      "date": "2026-05-11",
+      "title": "Anexo não carregou em solicitação interna",
+      "blocks": [
+        {
+          "id": "doc-inc-001-b01",
+          "type": "h1",
+          "html": "Causa do Incidente",
+          "page": 1
+        },
+        {
+          "id": "doc-inc-001-b02",
+          "type": "callout-problem",
+          "html": "Causa do Incidente: Um anexo pequeno não aparecia após salvar uma solicitação interna fictícia.",
+          "page": 1,
+          "cv": "problem"
+        },
+        {
+          "id": "doc-inc-001-b03",
+          "type": "h2",
+          "html": "Solução",
+          "page": 1
+        },
+        {
+          "id": "doc-inc-001-b04",
+          "type": "callout-action",
+          "html": "Solução: Revalidar o carregamento do recurso e confirmar se o backup exportado inclui a imagem.",
+          "page": 1,
+          "cv": "action"
+        },
+        {
+          "id": "doc-inc-001-b05",
+          "type": "h2",
+          "html": "Evidências",
+          "page": 1
+        },
+        {
+          "id": "doc-inc-001-b06",
+          "type": "text",
+          "html": "Evidências: registro fictício para demonstrar estrutura de incidente.",
+          "page": 1
+        }
+      ],
+      "priority": "Média",
+      "status": "Pendente",
+      "tags": [
+        "incidente",
+        "anexo",
+        "backup"
+      ],
+      "projectId": "proj-documentacao",
+      "postitColor": "c2",
+      "tipo": "Incidente",
+      "baseType": "Incidente",
+      "vinculoTipo": "Incidente",
+      "vinculoId": "INC-2026-003",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "sampleDayOffset": 16
     }
   ],
-  "updatedAt": "2026-05-11T10:00:00+00:00"
+  "resources": {
+    "resources/images/img-demo-fluxo-atendimento": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+PHJlY3Qgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIzNjAiIHJ4PSIyOCIgZmlsbD0iI0ZDRjZGMSIvPjxyZWN0IHg9IjUyIiB5PSI2NCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI5NiIgcng9IjE4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjMwMCIgeT0iNjQiIHdpZHRoPSIxNjAiIGhlaWdodD0iOTYiIHJ4PSIxOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjZDk3NzA2IiBzdHJva2Utd2lkdGg9IjUiLz48cmVjdCB4PSI1NDgiIHk9IjY0IiB3aWR0aD0iMTYwIiBoZWlnaHQ9Ijk2IiByeD0iMTgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzE2YTM0YSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTIyMiAxMTIgSDI4NiIgc3Ryb2tlPSIjMTExMTExIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNzcgOTggbDE4IDE0IC0xOCAxNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTExMTExIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik00NzAgMTEyIEg1MzQiIHN0cm9rZT0iIzExMTExMSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNTI1IDk4IGwxOCAxNCAtMTggMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMTExMSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48dGV4dCB4PSIxMzIiIHk9IjEwMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExMTExIj5FbnRyYWRhPC90ZXh0Pjx0ZXh0IHg9IjEzMiIgeT0iMTMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiM1MjYwNmQiPnRyaWFnZW08L3RleHQ+PHRleHQgeD0iMzgwIiB5PSIxMDMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzExMTExMSI+QW7DoWxpc2U8L3RleHQ+PHRleHQgeD0iMzgwIiB5PSIxMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzUyNjA2ZCI+cHJpb3JpZGFkZTwvdGV4dD48dGV4dCB4PSI2MjgiIHk9IjEwMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExMTExIj5SZWdpc3RybzwvdGV4dD48dGV4dCB4PSI2MjgiIHk9IjEzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNTI2MDZkIj5hw6fDo28gdG9tYWRhPC90ZXh0PjxyZWN0IHg9Ijg0IiB5PSIyMjIiIHdpZHRoPSI1OTIiIGhlaWdodD0iNjgiIHJ4PSIyMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjZDhjN2I1IiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIzODAiIHk9IjI1MSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTExMTExIj5GbHV4byBzaW1wbGVzIGRlIGF0ZW5kaW1lbnRvPC90ZXh0Pjx0ZXh0IHg9IjM4MCIgeT0iMjc3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2YjViNGEiPmV4ZW1wbG8gZ2Vuw6lyaWNvIHBhcmEgZGVtb25zdHJhciBpbWFnZW0gYW5leGEgbm8gSlNPTjwvdGV4dD48L3N2Zz4="
+    },
+    "resources/images/img-demo-json-backup": {
+      "type": "image/svg+xml",
+      "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+PHJlY3Qgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIzNjAiIHJ4PSIyOCIgZmlsbD0iIzExMTgyNyIvPjxyZWN0IHg9IjU4IiB5PSI0OCIgd2lkdGg9IjY0NCIgaGVpZ2h0PSIyNjQiIHJ4PSIyMiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45NiIvPjxyZWN0IHg9Ijg4IiB5PSI4NCIgd2lkdGg9IjIzOCIgaGVpZ2h0PSIxODgiIHJ4PSIxNiIgZmlsbD0iI0ZDRjZGMSIgc3Ryb2tlPSIjRjRERkNEIiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSIzNjYiIHk9Ijg0IiB3aWR0aD0iMzA2IiBoZWlnaHQ9IjE4OCIgcng9IjE2IiBmaWxsPSIjRjhGQUZDIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjEyOCIgY3k9IjEyNiIgcj0iMjIiIGZpbGw9IiMyNTYzZWIiLz48cmVjdCB4PSIxNjYiIHk9IjExMSIgd2lkdGg9IjEyNCIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiM5NEEzQjgiLz48cmVjdCB4PSIxNjYiIHk9IjEzNSIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0iI0NCRDVFMSIvPjxyZWN0IHg9IjExMiIgeT0iMTgwIiB3aWR0aD0iMTc4IiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iI2Q5NzcwNiIvPjxyZWN0IHg9IjExMiIgeT0iMjEyIiB3aWR0aD0iMTI2IiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iIzE2YTM0YSIvPjx0ZXh0IHg9IjUxOSIgeT0iMTIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPkltYWdlbSBubyBiYWNrdXA8L3RleHQ+PHRleHQgeD0iNTE5IiB5PSIxNTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzQ3NTU2OSI+byBhcnF1aXZvIEpTT04gZ3VhcmRhIG8gYW5leG88L3RleHQ+PHRleHQgeD0iNTE5IiB5PSIxODEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzQ3NTU2OSI+Y29tbyB0ZXh0byBiYXNlNjQ8L3RleHQ+PHBhdGggZD0iTTM4NSAyMjAgSDY1MyIgc3Ryb2tlPSIjQ0JENUUxIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzg1IDI0OCBINTkwIiBzdHJva2U9IiNDQkQ1RTEiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9IjM4MCIgeT0iMzMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiNDQkQ1RTEiPkRlbW9uc3RyYcOnw6NvIGZpY3TDrWNpYSDCtyBzZW0gZGFkb3MgcmVhaXM8L3RleHQ+PC9zdmc+"
+    }
+  },
+  "updatedAt": "2026-05-11T12:00:00+00:00"
 }
