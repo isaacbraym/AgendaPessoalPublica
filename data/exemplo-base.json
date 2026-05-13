@@ -16,7 +16,7 @@
       "name": "Organização da Agenda",
       "color": "#7c3aed",
       "status": "ativo",
-      "description": "Projeto tutorial para aprender temas, templates, post-its, busca, menus, histórico, backups e uso geral da agenda.",
+      "description": "Projeto tutorial para aprender temas, templates, post-its, busca, menus, histórico, anexos, backup completo e uso geral da agenda.",
       "createdAt": "2026-05-01T08:00:00+00:00"
     },
     {
@@ -91,6 +91,27 @@
           "html": "Dica: esta base é fictícia e segura. Ela existe para ensinar o app, não para representar dados reais.",
           "page": 1,
           "cv": "note"
+        },
+        {
+          "id": "org-anot-001-tour-b08",
+          "type": "checklist",
+          "html": "Abrir o editor e testar o botão direito em um bloco",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-001-tour-b09",
+          "type": "checklist",
+          "html": "Anexar um arquivo pequeno e confirmar se ele aparece como card baixável",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-001-tour-b10",
+          "type": "checklist",
+          "html": "Exportar um backup completo ZIP quando houver imagens ou anexos",
+          "page": 1,
+          "done": false
         }
       ],
       "priority": "Baixa",
@@ -111,7 +132,7 @@
       "reminderEnabled": false,
       "sheetLayout": "single",
       "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-13T05:45:00+00:00",
       "sampleDayOffset": 2
     },
     {
@@ -764,7 +785,7 @@
         {
           "id": "org-anot-009-armazenamento-backup-b02",
           "type": "text",
-          "html": "A Agenda Caderno é offline. Ela salva os registros no armazenamento do navegador deste computador e usa recursos locais para manter a experiência simples: abrir o index.html e usar.",
+          "html": "O navegador guarda a agenda localmente para uso offline. Quando houver imagens ou anexos, prefira o backup completo ZIP para levar também os arquivos vinculados.",
           "page": 1
         },
         {
@@ -780,7 +801,7 @@
         {
           "id": "org-anot-009-armazenamento-backup-b04",
           "type": "checklist",
-          "html": "Exportar JSON antes de grandes alterações",
+          "html": "Backup completo ZIP: recomendado para migrar ou guardar a agenda com imagens, anexos e manifesto.",
           "page": 1,
           "done": false
         },
@@ -811,6 +832,25 @@
           "html": "Atenção: limpar dados do navegador, trocar de perfil ou usar outro computador pode fazer a agenda parecer vazia se você não tiver exportado um JSON.",
           "page": 1,
           "cv": "problem"
+        },
+        {
+          "id": "org-anot-009-armazenamento-backup-b09",
+          "type": "bullet",
+          "html": "Anexos entram no backup completo dentro da pasta anexos/, organizados por ano, mês e registro.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-009-armazenamento-backup-b10",
+          "type": "bullet",
+          "html": "Ao importar em outra máquina, restaure o ZIP completo para recuperar a agenda e os arquivos baixáveis.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-009-armazenamento-backup-b11",
+          "type": "callout-priority",
+          "html": "Se a anotação tiver anexos, evite depender apenas de exportação simples em JSON.",
+          "page": 1,
+          "cv": "priority"
         }
       ],
       "priority": "Alta",
@@ -819,7 +859,9 @@
         "tutorial",
         "backup",
         "localstorage",
-        "importacao"
+        "importacao",
+        "anexos",
+        "zip-completo"
       ],
       "projectId": "proj-organizacao-agenda",
       "postitColor": "c2",
@@ -832,7 +874,7 @@
       "reminderEnabled": false,
       "sheetLayout": "single",
       "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-13T05:45:00+00:00",
       "sampleDayOffset": 9
     },
     {
@@ -998,6 +1040,31 @@
           "y": 14,
           "w": 74,
           "h": 96
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b12",
+          "type": "text",
+          "html": "Durante a edição, clique com o botão direito em qualquer bloco para abrir o menu próprio da agenda. Ele substitui o menu padrão do navegador dentro da área de escrita.",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b13",
+          "type": "bullet",
+          "html": "Use o menu de contexto para anexar arquivo exatamente naquele ponto.",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b14",
+          "type": "bullet",
+          "html": "Use o mesmo menu para inserir imagem, checklist, tabela, caixa livre, mover bloco ou converter o tipo do conteúdo.",
+          "page": 1
+        },
+        {
+          "id": "doc-anot-011-editor-avancado-b15",
+          "type": "callout-action",
+          "html": "Teste: clique em Editar, depois clique com o botão direito sobre esta anotação.",
+          "page": 1,
+          "cv": "action"
         }
       ],
       "priority": "Média",
@@ -1005,7 +1072,10 @@
       "tags": [
         "tutorial",
         "editor",
-        "blocos"
+        "blocos",
+        "botao-direito",
+        "menu-contexto",
+        "anexos"
       ],
       "projectId": "proj-documentacao-tecnica",
       "postitColor": "c4",
@@ -1018,7 +1088,7 @@
       "reminderEnabled": false,
       "sheetLayout": "single",
       "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-13T05:45:00+00:00",
       "sampleDayOffset": 11
     },
     {
@@ -1625,14 +1695,14 @@
         {
           "id": "org-dem-008-rotina-backup-b03",
           "type": "checklist",
-          "html": "Exportar JSON ao final de uma semana com muitas alterações",
+          "html": "Exportar backup completo ZIP ao final de uma semana com muitas alterações ou anexos",
           "page": 1,
           "done": false
         },
         {
           "id": "org-dem-008-rotina-backup-b04",
           "type": "checklist",
-          "html": "Guardar o arquivo em uma pasta própria de backups",
+          "html": "Guardar o ZIP em uma pasta própria de backups, fora do navegador",
           "page": 1,
           "done": false
         },
@@ -1646,7 +1716,7 @@
         {
           "id": "org-dem-008-rotina-backup-b06",
           "type": "checklist",
-          "html": "Importar em ambiente de teste se quiser validar antes de substituir a base real",
+          "html": "Importar o ZIP completo em ambiente de teste se quiser validar antes de substituir a base real",
           "page": 1,
           "done": false
         },
@@ -1663,7 +1733,9 @@
       "tags": [
         "tutorial",
         "backup",
-        "rotina"
+        "rotina",
+        "anexos",
+        "backup-completo"
       ],
       "projectId": "proj-organizacao-agenda",
       "postitColor": "c2",
@@ -1676,7 +1748,7 @@
       "reminderEnabled": false,
       "sheetLayout": "single",
       "createdAt": "2026-05-01T08:00:00+00:00",
-      "updatedAt": "2026-05-01T08:00:00+00:00",
+      "updatedAt": "2026-05-13T05:45:00+00:00",
       "sampleDayOffset": 19
     },
     {
@@ -2172,6 +2244,164 @@
       "createdAt": "2026-05-01T08:00:00+00:00",
       "updatedAt": "2026-05-01T08:00:00+00:00",
       "sampleDayOffset": -1
+    },
+    {
+      "priority": "Baixa",
+      "status": "Em andamento",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-13T05:45:00+00:00",
+      "updatedAt": "2026-05-13T05:45:00+00:00",
+      "id": "org-anot-012-anexos-backup",
+      "date": "2026-06-05",
+      "title": "Tutorial: anexos baixáveis e backup completo",
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c3",
+      "tags": [
+        "tutorial",
+        "anexos",
+        "backup-completo",
+        "zip"
+      ],
+      "sampleDayOffset": 25,
+      "blocks": [
+        {
+          "id": "org-anot-012-anexos-backup-b01",
+          "type": "h1",
+          "html": "Anexos viram parte da anotação",
+          "page": 1
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b02",
+          "type": "text",
+          "html": "Use anexos para guardar arquivos de apoio, evidências, pacotes ZIP, PDFs, planilhas ou documentos que precisam ficar ligados ao registro.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b03",
+          "type": "checklist",
+          "html": "Clique em Editar e use o botão 📎 Anexo na barra do editor",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b04",
+          "type": "checklist",
+          "html": "Escolha um arquivo pequeno para testar; o limite é de 15 MB por anexo",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b05",
+          "type": "checklist",
+          "html": "Confirme se o card do anexo apareceu dentro da anotação",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b06",
+          "type": "checklist",
+          "html": "Clique em Baixar para gerar uma cópia pelo download padrão do navegador",
+          "page": 1,
+          "done": false
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b07",
+          "type": "callout-priority",
+          "html": "Se houver anexos ou imagens, use backup completo ZIP. A exportação simples em JSON é útil, mas não deve ser a única cópia desses arquivos.",
+          "page": 1,
+          "cv": "priority"
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b08",
+          "type": "bullet",
+          "html": "O backup completo leva agenda.json, manifest.json, imagens e anexos.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-012-anexos-backup-b09",
+          "type": "bullet",
+          "html": "Em outra máquina, importe o ZIP completo para restaurar os arquivos baixáveis junto com as anotações.",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "priority": "Baixa",
+      "status": "Em andamento",
+      "tipo": "Anotação",
+      "baseType": "Anotação",
+      "vinculoTipo": null,
+      "vinculoId": "",
+      "isScheduled": false,
+      "scheduledTime": "",
+      "reminderEnabled": false,
+      "sheetLayout": "single",
+      "createdAt": "2026-05-13T05:45:00+00:00",
+      "updatedAt": "2026-05-13T05:45:00+00:00",
+      "id": "org-anot-013-click-direito-editor",
+      "date": "2026-06-06",
+      "title": "Tutorial: botão direito com ferramentas do editor",
+      "projectId": "proj-organizacao-agenda",
+      "postitColor": "c6",
+      "tags": [
+        "tutorial",
+        "editor",
+        "botao-direito",
+        "menu-contexto"
+      ],
+      "sampleDayOffset": 26,
+      "blocks": [
+        {
+          "id": "org-anot-013-click-direito-editor-b01",
+          "type": "h1",
+          "html": "Botão direito sem menu genérico do navegador",
+          "page": 1
+        },
+        {
+          "id": "org-anot-013-click-direito-editor-b02",
+          "type": "text",
+          "html": "Dentro da edição, o clique direito abre um menu próprio da agenda. Ele ajuda a inserir, transformar e organizar blocos sem procurar tudo na barra superior.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-013-click-direito-editor-b03",
+          "type": "bullet",
+          "html": "Anexar arquivo aqui: insere o anexo exatamente naquele ponto da anotação.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-013-click-direito-editor-b04",
+          "type": "bullet",
+          "html": "Inserir imagem, checklist, tabela ou caixa livre: cria o bloco logo abaixo do ponto escolhido.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-013-click-direito-editor-b05",
+          "type": "bullet",
+          "html": "Converter bloco: transforma texto em título, subtítulo, lista, checklist, observação ou prioridade.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-013-click-direito-editor-b06",
+          "type": "bullet",
+          "html": "Mover para cima/baixo: reorganiza a anotação sem copiar e colar.",
+          "page": 1
+        },
+        {
+          "id": "org-anot-013-click-direito-editor-b07",
+          "type": "callout-action",
+          "html": "Teste agora: clique em Editar e depois use o botão direito sobre qualquer linha desta anotação.",
+          "page": 1,
+          "cv": "action"
+        }
+      ]
     }
   ],
   "resources": {
@@ -2236,5 +2466,5 @@
       "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgNzYwIDM2MCI+CjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMzYwIiByeD0iMjgiIGZpbGw9IiNGQ0Y2RjEiLz4KPHJlY3QgeD0iNDIiIHk9IjQyIiB3aWR0aD0iNjc2IiBoZWlnaHQ9IjI3NiIgcng9IjI0IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNlNWU3ZWIiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI5MiIgY3k9IjkwIiByPSIyMiIgZmlsbD0iIzBmNzY2ZSIvPgo8dGV4dCB4PSIxMjgiIHk9IjgyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjciIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTExMTEiPlRhYmVsYSBlc3RpbG8gcGxhbmlsaGE8L3RleHQ+Cjx0ZXh0IHg9IjEyOCIgeT0iMTEyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM1MjYwNmQiPmJvbSBwYXJhIGNoZWNrbGlzdCBkZSB2YWxpZGHDp8OjbzwvdGV4dD4KPHJlY3QgeD0iODgiIHk9IjE0MiIgd2lkdGg9IjU4NCIgaGVpZ2h0PSIzOSIgcng9IjE0IiBmaWxsPSIjZjhmYWZjIiBzdHJva2U9IiNlMmU4ZjAiLz48Y2lyY2xlIGN4PSIxMTYiIGN5PSIxNjIiIHI9IjgiIGZpbGw9IiMwZjc2NmUiLz48dGV4dCB4PSIxMzgiIHk9IjE2OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjMTExMTExIj5JdGVtPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIxODkiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjA5IiByPSI4IiBmaWxsPSIjMjU2M2ViIi8+PHRleHQgeD0iMTM4IiB5PSIyMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+U3RhdHVzPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIyMzYiIHdpZHRoPSI1ODQiIGhlaWdodD0iMzkiIHJ4PSIxNCIgZmlsbD0iI2Y4ZmFmYyIgc3Ryb2tlPSIjZTJlOGYwIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMjU2IiByPSI4IiBmaWxsPSIjMTZhMzRhIi8+PHRleHQgeD0iMTM4IiB5PSIyNjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzExMTExMSI+UmVzcG9uc8OhdmVsIGdlbsOpcmljbzwvdGV4dD48cmVjdCB4PSI4OCIgeT0iMjgzIiB3aWR0aD0iNTg0IiBoZWlnaHQ9IjM5IiByeD0iMTQiIGZpbGw9IiNmOGZhZmMiIHN0cm9rZT0iI2UyZThmMCIvPjxjaXJjbGUgY3g9IjExNiIgY3k9IjMwMyIgcj0iOCIgZmlsbD0iI2Q5NzcwNiIvPjx0ZXh0IHg9IjEzOCIgeT0iMzA5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiMxMTExMTEiPk9ic2VydmHDp8OjbzwvdGV4dD4KPC9zdmc+"
     }
   },
-  "updatedAt": "2026-05-11T12:00:00+00:00"
+  "updatedAt": "2026-05-13T05:45:00+00:00"
 }
